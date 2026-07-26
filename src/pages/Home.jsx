@@ -80,7 +80,7 @@ const Home = () => {
             </div>
             <div className="w-full md:flex-1 relative">
               <div className="aspect-square rounded-3xl glass overflow-hidden flex items-center justify-center relative group">
-                <img fetchpriority="high" src="/images/Shiva parvathi I hd Shiva parvathi wallpaper.jpg" alt="Pandit Rudradev" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 z-0" />
+                <img fetchpriority="high" src="/images/Shiva parvathi I hd Shiva parvathi wallpaper.webp" alt="Pandit Rudradev" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 z-0" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-aurora-purple)]/20 to-transparent mix-blend-overlay z-10 pointer-events-none"></div>
               </div>
             </div>

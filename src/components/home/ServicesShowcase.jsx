@@ -8,7 +8,7 @@ const services = [
     title: "Love Solutions", 
     desc: "When matters of the heart cannot wait, our powerful Vedic remedies resolve severe relationship crises.", 
     color: "from-[var(--color-brand-red)] to-[var(--color-brand-red)]",
-    image: "/images/Reconnect & Co-Regulate_ Science-Based Tools for NYC Families.jpg",
+    image: "/images/Reconnect & Co-Regulate_ Science-Based Tools for NYC Families.webp",
     span: "md:col-span-2 md:row-span-2",
     icon: <HeartPulse size={48} className="text-[var(--foreground)]/30" />,
     isLarge: true
@@ -34,7 +34,7 @@ const services = [
     title: "Face Reading", 
     desc: "Ancient facial analysis.", 
     color: "from-[#6366f1] to-[#18181b]",
-    image: "/images/Why Many Trust Facial Reading Astrology Services For Daily Guidance.jpg",
+    image: "/images/Why Many Trust Facial Reading Astrology Services For Daily Guidance.webp",
     span: "md:col-span-1 md:row-span-1",
     isLarge: false
   },
@@ -59,7 +59,7 @@ const services = [
     title: "Family Peace", 
     desc: "Resolve toxic misunderstandings.", 
     color: "from-[#6366f1] to-[#18181b]",
-    image: "/images/family.jpg",
+    image: "/images/family.webp",
     span: "md:col-span-1 md:row-span-1",
     isLarge: false
   },

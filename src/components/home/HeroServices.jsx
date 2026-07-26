@@ -9,28 +9,32 @@ const services = [
     title: "Love Solutions",
     subtitle: "Immediate Cosmic Intervention",
     desc: "When matters of the heart cannot wait, our powerful Vedic remedies align planetary energies to resolve severe relationship crises within 24 hours. Pandit Rudradev uses ancient astrological charting to pinpoint the exact energetic blockages causing your separation. Experience profound peace, emotional healing, and a guaranteed path forward with absolute confidentiality.",
-    color: "from-[var(--color-brand-red)] to-[var(--color-brand-red)]"
+    color: "from-[var(--color-brand-red)] to-[var(--color-brand-red)]",
+    image: "/images/Pandit Rudradev - Bn1.webp"
   },
   {
     id: '02',
     title: "Powerful Love Spells",
     subtitle: "Bind True Love Forever",
     desc: "Authentic, safe, and highly potent spiritual love spells designed to attract your soulmate, reignite lost passion, and secure unconditional love. Unlike temporary fixes, our rituals work on a deep spiritual level to create a permanent, unbreakable bond without any negative karmic consequences. Let the universe bring your true love directly to you.",
-    color: "from-[var(--color-brand-yellow)] to-[var(--color-brand-orange)]"
+    color: "from-[var(--color-brand-yellow)] to-[var(--color-brand-orange)]",
+    image: "/images/Pandit Rudradev - Bn1.webp"
   },
   {
     id: '03',
     title: "Bring Ex Back",
     subtitle: "Restore Broken Bonds",
     desc: "Using ancient astrology and energy binding, we safely remove the misunderstandings, jealousy, and external influences that drove you apart. Heartbreak is not the final chapter. We rebuild the foundation of your relationship from the ground up, ensuring that when your partner returns, the connection is stronger and more passionate than ever before.",
-    color: "from-[var(--color-brand-orange)] to-[var(--color-brand-red)]"
+    color: "from-[var(--color-brand-orange)] to-[var(--color-brand-red)]",
+    image: "/images/Pandit Rudradev - Bn2.webp"
   },
   {
     id: '04',
     title: "Black Magic Removal",
     subtitle: "Ultimate Spiritual Protection",
     desc: "Identify and completely destroy dark energies, generational curses, and black magic that have been silently causing failures in your health, career, and love life. Pandit Rudradev performs intensive cleansing rituals to eradicate these negative forces, restoring a highly protective and impenetrable aura around you and your loved ones.",
-    color: "from-white to-[#18181b]"
+    color: "from-white to-[#18181b]",
+    image: "/images/Pandit Rudradev - Bn3.webp"
   }
 ];
 
@@ -115,18 +119,20 @@ const HeroServices = () => {
             >
               <div className="w-full h-full bg-[#09090b] rounded-t-[4rem] rounded-b-md lg:rounded-[4rem] overflow-hidden border border-[var(--color-brand-yellow)]/10 relative group">
                 
-                {/* Simulated Ken Burns Image Effect Space */}
+                {/* Image Effect Space */}
                 <motion.div 
-                  className="w-full h-full bg-[#6366f1] flex items-center justify-center relative"
-                  animate={{ scale: 1.05 }}
-                  transition={{ duration: 10, ease: "linear" }}
+                  className="w-full h-full bg-[#18181b] flex items-center justify-center relative overflow-hidden"
                 >
-                  <span className="text-[var(--foreground)] font-medium tracking-[0.3em] uppercase text-xs z-10 text-center px-4">
-                    High-Fidelity<br/>Image Placeholder
-                  </span>
-                  
+                  <motion.img 
+                    src={activeService.image} 
+                    alt={activeService.title} 
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ scale: 1.05 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 10, ease: "linear" }}
+                  />
                   {/* Subtle thematic glow based on service */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${activeService.color} opacity-10 mix-blend-screen`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${activeService.color} opacity-20 mix-blend-overlay z-10 pointer-events-none`}></div>
                 </motion.div>
                 
               </div>

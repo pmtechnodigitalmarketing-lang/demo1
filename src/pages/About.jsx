@@ -70,7 +70,7 @@ const About = () => {
             <div className="aspect-[4/5] rounded-3xl glass p-2 relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-aurora-green)]/20 to-transparent mix-blend-overlay z-10"></div>
               <div className="w-full h-full rounded-2xl overflow-hidden relative">
-                <img loading="lazy" src="/images/632474341480103293.jpg" alt="Pandit Rudradev" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img loading="lazy" src="/images/632474341480103293.webp" alt="Pandit Rudradev" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </motion.div>
