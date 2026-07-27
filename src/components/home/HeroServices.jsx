@@ -10,7 +10,7 @@ const services = [
     subtitle: "Immediate Cosmic Intervention",
     desc: "When matters of the heart cannot wait, our powerful Vedic remedies align planetary energies to resolve severe relationship crises within 24 hours. Pandit Rudradev uses ancient astrological charting to pinpoint the exact energetic blockages causing your separation. Experience profound peace, emotional healing, and a guaranteed path forward with absolute confidentiality.",
     color: "from-[var(--color-brand-red)] to-[var(--color-brand-red)]",
-    image: "/images/Pandit Rudradev - Bn1.webp"
+    image: "/images/Pandit Rudradev - Bn4.webp"
   },
   {
     id: '02',
