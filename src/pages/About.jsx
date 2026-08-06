@@ -58,7 +58,7 @@ const About = () => {
     <div className="w-full bg-[var(--background)] min-h-screen">
 
       {/* 1. Immersive Hero Section */}
-      <section className="relative w-full h-auto pb-12 lg:pb-16 flex flex-col justify-start pt-8 md:pt-12 overflow-hidden">
+      <section className="relative w-full h-auto pb-0 md:pb-12 lg:pb-16 flex flex-col justify-start pt-8 md:pt-12 overflow-hidden">
         {/* Background Image with Gradient Mask */}
         <div className="absolute inset-0 z-0">
           <img
@@ -160,7 +160,7 @@ const About = () => {
               </div>
 
               {/* In-line Image / Visual Break */}
-              <div className="w-full aspect-[4/5] md:aspect-[4/3] rounded-3xl overflow-hidden relative group my-12 border border-[var(--color-mystic-accent)]/20 shadow-2xl">
+              <div className="w-full aspect-[4/5] md:aspect-[4/3] rounded-3xl overflow-hidden relative group mt-12 mb-0 md:my-12 border border-[var(--color-mystic-accent)]/20 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-transparent opacity-80 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
                 <img
                   src="/images/load_shiva.jpg"

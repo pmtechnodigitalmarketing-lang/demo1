@@ -47,7 +47,7 @@ const TestimonialCarousel = () => {
   const prev = () => setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center bg-[#0a0f1d] overflow-hidden py-24">
+    <section className="relative min-h-[80vh] flex items-center justify-center bg-[#0a0f1d] overflow-hidden py-8 md:py-24">
       
       {/* Dynamic Ambient Background */}
       <AnimatePresence mode="wait">

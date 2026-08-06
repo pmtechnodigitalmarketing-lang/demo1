@@ -360,7 +360,7 @@ const Services = () => {
       </section>
 
       {/* 3. FAQ Section */}
-      <section className="pt-8 pb-24 lg:pt-12 relative overflow-hidden flex items-center justify-center border-y border-white/5 bg-[var(--background)]">
+      <section className="pt-8 pb-8 md:pb-24 lg:pt-12 relative overflow-hidden flex items-center justify-center border-y border-white/5 bg-[var(--background)]">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-mystic-accent)]/5 via-transparent to-transparent"></div>
         
         <div className="relative z-10 w-full max-w-4xl mx-auto px-6">
@@ -378,7 +378,7 @@ const Services = () => {
       </section>
 
       {/* 4. Dramatic Final CTA */}
-      <section className="pt-8 pb-32 lg:pt-12 lg:pb-32 px-6 relative overflow-hidden flex items-center justify-center">
+      <section className="pt-0 md:pt-8 pb-4 md:pb-32 lg:pt-12 lg:pb-32 px-6 relative overflow-hidden flex items-center justify-center">
         {/* Deep Glow Background */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-mystic-accent)]/20 via-[var(--background)] to-[var(--background)]"></div>
 

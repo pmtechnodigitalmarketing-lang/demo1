@@ -40,7 +40,7 @@ const ServicesShowcase = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative min-h-screen pt-8 pb-24 lg:pt-12 lg:pb-24 px-6 md:px-12 lg:px-24 flex items-center bg-[var(--background)] overflow-hidden">
+    <section className="relative min-h-screen pt-8 pb-8 md:pb-24 lg:pt-12 lg:pb-24 px-6 md:px-12 lg:px-24 flex items-center bg-[var(--background)] overflow-hidden">
       
       {/* Immersive Background based on active service */}
       <AnimatePresence mode="wait">

@@ -49,10 +49,10 @@ const Home = () => {
         </div>
 
         <div className="container mx-auto max-w-7xl relative">
-          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-0">
+          <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-16 lg:gap-0">
             
             {/* Left: Masked Image & Floating Elements */}
-            <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-[700px] flex justify-center items-center">
+            <div className="w-full lg:w-1/2 relative min-h-[350px] md:min-h-[500px] lg:min-h-[700px] flex justify-center items-center">
               {/* Decorative Arch Mask Container */}
               <motion.div 
                 initial={{ opacity: 0, y: 50 }}

@@ -152,7 +152,7 @@ const HeroServices = () => {
         </div>
 
         {/* Asymmetrical Floating Services List */}
-        <div className="w-full lg:w-2/5 mt-16 lg:mt-0 flex flex-col gap-4 relative">
+        <div className="w-full lg:w-2/5 mt-8 md:mt-16 lg:mt-0 flex flex-col gap-4 relative">
           {/* Connecting line */}
           <div className="hidden lg:block absolute left-[-40px] top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-[var(--color-mystic-accent)]/30 to-transparent"></div>
 
