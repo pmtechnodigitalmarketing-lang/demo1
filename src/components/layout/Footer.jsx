@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Brand */}
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center mb-6">
-            <img src="/images/Pandit Rudradev - Logo.webp" alt="Pandit Rudradev Logo" className="h-16 w-auto" />
+            <img src="/images/PR Logo2.png" alt="Pandit Rudradev Logo" className="h-20 w-auto" />
           </Link>
           <p className="text-[var(--foreground)] text-sm leading-relaxed mb-6 opacity-90">
             Guiding you through life's cosmic journey with authentic astrology and psychic readings in Canada.

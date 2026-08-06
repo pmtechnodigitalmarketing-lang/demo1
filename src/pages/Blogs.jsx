@@ -99,7 +99,7 @@ const BLOG_POSTS = [
     author: 'Pandit Rudradev',
     date: 'Aug 03, 2024',
     readTime: '7 min read',
-    image: '/images/Como%20Alinhar%20os%20Chakras_%20Um%20Guia%20Completo%20para%20Equilibrar%20Sua%20Energia%20Interior.jpg',
+    image: '/images/Como Alinhar os Chakras_ Um Guia Completo para Equilibrar Sua Energia Interior.webp',
   },
   {
     id: 10,

@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <img src="/images/Pandit Rudradev - Logo.webp" alt="Pandit Rudradev Logo" className="h-16 w-auto group-hover:scale-105 transition-transform duration-300" />
+          <img src="/images/PR Logo2.png" alt="Pandit Rudradev Logo" className="h-20 w-auto -mt-2 group-hover:scale-105 transition-transform duration-300" />
         </Link>
 
         {/* Desktop Nav */}
