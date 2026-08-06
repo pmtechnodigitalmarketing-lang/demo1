@@ -95,7 +95,7 @@ const Navbar = () => {
                 className={`flex flex-col items-center justify-center p-4 rounded-2xl border transition-all duration-300 ${
                   location.pathname === link.path 
                     ? 'bg-[var(--color-mystic-accent)]/10 border-[var(--color-mystic-accent)]/30 text-[var(--color-mystic-accent)] shadow-[0_0_15px_rgba(212,175,55,0.1)]' 
-                    : 'bg-[#09090b]/50 border-[var(--color-mystic-accent)]/5 text-[var(--foreground)] hover:bg-[#18181b]/80'
+                    : 'bg-black/5 border-[var(--color-mystic-accent)]/10 text-[var(--foreground)] hover:bg-black/10'
                 }`}
               >
                 <span className="text-xs font-semibold uppercase tracking-widest mt-1">{link.name}</span>
@@ -106,7 +106,7 @@ const Navbar = () => {
             <div className="col-span-2 flex justify-center gap-6 mt-4 mb-2">
               <motion.a 
                 href="tel:+1234567890" 
-                className="w-14 h-14 rounded-full bg-[#09090b] border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(212,175,55,0.15)] relative"
+                className="w-14 h-14 rounded-full bg-black/5 border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(212,175,55,0.15)] relative"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
               >
@@ -117,7 +117,7 @@ const Navbar = () => {
               <motion.a 
                 href="https://wa.me/1234567890" 
                 target="_blank" rel="noopener noreferrer"
-                className="w-14 h-14 rounded-full bg-[#09090b] border border-[var(--color-mystic-emerald)]/40 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(15,90,62,0.15)] relative"
+                className="w-14 h-14 rounded-full bg-black/5 border border-[var(--color-mystic-emerald)]/40 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(15,90,62,0.15)] relative"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.3 }}
               >
@@ -128,7 +128,7 @@ const Navbar = () => {
               <motion.a 
                 href="/locations" 
                 onClick={() => setIsOpen(false)}
-                className="w-14 h-14 rounded-full bg-[#09090b] border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] shadow-[0_0_15px_rgba(212,175,55,0.15)] relative"
+                className="w-14 h-14 rounded-full bg-black/5 border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] shadow-[0_0_15px_rgba(212,175,55,0.15)] relative"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: 0.6 }}
               >
@@ -139,7 +139,7 @@ const Navbar = () => {
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="col-span-2 flex items-center justify-center p-4 mt-2 rounded-2xl bg-[var(--color-mystic-emerald)] text-[var(--foreground)] font-bold uppercase tracking-widest text-sm hover:scale-[1.02] transition-transform shadow-[0_0_20px_rgba(15,90,62,0.3)]"
+              className="col-span-2 flex items-center justify-center p-4 mt-2 rounded-2xl bg-[var(--color-mystic-emerald)] text-white font-bold uppercase tracking-widest text-sm hover:scale-[1.02] transition-transform shadow-[0_0_20px_rgba(15,90,62,0.3)]"
             >
               Book Reading
             </Link>

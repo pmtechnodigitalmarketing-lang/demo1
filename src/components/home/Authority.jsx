@@ -4,7 +4,7 @@ import { Award, Lock, Users, Send } from 'lucide-react';
 
 const Authority = () => {
   return (
-    <section className="pt-16 pb-8 lg:pt-24 lg:pb-8 px-6 md:px-12 relative z-10">
+    <section className="pt-4 md:pt-16 pb-8 lg:pt-24 lg:pb-8 px-6 md:px-12 relative z-10">
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           

@@ -36,7 +36,7 @@ const Process = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} className="pt-12 pb-24 lg:pt-16 lg:pb-40 px-6 md:px-12 relative bg-[var(--background)] overflow-hidden">
+    <section ref={containerRef} className="pt-12 pb-6 md:pb-24 lg:pt-16 lg:pb-40 px-6 md:px-12 relative bg-[var(--background)] overflow-hidden">
       
       {/* Background Ambience */}
       <div className="absolute inset-0 z-0 opacity-20">

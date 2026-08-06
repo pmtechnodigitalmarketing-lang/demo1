@@ -199,7 +199,7 @@ const About = () => {
       </section>
 
       {/* 3. The Methodology (New Section) */}
-      <section className="pt-8 pb-24 px-6 md:px-12 lg:px-24 lg:pt-12 relative z-10">
+      <section className="pt-8 pb-12 md:pb-24 px-6 md:px-12 lg:px-24 lg:pt-12 relative z-10">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">Our <span className="text-[var(--color-mystic-accent)]">Methodology</span></h2>
@@ -241,7 +241,7 @@ const About = () => {
       </section>
 
       {/* 5. Seamless Testimonials */}
-      <section className="pt-0 pb-24 lg:pt-0 bg-gradient-to-b from-transparent to-[var(--color-mystic-secondary)]/50 px-6">
+      <section className="pt-0 pb-6 md:pb-24 lg:pt-0 bg-gradient-to-b from-transparent to-[var(--color-mystic-secondary)]/50 px-6">
         <div className="container mx-auto max-w-5xl text-center">
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-16">Words of <span className="text-[var(--color-mystic-accent)]">Transformation</span></h2>
 
@@ -276,7 +276,7 @@ const About = () => {
       </section>
 
       {/* 6. Dramatic Final CTA */}
-      <section className="pt-12 pb-32 lg:pt-16 lg:pb-32 px-6 relative overflow-hidden flex items-center justify-center">
+      <section className="pt-6 md:pt-12 pb-12 md:pb-32 lg:pt-16 lg:pb-32 px-6 relative overflow-hidden flex items-center justify-center">
         {/* Deep Glow Background */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-mystic-accent)]/20 via-[var(--background)] to-[var(--background)]"></div>
 
