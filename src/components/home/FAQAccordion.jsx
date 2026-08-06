@@ -33,7 +33,7 @@ const FAQAccordion = () => {
   };
 
   return (
-    <section className="pt-8 pb-12 lg:pb-24 px-6 relative z-10">
+    <section className="pt-8 pb-8 lg:pb-12 px-6 relative z-10">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Frequently Asked <span className="text-[var(--color-aurora-green)]">Questions</span></h2>

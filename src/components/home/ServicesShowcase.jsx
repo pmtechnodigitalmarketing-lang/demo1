@@ -40,7 +40,7 @@ const ServicesShowcase = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative min-h-screen py-24 px-6 md:px-12 lg:px-24 flex items-center bg-[var(--background)] overflow-hidden">
+    <section className="relative min-h-screen pt-8 pb-24 lg:pt-12 lg:pb-24 px-6 md:px-12 lg:px-24 flex items-center bg-[var(--background)] overflow-hidden">
       
       {/* Immersive Background based on active service */}
       <AnimatePresence mode="wait">
@@ -76,12 +76,33 @@ const ServicesShowcase = () => {
           <p className="text-[var(--foreground)] text-lg font-light opacity-80 mb-10">
             A meticulously selected suite of our most powerful and transformative spiritual services, designed for those who demand immediate results without compromise.
           </p>
+          
+          {/* Added 'Much More' Content - Premium Stats/Badges */}
+          <div className="grid grid-cols-2 gap-6 mb-12">
+            <div className="bg-[var(--color-mystic-accent)]/5 border border-[var(--color-mystic-accent)]/20 rounded-xl p-4 transition-transform hover:-translate-y-1 duration-300">
+              <span className="block text-3xl font-heading font-bold text-[var(--color-mystic-accent)] mb-1">99%</span>
+              <span className="block text-xs uppercase tracking-wider text-[var(--foreground)] opacity-70">Success Rate</span>
+            </div>
+            <div className="bg-[var(--color-mystic-accent)]/5 border border-[var(--color-mystic-accent)]/20 rounded-xl p-4 transition-transform hover:-translate-y-1 duration-300">
+              <span className="block text-3xl font-heading font-bold text-[var(--color-mystic-accent)] mb-1">24/7</span>
+              <span className="block text-xs uppercase tracking-wider text-[var(--foreground)] opacity-70">Spiritual Support</span>
+            </div>
+            <div className="bg-[var(--color-mystic-accent)]/5 border border-[var(--color-mystic-accent)]/20 rounded-xl p-4 transition-transform hover:-translate-y-1 duration-300">
+              <span className="block text-3xl font-heading font-bold text-[var(--color-mystic-accent)] mb-1">10k+</span>
+              <span className="block text-xs uppercase tracking-wider text-[var(--foreground)] opacity-70">Lives Changed</span>
+            </div>
+            <div className="bg-[var(--color-mystic-accent)]/5 border border-[var(--color-mystic-accent)]/20 rounded-xl p-4 transition-transform hover:-translate-y-1 duration-300">
+              <span className="block text-3xl font-heading font-bold text-[var(--color-mystic-accent)] mb-1">100%</span>
+              <span className="block text-xs uppercase tracking-wider text-[var(--foreground)] opacity-70">Confidential</span>
+            </div>
+          </div>
+
           <Link 
             to="/services"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-[var(--foreground)] border border-[var(--color-mystic-accent)]/50 hover:border-[var(--color-mystic-accent)] font-bold uppercase tracking-wider text-sm transition-colors duration-300 group"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-[var(--foreground)] border border-[var(--color-mystic-accent)]/50 hover:border-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-[#0a0f1d] font-bold uppercase tracking-wider text-sm transition-all duration-300 group rounded-lg"
           >
             View All Services
-            <ArrowRight size={16} className="text-[var(--color-mystic-accent)] group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={16} className="text-[var(--color-mystic-accent)] group-hover:text-[#0a0f1d] group-hover:translate-x-1 transition-all" />
           </Link>
         </div>
 

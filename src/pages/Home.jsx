@@ -40,7 +40,7 @@ const Home = () => {
       <CanadianLocations />
 
       {/* About CTA Section */}
-      <section className="py-24 lg:py-40 px-6 relative z-10 overflow-hidden bg-[var(--background)]">
+      <section className="pt-12 pb-24 lg:pt-16 lg:pb-32 px-6 relative z-10 overflow-hidden bg-[var(--background)]">
         {/* Background Massive Typography */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none opacity-5">
           <h2 className="text-[10rem] md:text-[20rem] font-black font-heading leading-none whitespace-nowrap">

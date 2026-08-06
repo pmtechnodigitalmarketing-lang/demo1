@@ -4,7 +4,7 @@ import { Sparkles, Phone, Mail, MapPin, Share2, MessageCircle, Globe } from 'luc
 
 const Footer = () => {
   return (
-    <footer className="glass border-t border-[var(--color-mystic-accent)]/20 mt-20 pt-16 pb-8 bg-[var(--background)]">
+    <footer className="glass border-t border-[var(--color-mystic-accent)]/20 mt-8 pt-10 pb-8 bg-[var(--background)]">
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-12">
         {/* Brand */}
         <div className="col-span-1 md:col-span-1">

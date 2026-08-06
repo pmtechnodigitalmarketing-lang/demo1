@@ -13,7 +13,7 @@ const locations = [
 
 const CanadianLocations = () => {
   return (
-    <section className="pt-8 pb-12 lg:pb-32 px-6 md:px-12 lg:px-24 relative z-10 overflow-hidden">
+    <section className="pt-8 pb-12 lg:pb-16 px-6 md:px-12 lg:px-24 relative z-10 overflow-hidden">
       {/* Background Accents */}
       <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(circle at 70% 30%, var(--color-aurora-purple) 0%, transparent 40%)' }}></div>

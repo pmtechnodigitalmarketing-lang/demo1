@@ -47,7 +47,7 @@ const SymptomItem = ({ item, index }) => {
     <motion.div 
       ref={ref}
       style={{ opacity, scale }}
-      className="min-h-[60vh] flex flex-col lg:flex-row items-center gap-12 lg:gap-24 py-20"
+      className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 py-6"
     >
       {/* Image Side */}
       <div className={`w-full lg:w-5/12 flex justify-center ${isEven ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}`}>
@@ -72,7 +72,7 @@ const SymptomItem = ({ item, index }) => {
       {/* Text Side */}
       <div className={`w-full lg:w-7/12 flex flex-col justify-center text-left ${isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
         {item.icon}
-        <h3 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-[var(--foreground)] mb-8 leading-tight tracking-tight text-glow">
+        <h3 className="text-3xl md:text-5xl lg:text-5xl font-heading font-bold text-[var(--foreground)] mb-6 leading-tight tracking-tight text-glow">
           {item.question}
         </h3>
         <p className="text-lg md:text-2xl text-[var(--foreground)] opacity-70 font-light leading-relaxed max-w-2xl">
@@ -85,7 +85,7 @@ const SymptomItem = ({ item, index }) => {
 
 const Symptoms = () => {
   return (
-    <section className="relative bg-[#050810] py-32 overflow-hidden">
+    <section className="relative bg-[#050810] pt-8 pb-8 overflow-hidden">
       
       {/* Dark Ambience */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -95,7 +95,7 @@ const Symptoms = () => {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
         {/* Intro Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -110,14 +110,14 @@ const Symptoms = () => {
         </div>
 
         {/* Symptoms scroll list */}
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-0">
           {symptoms.map((item, index) => (
             <SymptomItem key={index} index={index} item={item} />
           ))}
         </div>
 
         {/* Outro */}
-        <div className="text-center mt-24">
+        <div className="text-center mt-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
