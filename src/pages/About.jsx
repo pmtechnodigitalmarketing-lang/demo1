@@ -1,237 +1,319 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, Users, Clock, Shield, Phone, MessageCircle, Star, ArrowRight, ChevronDown } from 'lucide-react';
+import { 
+  Award, Users, Clock, Shield, Phone, MessageCircle, Star, 
+  ArrowRight, ChevronDown, Sparkles, Activity, Lock, Eye 
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
   const stats = [
-    { icon: <Clock />, value: "25+", label: "Years Experience" },
-    { icon: <Users />, value: "10k+", label: "Happy Clients" },
-    { icon: <Award />, value: "15+", label: "Global Awards" },
-    { icon: <Shield />, value: "100%", label: "Confidentiality" }
+    { value: "25+", label: "Years of Mastery" },
+    { value: "10k+", label: "Lives Transformed" },
+    { value: "15+", label: "Global Accolades" },
+    { value: "100%", label: "Absolute Privacy" }
+  ];
+
+  const processSteps = [
+    {
+      id: "01",
+      icon: <Eye size={32} />,
+      title: "Deep Energy Assessment",
+      desc: "We don't just look at surface-level symptoms. Using advanced Vedic astrology and aura reading, we map the exact cosmic blockages causing your distress."
+    },
+    {
+      id: "02",
+      icon: <Activity size={32} />,
+      title: "Targeted Interventions",
+      desc: "No generic advice. You receive precise, powerful rituals and remedies designed specifically to alter your planetary alignments and shift your reality."
+    },
+    {
+      id: "03",
+      icon: <Lock size={32} />,
+      title: "Continuous Protection",
+      desc: "Healing is just the beginning. We implement permanent energetic shields to ensure that negative forces, black magic, or toxic influences never return."
+    }
   ];
 
   const testimonials = [
     {
       name: "Isabella Martinez",
-      location: "Brampton, ON",
+      location: "Toronto, ON",
       image: "https://randomuser.me/api/portraits/women/33.jpg",
       text: "I was struggling with severe anxiety and career stagnation. Pandit Rudradev's aura cleansing completely shifted my energy. I got a promotion within two months!",
       rating: 5
     },
     {
       name: "Rajesh K.",
-      location: "Surrey, BC",
+      location: "Vancouver, BC",
       image: "https://randomuser.me/api/portraits/men/51.jpg",
       text: "The Voodoo removal rituals saved my family from continuous misfortune. We can finally sleep peacefully knowing we are spiritually protected.",
       rating: 5
-    },
-    {
-      name: "Emily Thompson",
-      location: "Victoria, BC",
-      image: "https://randomuser.me/api/portraits/women/12.jpg",
-      text: "His deep understanding of Vedic astrology is unmatched. The gemstone he recommended changed the trajectory of my business entirely.",
-      rating: 5
     }
   ];
-
-  const faqs = [
-    {
-      question: "What should I expect during my first consultation?",
-      answer: "During your first session, Pandit Rudradev will analyze your birth chart (Kundli) and discuss your current life situations. He will provide insights into your past, present, and future, along with actionable remedies."
-    },
-    {
-      question: "Are my sessions and details kept confidential?",
-      answer: "Absolutely. We maintain 100% strict confidentiality. Your personal information, readings, and discussions are kept completely private and secure."
-    },
-    {
-      question: "Can I do a consultation over phone or video call?",
-      answer: "Yes! We offer both in-person consultations in Canada and virtual consultations (Phone/WhatsApp Video/Zoom) for clients globally."
-    },
-    {
-      question: "How soon can I see results from the remedies?",
-      answer: "Results vary depending on the complexity of your situation and how diligently you follow the remedies. Many clients report positive shifts within a few weeks."
-    }
-  ];
-
-  const [openFaq, setOpenFaq] = useState(null);
 
   return (
-    <div className="w-full pt-20 pb-12 lg:pb-24 px-6 relative z-10">
-      <div className="container mx-auto max-w-6xl">
-        
-        {/* Intro Section */}
-        <div className="flex flex-col lg:flex-row gap-8 md:gap-16 items-center mb-12 lg:mb-24">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 w-full"
-          >
-            <div className="aspect-[4/5] rounded-3xl glass p-2 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-aurora-green)]/20 to-transparent mix-blend-overlay z-10"></div>
-              <div className="w-full h-full rounded-2xl overflow-hidden relative">
-                <img loading="lazy" src="/images/632474341480103293.webp" alt="Pandit Rudradev" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-1"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              The Journey of <span className="text-[var(--color-aurora-purple)]">Pandit Rudradev</span>
-            </h1>
-            <h3 className="text-xl text-[var(--color-aurora-green)] mb-6 font-semibold tracking-wide">
-              Vedic Astrologer & Spiritual Healer in Canada
-            </h3>
-            
-            <div className="space-y-6 text-[var(--foreground)] text-lg leading-relaxed font-light mb-8">
-              <p>
-                Hailing from a long lineage of traditional Vedic astrologers, Pandit Rudradev has dedicated his life to deciphering the cosmic code. His deep understanding of planetary movements and their impact on human lives has made him a trusted advisor to thousands.
-              </p>
-              <p>
-                Based in Canada, he combines ancient Eastern wisdom with a modern understanding of the challenges faced in today's fast-paced world. Whether it's complex relationship dynamics, career stagnation, or unexplained spiritual blockages, Pandit Rudradev's remedies are highly effective and personalized.
-              </p>
-              <p>
-                His compassionate approach ensures that every client leaves with clarity, hope, and a practical roadmap to overcome their obstacles.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <a aria-label="Navigation Link" href="tel:+1234567890" className="flex items-center gap-2 bg-[var(--color-aurora-purple)] hover:bg-[var(--color-aurora-purple)]/80 text-[var(--foreground)] px-6 py-3 rounded-full font-medium transition-all shadow-[0_0_15px_rgba(99, 102, 241, 0.4)]">
-                <Phone size={20} />
-                Call Now
-              </a>
-              <a aria-label="Navigation Link" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[var(--color-brand-green)] hover:bg-[var(--color-brand-green)] text-[var(--foreground)] px-6 py-3 rounded-full font-medium transition-all shadow-[0_0_15px_rgba(99, 102, 241, 0.4)]">
-                <MessageCircle size={20} />
-                WhatsApp
-              </a>
-            </div>
-          </motion.div>
+    <div className="w-full bg-[var(--background)] min-h-screen">
+      
+      {/* 1. Immersive Hero Section */}
+      <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image with Gradient Mask */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/632474341480103293.webp" 
+            alt="Pandit Rudradev" 
+            className="w-full h-full object-cover object-top opacity-30 mix-blend-luminosity scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--background)] via-transparent to-[var(--background)]"></div>
         </div>
 
-        {/* Stats Section */}
+        {/* Floating Particles */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+          className="absolute top-1/4 right-1/4 text-[var(--color-mystic-accent)] opacity-20 pointer-events-none"
         >
-          {stats.map((stat, index) => (
-            <div key={index} className="glass-card p-8 rounded-3xl text-center hover:-translate-y-2 transition-transform duration-300">
-              <div className="inline-flex p-4 rounded-full bg-[var(--color-brand-yellow)]/10 text-[var(--color-aurora-green)] mb-4">
-                {stat.icon}
-              </div>
-              <h4 className="text-4xl font-bold mb-2 text-[var(--foreground)]">{stat.value}</h4>
-              <p className="text-[var(--foreground)] font-medium uppercase tracking-wider text-sm">{stat.label}</p>
-            </div>
-          ))}
+          <Sparkles size={120} />
         </motion.div>
 
-        {/* Testimonials Section */}
-        <div className="mt-16 lg:mt-32">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Stories of <span className="text-[var(--color-aurora-purple)]">Transformation</span></h2>
-            <p className="text-[var(--foreground)] max-w-2xl mx-auto">Real experiences from people who have found guidance, peace, and clarity through our sessions.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-            {testimonials.map((testimonial, index) => (
+        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="text-[var(--color-mystic-accent)] tracking-[0.3em] uppercase text-sm mb-6 font-semibold inline-flex items-center gap-4">
+              <span className="w-12 h-[1px] bg-[var(--color-mystic-accent)]"></span>
+              The Master Healer
+              <span className="w-12 h-[1px] bg-[var(--color-mystic-accent)]"></span>
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black font-heading leading-tight mb-8">
+              Pandit <br/> 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-mystic-accent)] to-amber-200">Rudradev</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-[var(--foreground)] opacity-80 font-light max-w-2xl mx-auto">
+              Deciphering the cosmic code for over 25 years. Guiding souls from darkness into profound clarity.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 2. The Journey - Sticky Editorial Layout */}
+      <section className="py-24 px-6 md:px-12 lg:px-24 relative z-10 border-t border-white/5">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+            
+            {/* Left: Sticky Title */}
+            <div className="w-full lg:w-1/3 lg:sticky lg:top-32 h-fit">
+              <h2 className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6">
+                The Path to <br/>
+                <span className="text-[var(--color-mystic-accent)]">Enlightenment</span>
+              </h2>
+              <p className="text-lg opacity-70 font-light leading-relaxed">
+                A life dedicated to the ancient sciences of the Vedas, translating celestial alignments into tangible human success.
+              </p>
+
+              {/* Dynamic Rotating Golden Seal */}
+              <div className="mt-16 hidden lg:flex items-center justify-start">
+                <div className="relative w-56 h-56 flex items-center justify-center">
+                  {/* Central Glow & Icon */}
+                  <div className="absolute inset-0 flex items-center justify-center z-10 text-[var(--color-mystic-accent)]">
+                    <div className="absolute w-20 h-20 bg-[var(--color-mystic-accent)]/10 rounded-full blur-xl"></div>
+                    <Star size={48} className="opacity-90" />
+                  </div>
+                  
+                  {/* Rotating Text SVG */}
+                  <motion.div 
+                    animate={{ rotate: 360 }}
+                    transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+                    className="absolute inset-0 w-full h-full text-[var(--color-mystic-accent)] opacity-70"
+                  >
+                    <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
+                      <path 
+                        id="circlePath" 
+                        d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" 
+                        fill="transparent" 
+                      />
+                      <text className="text-[10px] font-bold tracking-[0.2em] uppercase fill-current font-heading">
+                        <textPath href="#circlePath" startOffset="0%">
+                          • PANDIT RUDRADEV • SPIRITUAL HEALER 
+                        </textPath>
+                      </text>
+                    </svg>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Scrolling Biography */}
+            <div className="w-full lg:w-2/3 space-y-16">
               <motion.div 
-                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                className="text-xl md:text-2xl leading-relaxed font-light opacity-90 border-l-2 border-[var(--color-mystic-accent)] pl-8"
+              >
+                "Hailing from a long, unbroken lineage of traditional Vedic astrologers, Pandit Rudradev has spent decades mastering the subtle energies that dictate our reality."
+              </motion.div>
+
+              <div className="space-y-8 text-lg font-light opacity-80 leading-relaxed">
+                <p>
+                  Based in Canada, he serves as a bridge between ancient Eastern spiritual wisdom and the complex, fast-paced challenges of modern life. His approach is not about generic horoscopes; it is about surgical spiritual intervention.
+                </p>
+                <p>
+                  Whether you are facing inexplicable business failures, toxic relationship cycles, or the heavy burden of generational curses and black magic, Pandit Rudradev approaches each case with profound compassion and unmatched expertise.
+                </p>
+              </div>
+
+              {/* In-line Image / Visual Break */}
+              <div className="w-full aspect-[4/5] md:aspect-[4/3] rounded-3xl overflow-hidden relative group my-12 border border-[var(--color-mystic-accent)]/20 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-transparent opacity-80 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
+                <img 
+                  src="/images/load_shiva.jpg" 
+                  alt="Lord Shiva" 
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-1000"
+                />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. The Cosmic Impact (Stats) */}
+      <section className="py-24 relative overflow-hidden bg-[var(--color-mystic-secondary)]/30 border-y border-[var(--color-mystic-accent)]/10">
+        <div className="container mx-auto max-w-7xl px-6 md:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x-0 md:divide-x divide-[var(--color-mystic-accent)]/20">
+            {stats.map((stat, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="flex flex-col items-center justify-center px-4"
+              >
+                <div className="text-5xl md:text-6xl lg:text-7xl font-black font-heading text-[var(--color-mystic-accent)] mb-4 text-glow">
+                  {stat.value}
+                </div>
+                <div className="text-sm md:text-base uppercase tracking-[0.2em] opacity-80 font-semibold">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. The Methodology (New Section) */}
+      <section className="py-24 px-6 md:px-12 lg:px-24 relative z-10">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">Our <span className="text-[var(--color-mystic-accent)]">Methodology</span></h2>
+            <p className="text-lg opacity-70 font-light max-w-2xl mx-auto">
+              We do not rely on guesswork. Every intervention is backed by precise Vedic calculations and powerful energetic shielding.
+            </p>
+          </div>
+
+          <div className="space-y-12 relative">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute left-[3.5rem] top-10 bottom-10 w-[2px] bg-gradient-to-b from-[var(--color-mystic-accent)] via-[var(--color-mystic-accent)]/50 to-transparent"></div>
+
+            {processSteps.map((step, idx) => (
+              <motion.div 
+                key={step.id}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: idx * 0.2 }}
+                className="flex flex-col md:flex-row gap-8 md:gap-12 items-start relative z-10"
+              >
+                {/* Icon Circle */}
+                <div className="w-16 h-16 md:w-28 md:h-28 shrink-0 rounded-full bg-[var(--background)] border border-[var(--color-mystic-accent)] flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.15)] text-[var(--color-mystic-accent)]">
+                  {step.icon}
+                </div>
+                
+                {/* Content */}
+                <div className="pt-2 md:pt-6">
+                  <div className="text-[var(--color-mystic-accent)] font-heading font-bold text-xl mb-2">Phase {step.id}</div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{step.title}</h3>
+                  <p className="text-lg opacity-80 font-light leading-relaxed max-w-2xl">
+                    {step.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Seamless Testimonials */}
+      <section className="py-24 bg-gradient-to-b from-transparent to-[var(--color-mystic-secondary)]/50 px-6">
+        <div className="container mx-auto max-w-5xl text-center">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading mb-16">Words of <span className="text-[var(--color-mystic-accent)]">Transformation</span></h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {testimonials.map((test, idx) => (
+              <motion.div 
+                key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="glass p-8 rounded-3xl relative hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-between h-full"
+                className="bg-[var(--background)]/80 backdrop-blur-sm border border-white/5 p-10 rounded-[2rem] text-left hover:border-[var(--color-mystic-accent)]/30 transition-colors duration-500"
               >
-                <div>
-                  <div className="flex gap-1 mb-4 text-[var(--foreground)]">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={16} fill="currentColor" />
-                    ))}
-                  </div>
-                  <p className="text-[var(--foreground)] mb-6 italic leading-relaxed">"{testimonial.text}"</p>
+                <div className="flex gap-1 mb-6 text-[var(--color-mystic-accent)]">
+                  {[...Array(test.rating)].map((_, i) => (
+                    <Star key={i} size={16} fill="currentColor" />
+                  ))}
                 </div>
-                <div className="border-t border-[var(--color-brand-yellow)]/10 pt-6 mt-auto flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--color-aurora-purple)] shrink-0">
-                    <img loading="lazy" src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
-                  </div>
+                <p className="text-lg opacity-90 italic mb-8 font-light leading-relaxed">
+                  "{test.text}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <img src={test.image} alt={test.name} className="w-12 h-12 rounded-full border border-[var(--color-mystic-accent)]/50" />
                   <div>
-                    <h4 className="text-[var(--foreground)] font-semibold">{testimonial.name}</h4>
-                    <p className="text-sm text-[var(--color-aurora-green)]">{testimonial.location}</p>
+                    <h4 className="font-bold">{test.name}</h4>
+                    <span className="text-sm opacity-60 uppercase tracking-widest">{test.location}</span>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* FAQ Section */}
-        <div className="mt-16 lg:mt-32 max-w-4xl mx-auto">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked <span className="text-[var(--color-aurora-purple)]">Questions</span></h2>
-            <p className="text-[var(--foreground)]">Everything you need to know about consulting with Pandit Rudradev.</p>
-          </div>
-          
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div 
-                key={index} 
-                className={`glass rounded-2xl transition-all duration-300 overflow-hidden ${openFaq === index ? 'border border-[var(--color-aurora-purple)]/50' : 'border border-transparent'}`}
-              >
-                <button aria-label="Interactive Button" 
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-8 py-6 flex items-center justify-between text-left"
-                >
-                  <span className="text-lg font-semibold text-[var(--foreground)] pr-8">{faq.question}</span>
-                  <ChevronDown 
-                    className={`text-[var(--color-aurora-green)] transition-transform duration-300 shrink-0 ${openFaq === index ? 'rotate-180' : ''}`} 
-                    size={24} 
-                  />
-                </button>
-                <AnimatePresence>
-                  {openFaq === index && (
-                    <motion.div 
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="px-8 pb-6 text-[var(--foreground)] font-light"
-                    >
-                      {faq.answer}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
+      {/* 6. Dramatic Final CTA */}
+      <section className="py-32 px-6 relative overflow-hidden flex items-center justify-center">
+        {/* Deep Glow Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-mystic-accent)]/20 via-[var(--background)] to-[var(--background)]"></div>
+        
+        <div className="relative z-10 text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-black font-heading mb-8">
+            Your Future is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-mystic-accent)] to-amber-200">Not Fixed.</span>
+          </h2>
+          <p className="text-xl md:text-2xl font-light opacity-80 mb-12">
+            Take control of your destiny today. Book a private, confidential consultation and step into the light of clarity.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-mystic-accent)] text-[#0a0f1d] font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-300 rounded-full"
+            >
+              Book Consultation <ArrowRight size={18} />
+            </Link>
+            <a 
+              href="tel:+14165550198" 
+              className="inline-flex items-center gap-3 px-10 py-5 bg-transparent border border-[var(--color-mystic-accent)] text-[var(--color-mystic-accent)] font-bold uppercase tracking-widest text-sm hover:bg-[var(--color-mystic-accent)]/10 transition-colors duration-300 rounded-full"
+            >
+              <Phone size={18} /> Call Directly
+            </a>
           </div>
         </div>
+      </section>
 
-        {/* CTA Banner */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="mt-16 lg:mt-32 relative rounded-3xl overflow-hidden glass p-6 md:p-12 md:p-16 text-center"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-aurora-purple)]/20 to-[var(--color-aurora-green)]/20 mix-blend-overlay z-0"></div>
-          <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--foreground)]">Ready to Find Your Path?</h2>
-            <p className="text-lg md:text-xl text-[var(--foreground)] mb-10 font-light">
-              Don't let uncertainty hold you back. Book a private consultation with Pandit Rudradev and step into the light of clarity and purpose.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a aria-label="Navigation Link" href="tel:+1234567890" className="inline-flex items-center justify-center gap-2 bg-[var(--color-aurora-purple)] hover:bg-[var(--color-aurora-purple)]/80 text-[var(--foreground)] px-8 py-4 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(99, 102, 241, 0.4)] hover:shadow-[0_0_30px_rgba(99, 102, 241, 0.6)]">
-                Book Appointment <ArrowRight size={20} />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-
-      </div>
     </div>
   );
 };
