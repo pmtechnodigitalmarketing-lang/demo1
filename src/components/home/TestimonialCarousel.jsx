@@ -8,7 +8,7 @@ const testimonials = [
     location: "Toronto, ON", 
     image: "https://randomuser.me/api/portraits/women/44.jpg", 
     text: "Pandit Rudradev gave me clarity when I was completely lost. His psychic reading was eerily accurate. He saw things no one else could possibly know.",
-    color: "from-[#d4af37]/20 to-transparent"
+    color: "from-[var(--color-mystic-accent)]/20 to-transparent"
   },
   { 
     name: "David Chen", 
@@ -29,7 +29,7 @@ const testimonials = [
     location: "Calgary, AB", 
     image: "https://randomuser.me/api/portraits/men/46.jpg", 
     text: "Professional, confidential, and incredibly insightful. The horoscope reading predicted major life events that allowed me to prepare accordingly.",
-    color: "from-[#d4af37]/20 to-transparent"
+    color: "from-[var(--color-mystic-accent)]/20 to-transparent"
   }
 ];
 
@@ -47,7 +47,7 @@ const TestimonialCarousel = () => {
   const prev = () => setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center bg-[#0a0f1d] overflow-hidden py-8 md:py-24">
+    <section className="relative min-h-[80vh] flex items-center justify-center bg-[var(--background)] overflow-hidden py-8 md:py-24">
       
       {/* Dynamic Ambient Background */}
       <AnimatePresence mode="wait">
@@ -71,10 +71,10 @@ const TestimonialCarousel = () => {
           </div>
           
           <div className="flex gap-4">
-            <button aria-label="Previous Testimonial" onClick={prev} className="w-12 h-12 rounded-full border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-[#0a0f1d] transition-all duration-300">
+            <button aria-label="Previous Testimonial" onClick={prev} className="w-12 h-12 rounded-full border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-white transition-all duration-300">
               <ChevronLeft size={20} />
             </button>
-            <button aria-label="Next Testimonial" onClick={next} className="w-12 h-12 rounded-full border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-[#0a0f1d] transition-all duration-300">
+            <button aria-label="Next Testimonial" onClick={next} className="w-12 h-12 rounded-full border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-white transition-all duration-300">
               <ChevronRight size={20} />
             </button>
           </div>

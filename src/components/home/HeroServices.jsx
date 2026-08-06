@@ -8,7 +8,7 @@ const services = [
     id: '01',
     title: "Love Solutions",
     subtitle: "Immediate Cosmic Intervention",
-    color: "from-[var(--color-mystic-accent)] to-[#b08d24]",
+    color: "from-[var(--color-mystic-accent)] to-[var(--color-mystic-emerald)]",
     image: "/images/Pandit Rudradev - Bn4.webp",
     heroHeading: "Heal Your",
     heroHighlight: "Broken Heart",
@@ -28,7 +28,7 @@ const services = [
     id: '03',
     title: "Bring Ex Back",
     subtitle: "Restore Broken Bonds",
-    color: "from-[var(--color-mystic-secondary)] to-[#150D23]",
+    color: "from-[var(--color-mystic-secondary)] to-[var(--color-mystic-secondary)]",
     image: "/images/Pandit Rudradev - Bn2.webp",
     heroHeading: "Reunite With",
     heroHighlight: "Your Lost Love",
@@ -38,7 +38,7 @@ const services = [
     id: '04',
     title: "Black Magic",
     subtitle: "Ultimate Protection",
-    color: "from-[#4B5563] to-[var(--color-mystic-primary)]",
+    color: "from-[var(--foreground)] to-[var(--color-mystic-primary)]",
     image: "/images/Pandit Rudradev - Bn3.webp",
     heroHeading: "Destroy Dark",
     heroHighlight: "Energy Forces",
@@ -131,11 +131,11 @@ const HeroServices = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap items-center gap-4 md:gap-6 mt-4"
           >
-            <a aria-label="WhatsApp" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-mystic-emerald)]/10 text-[var(--color-mystic-emerald)] border border-[var(--color-mystic-emerald)]/30 hover:bg-[var(--color-mystic-emerald)] hover:text-white transition-all duration-300">
+            <a aria-label="WhatsApp" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-mystic-emerald)]/10 text-[var(--color-mystic-emerald)] border border-[var(--color-mystic-emerald)]/30 hover:bg-[var(--color-mystic-emerald)] hover:text-[var(--foreground)] transition-all duration-300">
               <MessageCircle size={24} />
             </a>
             
-            <a aria-label="Call" href="tel:+1234567890" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-mystic-accent)]/10 text-[var(--color-mystic-accent)] border border-[var(--color-mystic-accent)]/30 hover:bg-[var(--color-mystic-accent)] hover:text-[#0a0f1d] transition-all duration-300">
+            <a aria-label="Call" href="tel:+1234567890" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-mystic-accent)]/10 text-[var(--color-mystic-accent)] border border-[var(--color-mystic-accent)]/30 hover:bg-[var(--color-mystic-accent)] hover:text-white transition-all duration-300">
               <PhoneCall size={24} />
             </a>
 
@@ -199,11 +199,13 @@ const HeroServices = () => {
                 {/* Content */}
                 <div className="z-10">
                   <h3 className={`text-lg md:text-xl font-bold uppercase tracking-widest mb-1 transition-colors duration-500 ${
-                    isActive ? 'text-[var(--foreground)]' : 'text-[var(--foreground)]'
+                    isActive ? 'text-white' : 'text-[var(--foreground)]'
                   }`}>
                     {service.title}
                   </h3>
-                  <p className="text-xs md:text-sm text-[var(--color-mystic-accent)] opacity-80 tracking-wide">
+                  <p className={`text-xs md:text-sm tracking-wide transition-colors duration-500 ${
+                    isActive ? 'text-white/90' : 'text-[var(--color-mystic-accent)] opacity-80'
+                  }`}>
                     {service.subtitle}
                   </p>
                 </div>

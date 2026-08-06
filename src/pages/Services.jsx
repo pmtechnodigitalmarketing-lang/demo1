@@ -84,12 +84,12 @@ const FAQItem = ({ faq }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-white/10 bg-[#0a0f1d] rounded-2xl overflow-hidden transition-all duration-300 hover:border-[var(--color-mystic-accent)]/50">
+    <div className="border border-[var(--foreground)]/10 bg-[var(--background)] rounded-2xl overflow-hidden transition-all duration-300 hover:border-[var(--color-mystic-accent)]/50">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-6 flex items-center justify-between text-left focus:outline-none"
       >
-        <h4 className={`text-lg font-bold font-heading transition-colors ${isOpen ? 'text-[var(--color-mystic-accent)]' : 'text-white'}`}>
+        <h4 className={`text-lg font-bold font-heading transition-colors ${isOpen ? 'text-[var(--color-mystic-accent)]' : 'text-[var(--foreground)]'}`}>
           {faq.q}
         </h4>
         <div className={`text-[var(--color-mystic-accent)] transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
@@ -127,7 +127,7 @@ const QuickContactForm = () => {
     return (
       <div className="w-full p-8 text-center">
         <Sparkles className="text-[var(--color-mystic-accent)] mx-auto mb-4" size={32} />
-        <h3 className="text-2xl font-bold font-heading mb-2 text-white">Request Sent</h3>
+        <h3 className="text-2xl font-bold font-heading mb-2 text-[var(--foreground)]">Request Sent</h3>
         <p className="text-[var(--foreground)] opacity-80">Pandit Rudradev's team will contact you shortly to confirm your consultation.</p>
       </div>
     );
@@ -146,7 +146,7 @@ const QuickContactForm = () => {
           required
           value={formData.name}
           onChange={(e) => setFormData({...formData, name: e.target.value})}
-          className="w-full bg-[#0a0f1d] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors"
+          className="w-full bg-[var(--background)] border border-[var(--foreground)]/10 rounded-lg px-4 py-3 text-[var(--foreground)] placeholder-[var(--foreground)]/40 focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors"
         />
         <input 
           type="tel" 
@@ -154,12 +154,12 @@ const QuickContactForm = () => {
           required
           value={formData.phone}
           onChange={(e) => setFormData({...formData, phone: e.target.value})}
-          className="w-full bg-[#0a0f1d] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors"
+          className="w-full bg-[var(--background)] border border-[var(--foreground)]/10 rounded-lg px-4 py-3 text-[var(--foreground)] placeholder-[var(--foreground)]/40 focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors"
         />
         <select 
           value={formData.service}
           onChange={(e) => setFormData({...formData, service: e.target.value})}
-          className="w-full bg-[#0a0f1d] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors"
+          className="w-full bg-[var(--background)] border border-[var(--foreground)]/10 rounded-lg px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors"
         >
           <option value="General Inquiry">General Consultation</option>
           <option value="Love & Relationships">Love & Relationships</option>
@@ -168,7 +168,7 @@ const QuickContactForm = () => {
         </select>
         <button 
           type="submit" 
-          className="w-full bg-[var(--color-mystic-accent)] text-[#0a0f1d] font-bold uppercase tracking-widest text-sm py-4 rounded-lg hover:bg-amber-400 transition-colors mt-2"
+          className="w-full bg-[var(--color-mystic-accent)] text-white font-bold uppercase tracking-widest text-sm py-4 rounded-lg hover:bg-amber-400 transition-colors mt-2"
         >
           Request Appointment
         </button>
@@ -238,15 +238,15 @@ const Services = () => {
           {/* Filter Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-20">
             {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 border ${
-                  activeCategory === cat.id 
-                    ? 'bg-[var(--color-mystic-accent)] text-[#0a0f1d] border-[var(--color-mystic-accent)] shadow-[0_0_20px_rgba(212,175,55,0.4)]' 
-                    : 'bg-transparent text-[var(--foreground)] border-white/10 hover:border-[var(--color-mystic-accent)]/50 hover:bg-white/5'
-                }`}
-              >
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 border ${
+                      activeCategory === cat.id 
+                        ? 'bg-[var(--color-mystic-accent)] text-white border-[var(--color-mystic-accent)] shadow-[0_0_20px_rgba(212,175,55,0.4)]' 
+                        : 'bg-transparent text-[var(--foreground)] border-[var(--foreground)]/10 hover:border-[var(--color-mystic-accent)]/50 hover:bg-[var(--foreground)]/5'
+                    }`}
+                  >
                 {cat.icon}
                 {cat.label}
               </button>
@@ -269,13 +269,12 @@ const Services = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                   {/* Featured Large Card */}
                   <Link to={`/services/${signatureServices[0].id}`} className="group lg:col-span-2 relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden border border-[var(--color-mystic-accent)]/20 shadow-2xl block">
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1d] via-[#0a0f1d]/40 to-transparent z-10 transition-opacity duration-500"></div>
                     <img src={signatureServices[0].image} alt={signatureServices[0].title} className="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-1000" />
                     
-                    <div className="absolute bottom-0 left-0 p-8 md:p-12 z-20 w-full">
-                      <div className="text-[var(--color-mystic-accent)] uppercase tracking-widest text-xs font-bold mb-4">Most Requested</div>
-                      <h3 className="text-4xl md:text-5xl font-black font-heading mb-4 text-white group-hover:text-[var(--color-mystic-accent)] transition-colors">{signatureServices[0].title}</h3>
-                      <p className="text-lg opacity-80 max-w-2xl text-gray-200 line-clamp-2 mb-6">{signatureServices[0].desc}</p>
+                    <div className="absolute bottom-4 left-4 right-4 p-6 md:p-8 z-20 bg-[var(--background)]/90 backdrop-blur-md rounded-2xl">
+                      <div className="text-[var(--color-mystic-accent)] uppercase tracking-widest text-xs font-bold mb-2">Most Requested</div>
+                      <h3 className="text-3xl md:text-4xl font-black font-heading mb-2 text-[var(--foreground)] group-hover:text-[var(--color-mystic-accent)] transition-colors">{signatureServices[0].title}</h3>
+                      <p className="text-base opacity-80 max-w-2xl text-[var(--foreground)] line-clamp-2 mb-4">{signatureServices[0].desc}</p>
                       <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-mystic-accent)]">
                         View Details <ArrowUpRight size={18} />
                       </div>
@@ -286,11 +285,10 @@ const Services = () => {
                   <div className="flex flex-col gap-6">
                     {signatureServices.slice(1).map((service, idx) => (
                       <Link key={idx} to={`/services/${service.id}`} className="group relative flex-1 min-h-[200px] lg:min-h-0 rounded-3xl overflow-hidden border border-[var(--color-mystic-accent)]/20 shadow-xl block">
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1d] via-[#0a0f1d]/40 to-transparent z-10 transition-opacity duration-500"></div>
                         <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-1000" />
                         
-                        <div className="absolute bottom-0 left-0 p-6 z-20 w-full">
-                          <h3 className="text-2xl font-bold font-heading mb-2 text-white group-hover:text-[var(--color-mystic-accent)] transition-colors">{service.title}</h3>
+                        <div className="absolute bottom-3 left-3 right-3 p-4 z-20 bg-[var(--background)]/90 backdrop-blur-md rounded-xl">
+                          <h3 className="text-xl font-bold font-heading mb-1 text-[var(--foreground)] group-hover:text-[var(--color-mystic-accent)] transition-colors">{service.title}</h3>
                           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-mystic-accent)]">
                             Explore <ArrowUpRight size={14} />
                           </div>
@@ -307,9 +305,9 @@ const Services = () => {
           <div>
              {activeCategory === 'all' && (
                 <div className="flex items-center gap-4 mb-12">
-                  <div className="h-[1px] flex-grow bg-white/10"></div>
+                  <div className="h-[1px] flex-grow bg-[var(--foreground)]/10"></div>
                   <h2 className="text-2xl font-bold font-heading text-gray-400">Specialized Directory</h2>
-                  <div className="h-[1px] flex-grow bg-white/10"></div>
+                  <div className="h-[1px] flex-grow bg-[var(--foreground)]/10"></div>
                 </div>
              )}
              
@@ -333,16 +331,15 @@ const Services = () => {
                     >
                       {/* Image header */}
                       <div className="h-48 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-mystic-primary)] to-transparent z-10"></div>
                         <img loading="lazy" src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                       </div>
                       
                       {/* Content */}
                       <div className="p-6 md:p-8 flex flex-col relative z-20 -mt-12">
-                        <div className="w-12 h-12 rounded-full bg-[#0a0f1d] border border-[var(--color-mystic-accent)]/30 flex items-center justify-center mb-6 text-[var(--color-mystic-accent)] group-hover:bg-[var(--color-mystic-accent)] group-hover:text-[#0a0f1d] transition-colors duration-300">
+                        <div className="w-12 h-12 rounded-full bg-[var(--background)] border border-[var(--color-mystic-accent)]/30 flex items-center justify-center mb-6 text-[var(--color-mystic-accent)] group-hover:bg-[var(--color-mystic-accent)] group-hover:text-white transition-colors duration-300">
                           {serviceIconMap[service.id] || <Sparkles size={20} />}
                         </div>
-                        <h3 className="text-xl font-bold font-heading mb-3 text-white group-hover:text-[var(--color-mystic-accent)] transition-colors">{service.title}</h3>
+                        <h3 className="text-xl font-bold font-heading mb-3 text-[var(--foreground)] group-hover:text-[var(--color-mystic-accent)] transition-colors">{service.title}</h3>
                         <p className="text-sm opacity-60 leading-relaxed mb-6 line-clamp-3">{service.desc}</p>
                         
                         <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-mystic-accent)] opacity-80 group-hover:opacity-100">
@@ -360,7 +357,7 @@ const Services = () => {
       </section>
 
       {/* 3. FAQ Section */}
-      <section className="pt-8 pb-8 md:pb-24 lg:pt-12 relative overflow-hidden flex items-center justify-center border-y border-white/5 bg-[var(--background)]">
+      <section className="pt-8 pb-8 md:pb-24 lg:pt-12 relative overflow-hidden flex items-center justify-center border-y border-[var(--foreground)]/5 bg-[var(--background)]">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-mystic-accent)]/5 via-transparent to-transparent"></div>
         
         <div className="relative z-10 w-full max-w-4xl mx-auto px-6">
@@ -394,7 +391,7 @@ const Services = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-mystic-accent)] text-[#0a0f1d] font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-300 rounded-full"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-mystic-accent)] text-white font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-300 rounded-full"
               >
                 Book Consultation <ArrowRight size={18} />
               </Link>
@@ -407,7 +404,7 @@ const Services = () => {
             </div>
           </div>
           
-          <div className="bg-[#0a0f1d]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm shadow-2xl">
+          <div className="bg-[var(--background)]/50 p-8 rounded-3xl border border-[var(--foreground)]/5 backdrop-blur-sm shadow-2xl">
              <QuickContactForm />
           </div>
         </div>

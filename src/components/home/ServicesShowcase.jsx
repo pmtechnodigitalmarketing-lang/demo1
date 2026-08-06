@@ -42,26 +42,6 @@ const ServicesShowcase = () => {
   return (
     <section className="relative min-h-screen pt-8 pb-8 md:pb-24 lg:pt-12 lg:pb-24 px-6 md:px-12 lg:px-24 flex items-center bg-[var(--background)] overflow-hidden">
       
-      {/* Immersive Background based on active service */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={services[active].id}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="absolute inset-0 z-0"
-        >
-          <img 
-            src={services[active].image} 
-            alt={services[active].title}
-            className="w-full h-full object-cover opacity-20 grayscale hover:grayscale-0 transition-all duration-1000"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--background)] via-[var(--background)]/90 to-[var(--background)]/40"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-transparent"></div>
-        </motion.div>
-      </AnimatePresence>
-
       <div className="container mx-auto max-w-7xl relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-24">
         
         {/* Left: Sticky Header */}
@@ -99,10 +79,10 @@ const ServicesShowcase = () => {
 
           <Link 
             to="/services"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-[var(--foreground)] border border-[var(--color-mystic-accent)]/50 hover:border-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-[#0a0f1d] font-bold uppercase tracking-wider text-sm transition-all duration-300 group rounded-lg"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-[var(--foreground)] border border-[var(--color-mystic-accent)]/50 hover:border-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-white font-bold uppercase tracking-wider text-sm transition-all duration-300 group rounded-lg"
           >
             View All Services
-            <ArrowRight size={16} className="text-[var(--color-mystic-accent)] group-hover:text-[#0a0f1d] group-hover:translate-x-1 transition-all" />
+            <ArrowRight size={16} className="text-[var(--color-mystic-accent)] group-hover:text-white group-hover:translate-x-1 transition-all" />
           </Link>
         </div>
 

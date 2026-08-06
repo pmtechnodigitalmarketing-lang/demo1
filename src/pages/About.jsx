@@ -64,7 +64,7 @@ const About = () => {
           <img
             src="/images/632474341480103293.webp"
             alt="Pandit Rudradev"
-            className="w-full h-full object-cover object-top opacity-30 mix-blend-luminosity scale-105"
+            className="w-full h-full object-cover object-top opacity-15 scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--background)] via-transparent to-[var(--background)]"></div>
@@ -93,7 +93,7 @@ const About = () => {
       </section>
 
       {/* 2. The Journey - Sticky Editorial Layout */}
-      <section className="pt-4 pb-24 px-6 md:px-12 lg:px-24 lg:pt-8 relative z-10 border-t border-white/5">
+      <section className="pt-4 pb-12 px-6 md:px-12 lg:px-24 lg:pt-8 relative z-10 border-t border-[var(--foreground)]/5">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-18 lg:gap-24">
 
@@ -161,7 +161,6 @@ const About = () => {
 
               {/* In-line Image / Visual Break */}
               <div className="w-full aspect-[4/5] md:aspect-[4/3] rounded-3xl overflow-hidden relative group mt-12 mb-0 md:my-12 border border-[var(--color-mystic-accent)]/20 shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-transparent opacity-80 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
                 <img
                   src="/images/load_shiva.jpg"
                   alt="Lord Shiva"
@@ -175,7 +174,7 @@ const About = () => {
       </section>
 
       {/* 4. The Cosmic Impact (Stats) */}
-      <section className="pt-0 pb-24 lg:pt-0 relative overflow-hidden bg-[var(--color-mystic-secondary)]/30 border-y border-[var(--color-mystic-accent)]/10">
+      <section className="py-6 relative overflow-hidden bg-[var(--color-mystic-secondary)]/30 border-y border-[var(--color-mystic-accent)]/10">
         <div className="container mx-auto max-w-7xl px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x-0 md:divide-x divide-[var(--color-mystic-accent)]/20">
             {stats.map((stat, idx) => (
@@ -253,7 +252,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-[var(--background)]/80 backdrop-blur-sm border border-white/5 p-0 rounded-[2rem] text-left hover:border-[var(--color-mystic-accent)]/30 transition-colors duration-500"
+                className="bg-[var(--background)]/80 backdrop-blur-sm border border-[var(--foreground)]/5 p-0 rounded-[2rem] text-left hover:border-[var(--color-mystic-accent)]/30 transition-colors duration-500"
               >
                 <div className="flex gap-1 mb-6 text-[var(--color-mystic-accent)]">
                   {[...Array(test.rating)].map((_, i) => (
@@ -291,7 +290,7 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-mystic-accent)] text-[#0a0f1d] font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-300 rounded-full"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-mystic-accent)] text-white font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-300 rounded-full"
             >
               Book Consultation <ArrowRight size={18} />
             </Link>

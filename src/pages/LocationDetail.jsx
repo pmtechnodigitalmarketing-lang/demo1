@@ -64,14 +64,14 @@ const allServices = servicesData;
 
 const LocationDetail = () => {
   const { cityId } = useParams();
-  
+
   // Parallax ref for hero section
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"]
   });
-  
+
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacityText = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
@@ -102,26 +102,26 @@ const LocationDetail = () => {
   return (
     <div className="w-full pt-20 pb-4 lg:pb-8 px-6 relative z-10 min-h-screen">
       <div className="container mx-auto max-w-7xl">
-        
+
         {/* Hero Section */}
         <div ref={heroRef} className="relative w-full h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden mb-10 md:mb-16 glass border border-[var(--color-brand-yellow)]/10 flex items-center justify-center group [perspective:1000px]">
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-aurora-purple)]/40 to-[var(--color-aurora-green)]/20 mix-blend-overlay z-10"></div>
-          
+
           {/* Parallax Background Image */}
-          <motion.div 
+          <motion.div
             className="absolute -inset-[20%] z-0 opacity-60 group-hover:scale-105 transition-transform duration-1000"
             style={{ y: yBg }}
           >
-            <img loading="lazy" 
-              src={cityImages[cityId?.toLowerCase()] || cityImages.default} 
+            <img loading="lazy"
+              src={cityImages[cityId?.toLowerCase()] || cityImages.default}
               alt={`${formattedCity} Landscape`}
               className="w-full h-full object-cover"
             />
           </motion.div>
 
           {/* Floating animated orbs */}
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               y: [0, -30, 0],
               x: [0, 20, 0],
               scale: [1, 1.2, 1]
@@ -129,8 +129,8 @@ const LocationDetail = () => {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-10 left-10 w-32 h-32 bg-[var(--color-aurora-purple)] rounded-full blur-[60px] opacity-30 z-0"
           />
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               y: [0, 40, 0],
               x: [0, -30, 0],
               scale: [1, 1.5, 1]
@@ -157,7 +157,7 @@ const LocationDetail = () => {
         </div>
 
         {/* 4 Line Description */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -165,75 +165,74 @@ const LocationDetail = () => {
         >
           <div className="absolute -top-10 -left-10 w-32 h-32 bg-[var(--color-aurora-purple)] opacity-10 rounded-full blur-[40px]"></div>
           <p className="text-xl md:text-2xl text-[var(--foreground)] leading-relaxed font-light relative z-10">
-            Pandit Rudradev proudly offers his world-renowned astrological and spiritual healing services to the residents of {formattedCity}. 
-            Whether you are facing severe relationship struggles, unprecedented financial losses, or unexplainable health issues, his profound Vedic insights can guide you toward lasting peace. 
-            All consultations in {formattedCity} are strictly confidential, highly accurate, and designed to provide immediate, powerful remedies. 
+            Pandit Rudradev proudly offers his world-renowned astrological and spiritual healing services to the residents of {formattedCity}.
+            Whether you are facing severe relationship struggles, unprecedented financial losses, or unexplainable health issues, his profound Vedic insights can guide you toward lasting peace.
+            All consultations in {formattedCity} are strictly confidential, highly accurate, and designed to provide immediate, powerful remedies.
             Don't let distance or despair hold you back; experience transformative spiritual clarity in {formattedCity} today.
           </p>
         </motion.div>
 
         {/* Services in this location */}
         <div className="mb-10 md:mb-16">
-           <motion.h2 
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             className="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 tracking-tight"
-           >
-             All Services Provided in <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-aurora-green)] to-[var(--color-aurora-purple)]">{formattedCity}</span>
-           </motion.h2>
-           
-           <motion.div 
-             variants={containerVariants}
-             initial="hidden"
-             whileInView="show"
-             viewport={{ once: true, margin: "-100px" }}
-             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 [perspective:1000px]"
-           >
-              {allServices.map((service, index) => (
-                <motion.div 
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ 
-                    y: -10, 
-                    rotateX: 5, 
-                    rotateY: -5,
-                    boxShadow: "0 20px 40px -20px rgba(99, 102, 241, 0.5)" 
-                  }}
-                  className="rounded-3xl shadow-lg relative h-full"
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 tracking-tight"
+          >
+            All Services Provided in <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-aurora-green)] to-[var(--color-aurora-purple)]">{formattedCity}</span>
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 [perspective:1000px]"
+          >
+            {allServices.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{
+                  y: -10,
+                  rotateX: 5,
+                  rotateY: -5,
+                  boxShadow: "0 20px 40px -20px rgba(99, 102, 241, 0.5)"
+                }}
+                className="rounded-3xl shadow-lg relative h-full"
+              >
+                <Link
+                  to={`/services/${service.id}`}
+                  className="group flex flex-col justify-end relative overflow-hidden min-h-[260px] md:min-h-[280px] p-6 md:p-8 rounded-3xl border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-green)]"
                 >
-                  <Link 
-                    to={`/services/${service.id}`}
-                    className="group block relative overflow-hidden p-6 md:p-8 rounded-3xl border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-green)]"
-                  >
-                    {/* Background Image */}
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-110"
-                      style={{ backgroundImage: `url("${service.image}")` }}
-                    ></div>
-                    
-                    {/* Dark Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30 z-0"></div>
-                    
-                    {/* Dynamic Color Overlay on Hover */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-0 mix-blend-overlay`}></div>
+                  {/* Background Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-110"
+                    style={{ backgroundImage: `url("${service.image}")` }}
+                  ></div>
 
-                    {/* Subtle shine effect on hover */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out pointer-events-none z-0"></div>
+                  {/* Dark Overlay - Only at the bottom so the image remains clear */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-0"></div>
+                  
+                  {/* Dynamic Color Overlay on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-0 mix-blend-overlay`}></div>
 
-                    <div className="relative z-10 flex flex-col h-full justify-end">
-                      <h3 className="text-2xl font-bold text-[var(--foreground)] mb-2 group-hover:text-[var(--color-aurora-green)] transition-colors drop-shadow-md">{service.title}</h3>
-                      <p className="text-[var(--foreground)] text-sm leading-relaxed mb-4 drop-shadow-md">{service.desc}</p>
-                      <div className="mt-auto pt-4 border-t border-[var(--color-brand-yellow)]/10 group-hover:border-[var(--color-brand-green)]">
-                        <span className="inline-flex items-center gap-2 text-sm text-[var(--color-aurora-green)] font-semibold group-hover:text-[var(--foreground)] transition-colors">
-                          View Details <ArrowRight size={16} />
-                        </span>
-                      </div>
+                  {/* Subtle shine effect on hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out pointer-events-none z-0"></div>
+
+                  <div className="relative z-10 flex flex-col h-full justify-end">
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[var(--color-aurora-green)] transition-colors drop-shadow-md">{service.title}</h3>
+                    <div className="pt-4 border-t border-[var(--color-brand-yellow)]/20 w-full group-hover:border-[var(--color-brand-green)]">
+                      <span className="inline-flex items-center gap-2 text-sm text-[var(--color-aurora-green)] font-semibold group-hover:text-white transition-colors">
+                        View Details <ArrowRight size={16} />
+                      </span>
                     </div>
-                  </Link>
-                </motion.div>
-              ))}
-           </motion.div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
         {/* Testimonials */}

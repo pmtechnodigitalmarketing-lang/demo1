@@ -50,7 +50,7 @@ const Authority = () => {
               </div>
 
               <div className="flex items-start gap-6 group">
-                <div className="shrink-0 w-16 h-16 bg-[var(--color-brand-yellow)]/5 rounded-2xl flex items-center justify-center border border-[var(--color-brand-yellow)]/10 text-[var(--color-aurora-purple)] group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 w-16 h-16 bg-[var(--color-brand-yellow)]/5 rounded-2xl flex items-center justify-center border border-[var(--color-brand-yellow)]/10 text-[var(--color-mystic-emerald)] group-hover:scale-110 transition-transform duration-300">
                   <Users size={32} />
                 </div>
                 <div>
@@ -66,7 +66,7 @@ const Authority = () => {
 
           {/* Right: Quick Contact Form */}
           <div className="w-full lg:w-5/12 relative">
-            <div className="sticky top-24 bg-gradient-to-b from-[var(--color-mystic-secondary)]/40 to-[#0a0f1d]/80 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] border border-[var(--color-mystic-accent)]/20 shadow-[0_0_50px_rgba(212,175,55,0.05)]">
+            <div className="sticky top-24 bg-gradient-to-b from-[var(--color-mystic-secondary)]/40 to-[var(--background)]/80 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] border border-[var(--color-mystic-accent)]/20 shadow-[0_0_50px_rgba(212,175,55,0.05)]">
               
               <div className="absolute top-0 right-0 w-40 h-40 bg-[var(--color-mystic-accent)]/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -86,7 +86,7 @@ const Authority = () => {
                     type="text" 
                     id="auth-name"
                     placeholder="Your Name" 
-                    className="w-full bg-[#050810]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors placeholder:text-[var(--foreground)]/30 font-light"
+                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors placeholder:text-[var(--foreground)]/30 font-light"
                     required
                   />
                 </div>
@@ -97,7 +97,7 @@ const Authority = () => {
                     type="tel" 
                     id="auth-phone"
                     placeholder="Phone Number (for WhatsApp/Call)" 
-                    className="w-full bg-[#050810]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors placeholder:text-[var(--foreground)]/30 font-light"
+                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors placeholder:text-[var(--foreground)]/30 font-light"
                     required
                   />
                 </div>
@@ -106,7 +106,7 @@ const Authority = () => {
                   <label htmlFor="auth-problem" className="sr-only">Select your problem</label>
                   <select 
                     id="auth-problem"
-                    className="w-full bg-[#050810]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors font-light appearance-none"
+                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors font-light appearance-none"
                     required
                   >
                     <option value="" disabled selected>Select Your Problem...</option>
@@ -120,7 +120,7 @@ const Authority = () => {
 
                 <button 
                   type="submit" 
-                  className="mt-2 w-full group relative flex items-center justify-center gap-3 bg-[var(--color-mystic-accent)] text-[#0a0f1d] px-8 py-4 rounded-xl font-bold uppercase tracking-widest overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                  className="mt-2 w-full group relative flex items-center justify-center gap-3 bg-[var(--color-mystic-accent)] text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
                 >
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                   <span className="relative z-10">Send Request</span>

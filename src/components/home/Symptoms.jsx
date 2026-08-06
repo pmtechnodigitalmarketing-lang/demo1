@@ -52,14 +52,13 @@ const SymptomItem = ({ item, index }) => {
       {/* Image Side */}
       <div className={`w-full lg:w-5/12 flex justify-center ${isEven ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}`}>
         {item.image ? (
-          <div className="relative aspect-square w-full max-w-[380px] lg:max-w-[460px] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.05)] border border-[var(--color-mystic-accent)]/20">
+          <div className="relative h-64 lg:h-80 w-full max-w-[460px] rounded-2xl overflow-hidden shadow-xl group border border-[var(--color-mystic-accent)]/20">
             <img 
               src={item.image} 
               alt={item.question} 
-              className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050810] via-[#050810]/40 to-transparent pointer-events-none"></div>
-            <div className="absolute inset-0 bg-[var(--color-mystic-accent)]/10 mix-blend-overlay pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)]/20 to-transparent pointer-events-none"></div>
           </div>
         ) : (
           <div className="relative aspect-square w-full max-w-[380px] lg:max-w-[460px] rounded-2xl border border-[var(--color-mystic-accent)]/20 border-dashed flex flex-col items-center justify-center text-[var(--color-mystic-accent)]/40 bg-[var(--color-mystic-accent)]/5">
@@ -85,11 +84,11 @@ const SymptomItem = ({ item, index }) => {
 
 const Symptoms = () => {
   return (
-    <section className="relative bg-[#050810] pt-8 pb-8 overflow-hidden">
+    <section className="relative bg-[var(--background)] pt-8 pb-8 overflow-hidden">
       
       {/* Dark Ambience */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-mystic-secondary)]/20 via-[#050810] to-[#050810]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-mystic-secondary)]/20 via-[var(--background)] to-[var(--background)]"></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">

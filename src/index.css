@@ -2,15 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-mystic-primary: #0A0F1D; /* Deep Midnight Blue */
-  --color-mystic-secondary: #1F1433; /* Dark Cosmic Purple */
-  --color-mystic-accent: #D4AF37; /* Soft Gold */
-  --color-mystic-emerald: #0F5A3E; /* Deep Emerald */
-  --color-mystic-glow: rgba(212, 175, 55, 0.4); /* Gold Glow */
+  --color-mystic-primary: #FFF0F5; /* Lavender Blush */
+  --color-mystic-secondary: #FFE4E1; /* Misty Rose */
+  --color-mystic-accent: #E11D48; /* Vibrant Red */
+  --color-mystic-emerald: #FF1493; /* Deep Pink */
+  --color-mystic-glow: rgba(225, 29, 72, 0.4); /* Red Glow */
   
-  --color-aurora-green: #D4AF37; /* Re-mapped to Gold for Aurora */
-  --color-aurora-purple: #1F1433; /* Dark Purple */
-  --color-aurora-blue: #0F5A3E; /* Emerald */
+  --color-aurora-green: #E11D48; /* Re-mapped to Red for Aurora */
+  --color-aurora-purple: #FFE4E1; /* Light Pink */
+  --color-aurora-blue: #FF1493; /* Deep Pink */
   
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
@@ -18,8 +18,8 @@
 
 @layer base {
   :root {
-    --background: #0A0F1D; /* Midnight Blue */
-    --foreground: #F8F9FA; /* Off-White */
+    --background: #FFFFFF; /* White */
+    --foreground: #1A1A1A; /* Dark Grey */
   }
   body {
     background-color: var(--background);
@@ -37,16 +37,17 @@
 
 @layer utilities {
   .glass {
-    background: rgba(10, 15, 29, 0.4); 
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.15); /* Soft Gold Border */
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(225, 29, 72, 0.1);
   }
   
   .glass-card {
-    background: linear-gradient(135deg, rgba(31, 20, 51, 0.6) 0%, rgba(10, 15, 29, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(255, 240, 245, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(212, 175, 55, 0.2); /* Soft Gold Border */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(225, 29, 72, 0.2); /* Soft Red Border */
+    box-shadow: 0 8px 32px rgba(225, 29, 72, 0.1);
   }
 
   .text-glow {

@@ -8,10 +8,10 @@ const ServiceDetail = () => {
   const { serviceId } = useParams();
   const navigate = useNavigate();
   const [activeFaq, setActiveFaq] = useState(null);
-  
+
   const serviceIndex = servicesData.findIndex(s => s.id === serviceId);
   const service = serviceIndex !== -1 ? servicesData[serviceIndex] : null;
-  
+
   const recommendedServices = [];
   if (serviceIndex !== -1 && servicesData.length > 3) {
     for (let i = 1; i <= 3; i++) {
@@ -38,38 +38,36 @@ const ServiceDetail = () => {
 
   return (
     <div className="w-full pb-12 lg:pb-24 relative z-10 min-h-screen">
-      
+
       {/* Hero Section */}
-      <div className="relative w-full h-[65vh] md:h-[85vh] overflow-hidden mb-10 md:mb-16">
-        <div className="absolute inset-0 bg-[#6366f1]/30 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-space-black)] to-transparent z-10" />
-        <img loading="lazy" 
-          src={service.image} 
-          alt={service.title} 
-          className="w-full h-full object-cover object-center"
+      <div className="relative w-full h-[65vh] md:h-[85vh] overflow-hidden mb-10 md:mb-16 rounded-b-[3rem] shadow-2xl">
+        <img loading="lazy"
+          src={service.image}
+          alt={service.title}
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 z-20 flex items-center">
-          <div className="container mx-auto px-6 max-w-7xl">
-            <motion.div 
+        <div className="absolute inset-0 z-20 flex items-end pb-12 md:pb-24">
+          <div className="container mx-auto px-6 max-w-7xl flex justify-end">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="max-w-3xl"
+              className="max-w-2xl bg-[var(--background)]/95 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-[var(--color-mystic-accent)]/20 shadow-xl"
             >
-              <h1 className="text-3xl md:text-5xl md:text-7xl font-bold mb-6 text-[var(--foreground)] text-glow">{service.title}</h1>
-              <p className="text-xl text-[var(--foreground)] leading-relaxed max-w-4xl">{service.longDesc}</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading mb-4 text-[var(--foreground)]">{service.title}</h1>
+              <p className="text-base md:text-lg text-[var(--foreground)] leading-relaxed opacity-90">{service.longDesc}</p>
             </motion.div>
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-6 max-w-7xl">
-        
+
         {/* Main Content & Sidebar Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-12 mb-12 lg:mb-24">
-          
+
           {/* Left Column (Description & Details) */}
           <div className="lg:col-span-2">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -79,7 +77,7 @@ const ServiceDetail = () => {
               <p className="text-[var(--foreground)] leading-relaxed text-lg whitespace-pre-line mb-8">
                 {service.aboutDesc}
               </p>
-              
+
               <div className="flex flex-wrap gap-4">
                 <a aria-label="Navigation Link" href="tel:+1234567890" className="flex items-center gap-2 bg-[var(--color-brand-yellow)] hover:bg-[var(--color-brand-yellow)] text-[#fafafa] font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-lg">
                   <Phone size={20} />
@@ -93,7 +91,7 @@ const ServiceDetail = () => {
             </motion.div>
 
             {/* Testimonials */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -120,13 +118,13 @@ const ServiceDetail = () => {
 
           {/* Right Column (Sidebar) */}
           <div className="lg:col-span-1 space-y-8">
-            
+
             {/* Trusted Badges & Booking */}
             <div className="glass p-8 rounded-3xl border border-[var(--color-brand-green)]">
               <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10`} />
-              
+
               <h3 className="text-2xl font-bold mb-6 relative z-10">Book Your Session</h3>
-              
+
               <ul className="space-y-4 mb-8 relative z-10">
                 {service.badges.map((badge, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-[var(--foreground)]">
@@ -171,7 +169,7 @@ const ServiceDetail = () => {
         </div>
 
         {/* FAQ Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -181,14 +179,14 @@ const ServiceDetail = () => {
             <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
             <p className="text-[var(--foreground)]">Everything you need to know about our {service.title} service.</p>
           </div>
-          
+
           <div className="space-y-4">
             {service.faqs.map((faq, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`glass border rounded-2xl overflow-hidden transition-colors duration-300 ${activeFaq === idx ? 'border-[var(--color-brand-green)]' : 'border-[var(--color-brand-yellow)]/10'}`}
               >
-                <button aria-label="Interactive Button" 
+                <button aria-label="Interactive Button"
                   className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
                   onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
                 >
@@ -217,7 +215,7 @@ const ServiceDetail = () => {
         </motion.div>
 
         {/* Recommended Services */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -228,11 +226,11 @@ const ServiceDetail = () => {
               View All <ArrowRight size={16} />
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {recommendedServices.map((rec) => (
-              <Link 
-                key={rec.id} 
+              <Link
+                key={rec.id}
                 to={`/services/${rec.id}`}
                 className="group block relative glass-card rounded-2xl overflow-hidden border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-green)]">
                 <div className="aspect-[4/3] relative overflow-hidden bg-[#6366f1]/40">
