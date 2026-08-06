@@ -1,85 +1,134 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { AlertCircle, HeartCrack, TrendingDown, EyeOff } from 'lucide-react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { HeartCrack, TrendingDown, EyeOff, AlertCircle, Image as ImageIcon } from 'lucide-react';
 
 const symptoms = [
   {
-    icon: <HeartCrack size={32} className="text-[var(--foreground)]" />,
+    icon: <HeartCrack size={48} className="text-[var(--color-mystic-accent)] mb-6 opacity-80" />,
     question: "A sudden, heartbreaking disconnect with your partner?",
     desc: "Everything was perfect, and then suddenly, they pulled away for no logical reason.",
-    color: "from-[var(--color-brand-red)] to-[var(--color-brand-red)]"
+    image: "/images/download.jpg"
   },
   {
-    icon: <TrendingDown size={32} className="text-[var(--foreground)]" />,
+    icon: <TrendingDown size={48} className="text-[var(--color-mystic-accent)] mb-6 opacity-80" />,
     question: "Constant, unexplainable bad luck in finance?",
     desc: "No matter how hard you work, money slips through your fingers and opportunities vanish at the last second.",
-    color: "from-[var(--color-brand-yellow)] to-[var(--color-brand-orange)]"
+    image: "/images/finance_symptom.jpg"
   },
   {
-    icon: <EyeOff size={32} className="text-[var(--foreground)]" />,
+    icon: <EyeOff size={48} className="text-[var(--color-mystic-accent)] mb-6 opacity-80" />,
     question: "Feeling a heavy, dark energy surrounding you?",
     desc: "Waking up exhausted, feeling watched, or experiencing a constant state of unexplainable anxiety.",
-    color: "from-white to-[#18181b]"
+    image: "/images/dark_energy_symptom.jpg"
   },
   {
-    icon: <AlertCircle size={32} className="text-[var(--foreground)]" />,
+    icon: <AlertCircle size={48} className="text-[var(--color-mystic-accent)] mb-6 opacity-80" />,
     question: "Generational cycles of failure?",
     desc: "Noticing that the same struggles that plagued your parents are now destroying your own life.",
-    color: "from-[var(--color-brand-orange)] to-[var(--color-brand-red)]"
+    image: "/images/generational_symptom.jpg"
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
-};
+// Single Item Component for scroll-based opacity fading
+const SymptomItem = ({ item, index }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 90%", "center center", "end 10%"]
+  });
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  // Fade in at center, fade out at edges
+  const opacity = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.1, 1, 1, 0.1]);
+  const scale = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.8, 1, 1, 0.8]);
+  
+  const isEven = index % 2 === 0;
+
+  return (
+    <motion.div 
+      ref={ref}
+      style={{ opacity, scale }}
+      className="min-h-[60vh] flex flex-col lg:flex-row items-center gap-12 lg:gap-24 py-20"
+    >
+      {/* Image Side */}
+      <div className={`w-full lg:w-5/12 flex justify-center ${isEven ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}`}>
+        {item.image ? (
+          <div className="relative aspect-square w-full max-w-[380px] lg:max-w-[460px] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.05)] border border-[var(--color-mystic-accent)]/20">
+            <img 
+              src={item.image} 
+              alt={item.question} 
+              className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050810] via-[#050810]/40 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[var(--color-mystic-accent)]/10 mix-blend-overlay pointer-events-none"></div>
+          </div>
+        ) : (
+          <div className="relative aspect-square w-full max-w-[380px] lg:max-w-[460px] rounded-2xl border border-[var(--color-mystic-accent)]/20 border-dashed flex flex-col items-center justify-center text-[var(--color-mystic-accent)]/40 bg-[var(--color-mystic-accent)]/5">
+            <ImageIcon size={48} className="mb-4 opacity-50" />
+            <span className="text-sm uppercase tracking-widest opacity-80">Awaiting Image</span>
+          </div>
+        )}
+      </div>
+
+      {/* Text Side */}
+      <div className={`w-full lg:w-7/12 flex flex-col justify-center text-left ${isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
+        {item.icon}
+        <h3 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-[var(--foreground)] mb-8 leading-tight tracking-tight text-glow">
+          {item.question}
+        </h3>
+        <p className="text-lg md:text-2xl text-[var(--foreground)] opacity-70 font-light leading-relaxed max-w-2xl">
+          {item.desc}
+        </p>
+      </div>
+    </motion.div>
+  );
 };
 
 const Symptoms = () => {
   return (
-    <section className="py-12 lg:py-24 px-6 md:px-12 lg:px-24 relative z-10">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-            Are You Experiencing <span className="text-[var(--color-aurora-purple)]">This?</span>
-          </h2>
-          <p className="text-[var(--foreground)] max-w-2xl mx-auto text-lg">
-            You are not alone. These are the most common signs of severe astrological blockages and dark energy interference.
-          </p>
+    <section className="relative bg-[#050810] py-32 overflow-hidden">
+      
+      {/* Dark Ambience */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-mystic-secondary)]/20 via-[#050810] to-[#050810]"></div>
+      </div>
+
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
+        
+        {/* Intro Header */}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-block"
+          >
+            <h2 className="text-2xl md:text-3xl text-[var(--color-mystic-accent)] font-semibold tracking-[0.2em] uppercase mb-4 opacity-80">
+              Are You Experiencing This?
+            </h2>
+            <div className="h-[1px] w-24 bg-[var(--color-mystic-accent)]/50 mx-auto"></div>
+          </motion.div>
         </div>
 
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
+        {/* Symptoms scroll list */}
+        <div className="flex flex-col gap-12">
           {symptoms.map((item, index) => (
-            <motion.div 
-              key={index} 
-              variants={itemVariants}
-              className="glass-card p-8 rounded-[2rem] border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-yellow)]/10 transition-colors duration-300 relative group overflow-hidden"
-            >
-              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color} opacity-50`}></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="mb-6 bg-[#6366f1]/40 w-16 h-16 rounded-2xl flex items-center justify-center border border-[var(--color-brand-yellow)]/10 group-hover:scale-110 transition-transform duration-500">
-                {item.icon}
-              </div>
-              
-              <h3 className="text-xl font-bold text-[var(--foreground)] mb-4 leading-tight">{item.question}</h3>
-              <p className="text-[var(--foreground)] text-sm leading-relaxed">{item.desc}</p>
-            </motion.div>
+            <SymptomItem key={index} index={index} item={item} />
           ))}
-        </motion.div>
+        </div>
+
+        {/* Outro */}
+        <div className="text-center mt-24">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-xl md:text-3xl text-[var(--foreground)] font-light max-w-4xl mx-auto leading-relaxed">
+              You are not alone. These are the echoes of severe astrological blockages and dark energy interference. <span className="text-[var(--color-mystic-accent)] font-semibold">But they can be broken.</span>
+            </p>
+          </motion.div>
+        </div>
+
       </div>
     </section>
   );

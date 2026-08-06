@@ -19,15 +19,15 @@ const Services = () => {
           <motion.h1 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+            className="text-4xl md:text-5xl md:text-7xl font-bold mb-6 tracking-tight font-heading"
           >
-            Our <span className="text-[var(--color-aurora-green)]">Services</span>
+            Our <span className="text-[var(--color-mystic-accent)]">Services</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-[var(--foreground)] text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-[var(--foreground)] text-lg md:text-xl max-w-3xl mx-auto leading-relaxed opacity-80"
           >
             Explore our comprehensive range of over 20 specialized astrological and spiritual services, each tailored to solve your unique life challenges.
           </motion.p>
@@ -42,11 +42,11 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: (index % 4) * 0.1, duration: 0.5 }}
-              className="glass-card rounded-[2rem] overflow-hidden border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-yellow)]/10 transition-all duration-300 group flex flex-col h-full"
+              className="glass-card rounded-[2rem] overflow-hidden border border-[var(--color-mystic-accent)]/20 hover:border-[var(--color-mystic-accent)]/50 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-all duration-300 group flex flex-col h-full shadow-[0_5px_20px_rgba(0,0,0,0.5)] bg-[var(--color-mystic-primary)]"
             >
               {/* Image Section */}
-              <div className="w-full aspect-[4/3] relative overflow-hidden bg-[#6366f1]/40">
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-20 group-hover:opacity-40 transition-opacity duration-500 mix-blend-overlay z-10`}></div>
+              <div className="w-full aspect-[4/3] relative overflow-hidden bg-[var(--color-mystic-primary)]">
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-40 group-hover:opacity-60 transition-opacity duration-500 mix-blend-color z-10`}></div>
                 
                 <img loading="lazy" 
                   src={service.image} 
@@ -57,12 +57,12 @@ const Services = () => {
 
               {/* Text Section */}
               <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-[var(--foreground)] mb-3">{service.title}</h3>
-                <p className="text-[var(--foreground)] text-sm leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                <h3 className="text-xl font-bold text-[var(--color-mystic-accent)] mb-3 font-heading tracking-wide">{service.title}</h3>
+                <p className="text-[var(--foreground)] text-sm leading-relaxed mb-6 flex-grow opacity-90">{service.desc}</p>
                 
                 <Link 
                   to={`/services/${service.id}`} 
-                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-aurora-green)] hover:text-[var(--foreground)] transition-colors mt-auto"
+                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--foreground)] hover:text-[var(--color-mystic-accent)] transition-colors mt-auto"
                 >
                   View Details
                   <ArrowRight size={16} />

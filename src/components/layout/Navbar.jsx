@@ -47,22 +47,22 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm uppercase tracking-widest hover:text-[var(--color-aurora-green)] transition-colors relative group ${
-                location.pathname === link.path ? 'text-[var(--color-aurora-green)]' : 'text-[var(--foreground)]'
+              className={`text-sm uppercase tracking-widest hover:text-[var(--color-mystic-accent)] transition-colors relative group font-semibold ${
+                location.pathname === link.path ? 'text-[var(--color-mystic-accent)]' : 'text-[var(--foreground)]'
               }`}
             >
               {link.name}
               {location.pathname === link.path && (
                 <motion.div 
                   layoutId="underline"
-                  className="absolute -bottom-2 left-0 w-full h-[2px] bg-[var(--color-aurora-green)]"
+                  className="absolute -bottom-2 left-0 w-full h-[2px] bg-[var(--color-mystic-accent)]"
                 />
               )}
             </Link>
           ))}
           <Link 
             to="/contact" 
-            className="ml-4 px-6 py-2 rounded-full border border-[var(--color-brand-green)]"
+            className="ml-4 px-6 py-2 rounded-full border border-[var(--color-mystic-accent)] text-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-[var(--background)] transition-all font-semibold uppercase tracking-widest text-sm"
           >
             Book Reading
           </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-[#09090b] grid grid-cols-2 p-6 gap-4 md:hidden border-t border-[var(--color-brand-yellow)]/10 rounded-b-3xl shadow-2xl"
+            className="absolute top-full left-0 w-full bg-[var(--background)] grid grid-cols-2 p-6 gap-4 md:hidden border-t border-[var(--color-mystic-accent)]/20 rounded-b-3xl shadow-2xl"
           >
             {navLinks.map((link) => (
               <Link
@@ -94,8 +94,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`flex flex-col items-center justify-center p-4 rounded-2xl border transition-all duration-300 ${
                   location.pathname === link.path 
-                    ? 'bg-[var(--color-aurora-green)]/10 border-[var(--color-aurora-green)]/30 text-[var(--color-aurora-green)] shadow-[0_0_15px_rgba(99, 102, 241, 0.1)]' 
-                    : 'bg-[#09090b]/50 border-[var(--color-brand-yellow)]/5 text-[var(--foreground)] hover:bg-[#18181b]/80'
+                    ? 'bg-[var(--color-mystic-accent)]/10 border-[var(--color-mystic-accent)]/30 text-[var(--color-mystic-accent)] shadow-[0_0_15px_rgba(212,175,55,0.1)]' 
+                    : 'bg-[#09090b]/50 border-[var(--color-mystic-accent)]/5 text-[var(--foreground)] hover:bg-[#18181b]/80'
                 }`}
               >
                 <span className="text-xs font-semibold uppercase tracking-widest mt-1">{link.name}</span>
@@ -106,40 +106,40 @@ const Navbar = () => {
             <div className="col-span-2 flex justify-center gap-6 mt-4 mb-2">
               <motion.a 
                 href="tel:+1234567890" 
-                className="w-14 h-14 rounded-full bg-[#09090b] border border-[var(--color-brand-yellow)]/20 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(99, 102, 241, 0.1)] relative"
+                className="w-14 h-14 rounded-full bg-[#09090b] border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(212,175,55,0.15)] relative"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
               >
-                <div className="absolute inset-0 rounded-full border border-[var(--color-brand-yellow)] opacity-0 animate-ping" style={{ animationDuration: '3s' }}></div>
+                <div className="absolute inset-0 rounded-full border border-[var(--color-mystic-accent)] opacity-0 animate-ping" style={{ animationDuration: '3s' }}></div>
                 <Phone size={24} />
               </motion.a>
               
               <motion.a 
                 href="https://wa.me/1234567890" 
                 target="_blank" rel="noopener noreferrer"
-                className="w-14 h-14 rounded-full bg-[#09090b] border border-[#6366f1]/30 flex items-center justify-center text-[#fafafa] shadow-[0_0_15px_rgba(99, 102, 241, 0.15)] relative"
+                className="w-14 h-14 rounded-full bg-[#09090b] border border-[var(--color-mystic-emerald)]/40 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(15,90,62,0.15)] relative"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.3 }}
               >
-                <div className="absolute inset-0 rounded-full border border-[#6366f1] opacity-0 animate-ping" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
+                <div className="absolute inset-0 rounded-full border border-[var(--color-mystic-emerald)] opacity-0 animate-ping" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
                 <MessageCircle size={24} />
               </motion.a>
               
               <motion.a 
                 href="/locations" 
                 onClick={() => setIsOpen(false)}
-                className="w-14 h-14 rounded-full bg-[#09090b] border border-[var(--color-aurora-purple)]/30 flex items-center justify-center text-[var(--color-aurora-purple)] shadow-[0_0_15px_rgba(99, 102, 241, 0.15)] relative"
+                className="w-14 h-14 rounded-full bg-[#09090b] border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] shadow-[0_0_15px_rgba(212,175,55,0.15)] relative"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: 0.6 }}
               >
-                <div className="absolute inset-0 rounded-full border border-[var(--color-aurora-purple)] opacity-0 animate-ping" style={{ animationDuration: '3s', animationDelay: '2s' }}></div>
+                <div className="absolute inset-0 rounded-full border border-[var(--color-mystic-accent)] opacity-0 animate-ping" style={{ animationDuration: '3s', animationDelay: '2s' }}></div>
                 <MapPin size={24} />
               </motion.a>
             </div>
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="col-span-2 flex items-center justify-center p-4 mt-2 rounded-2xl bg-[var(--color-brand-green)] text-[#09090b] font-bold uppercase tracking-widest text-sm hover:scale-[1.02] transition-transform shadow-[0_0_20px_rgba(99, 102, 241, 0.3)]"
+              className="col-span-2 flex items-center justify-center p-4 mt-2 rounded-2xl bg-[var(--color-mystic-emerald)] text-[var(--foreground)] font-bold uppercase tracking-widest text-sm hover:scale-[1.02] transition-transform shadow-[0_0_20px_rgba(15,90,62,0.3)]"
             >
               Book Reading
             </Link>

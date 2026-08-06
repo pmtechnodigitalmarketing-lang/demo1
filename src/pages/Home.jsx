@@ -40,49 +40,104 @@ const Home = () => {
       <CanadianLocations />
 
       {/* About CTA Section */}
-      <section className="py-12 lg:py-24 px-6 relative z-10">
-        <div className="container mx-auto max-w-6xl">
-          <div className="glass-card rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-6 md:gap-12 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-aurora-purple)] rounded-full filter blur-[100px] opacity-20"></div>
-            
-            <div className="flex-1">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Pandit Rudradev?</h2>
-              <p className="text-[var(--foreground)] mb-6 text-lg leading-relaxed">
-                With over 25 years of experience in Vedic Astrology and spiritual healing, Pandit Rudradev has helped thousands across Canada find peace, love, and success. His unique approach combines ancient wisdom with modern empathy.
-              </p>
-              <ul className="flex flex-col gap-4 mb-8">
-                <li className="flex items-center gap-3"><Star className="text-[var(--color-aurora-green)]" size={20} /> <span>100% Confidential Readings</span></li>
-                <li className="flex items-center gap-3"><Star className="text-[var(--color-aurora-green)]" size={20} /> <span>Immediate & Effective Solutions</span></li>
-                <li className="flex items-center gap-3"><Star className="text-[var(--color-aurora-green)]" size={20} /> <span>Serving Toronto, Vancouver & all of Canada</span></li>
-              </ul>
-              <div className="flex flex-wrap items-center gap-4">
-                <Link to="/about" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-brand-green)]">
-                  Learn More About Pandit Rudradev
-                </Link>
-                
-                <a aria-label="Navigation Link" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-brand-green)] text-[var(--foreground)] font-semibold hover:bg-[var(--color-brand-green)] transition-colors shadow-[0_0_15px_rgba(99, 102, 241, 0.3)]">
-                  <MessageCircle size={20} />
-                  WhatsApp
-                </a>
+      <section className="py-24 lg:py-40 px-6 relative z-10 overflow-hidden bg-[var(--background)]">
+        {/* Background Massive Typography */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none opacity-5">
+          <h2 className="text-[10rem] md:text-[20rem] font-black font-heading leading-none whitespace-nowrap">
+            R U D R A D E V
+          </h2>
+        </div>
 
-                <div className="flex items-center gap-3 md:ml-2">
-                  <a aria-label="Navigation Link" href="#" className="w-11 h-11 rounded-full glass flex items-center justify-center hover:bg-[var(--color-brand-yellow)]/10 transition-colors text-[var(--foreground)] hover:text-[var(--foreground)]">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
-                  </a>
-                  <a aria-label="Navigation Link" href="#" className="w-11 h-11 rounded-full glass flex items-center justify-center hover:bg-[var(--color-brand-yellow)]/10 transition-colors text-[var(--foreground)] hover:text-[var(--foreground)]">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                  </a>
-                  <a aria-label="Navigation Link" href="#" className="w-11 h-11 rounded-full glass flex items-center justify-center hover:bg-[var(--color-brand-yellow)]/10 transition-colors text-[var(--foreground)] hover:text-[var(--foreground)]">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+        <div className="container mx-auto max-w-7xl relative">
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-0">
+            
+            {/* Left: Masked Image & Floating Elements */}
+            <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-[700px] flex justify-center items-center">
+              {/* Decorative Arch Mask Container */}
+              <motion.div 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 1 }}
+                className="relative w-full max-w-md aspect-[3/4] overflow-hidden"
+                style={{
+                  clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', // Hexagon mask
+                  WebkitClipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+                }}
+              >
+                <div className="absolute inset-0 bg-[var(--color-mystic-accent)]/20 z-10 pointer-events-none mix-blend-overlay"></div>
+                <img 
+                  fetchpriority="high" 
+                  src="/images/Shiva parvathi I hd Shiva parvathi wallpaper.webp" 
+                  alt="Pandit Rudradev" 
+                  className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-1000 opacity-90" 
+                />
+              </motion.div>
+
+              {/* Floating Stars */}
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+                className="absolute top-10 left-10 text-[var(--color-mystic-accent)] opacity-50"
+              >
+                <Star size={40} />
+              </motion.div>
+              <motion.div 
+                animate={{ rotate: -360, y: [0, 20, 0] }}
+                transition={{ rotate: { repeat: Infinity, duration: 25, ease: "linear" }, y: { repeat: Infinity, duration: 5, ease: "easeInOut" } }}
+                className="absolute bottom-20 right-10 text-[var(--color-mystic-emerald)] opacity-50"
+              >
+                <Moon size={60} />
+              </motion.div>
+            </div>
+            
+            {/* Right: Editorial Typography */}
+            <div className="w-full lg:w-1/2 lg:-ml-20 relative z-10">
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="bg-[var(--color-mystic-secondary)]/80 backdrop-blur-2xl p-10 md:p-16 border-l-4 border-[var(--color-mystic-accent)] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              >
+                <h2 className="text-4xl md:text-6xl font-bold mb-8 text-[var(--foreground)] tracking-tight font-heading leading-tight">
+                  Guidance Beyond <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-mystic-accent)] to-amber-200">The Physical Realm</span>
+                </h2>
+                
+                <p className="text-[var(--foreground)] mb-8 text-lg leading-relaxed opacity-80 font-light">
+                  With over 25 years of profound experience in Vedic Astrology and spiritual healing, Pandit Rudradev acts as a conduit between you and the cosmic energies. His approach doesn't just treat symptoms; it annihilates the root cause of your life's blockages.
+                </p>
+                
+                <ul className="flex flex-col gap-6 mb-12">
+                  <li className="flex items-start gap-4">
+                    <span className="text-[var(--color-mystic-accent)] mt-1"><Compass size={24} /></span>
+                    <div>
+                      <h4 className="text-xl font-bold font-heading mb-1 text-[var(--foreground)]">Absolute Confidentiality</h4>
+                      <p className="text-sm opacity-70">A judgment-free sanctuary for your deepest concerns.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="text-[var(--color-mystic-emerald)] mt-1"><Sun size={24} /></span>
+                    <div>
+                      <h4 className="text-xl font-bold font-heading mb-1 text-[var(--foreground)]">Immediate Interventions</h4>
+                      <p className="text-sm opacity-70">Powerful rituals that demand rapid cosmic shifts.</p>
+                    </div>
+                  </li>
+                </ul>
+                
+                <div className="flex flex-wrap items-center gap-6">
+                  <Link to="/about" className="group relative inline-flex items-center justify-center px-8 py-4 bg-transparent text-[var(--color-mystic-accent)] border border-[var(--color-mystic-accent)]/50 font-bold uppercase tracking-widest text-sm overflow-hidden hover:border-[var(--color-mystic-accent)] transition-colors">
+                    <span className="relative z-10">Discover The Journey</span>
+                    <div className="absolute inset-0 bg-[var(--color-mystic-accent)]/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
+                  </Link>
+                  
+                  <a aria-label="Navigation Link" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[var(--foreground)] hover:text-[var(--color-mystic-emerald)] transition-colors tracking-wide font-semibold">
+                    <MessageCircle size={20} />
+                    Direct WhatsApp
                   </a>
                 </div>
-              </div>
-            </div>
-            <div className="w-full md:flex-1 relative">
-              <div className="aspect-square rounded-3xl glass overflow-hidden flex items-center justify-center relative group">
-                <img fetchpriority="high" src="/images/Shiva parvathi I hd Shiva parvathi wallpaper.webp" alt="Pandit Rudradev" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 z-0" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-aurora-purple)]/20 to-transparent mix-blend-overlay z-10 pointer-events-none"></div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

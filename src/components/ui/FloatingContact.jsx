@@ -19,7 +19,7 @@ const FloatingContact = () => {
               href="https://wa.me/14165550198" 
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center gap-3 bg-[var(--color-brand-green)] text-[var(--foreground)] px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
+              className="flex items-center gap-3 bg-[var(--color-mystic-emerald)] text-[var(--foreground)] px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
             >
               <span className="font-semibold text-sm">WhatsApp</span>
               <MessageCircle size={20} />
@@ -27,7 +27,7 @@ const FloatingContact = () => {
             
             <a aria-label="Navigation Link" 
               href="tel:+14165550198" 
-              className="flex items-center gap-3 bg-[var(--color-aurora-purple)] text-[var(--foreground)] px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
+              className="flex items-center gap-3 bg-[var(--color-mystic-secondary)] text-[var(--foreground)] px-4 py-3 border border-[var(--color-mystic-accent)]/30 rounded-full shadow-lg hover:scale-105 transition-transform"
             >
               <span className="font-semibold text-sm">Call Now</span>
               <Phone size={20} />
@@ -35,7 +35,7 @@ const FloatingContact = () => {
             
             <a aria-label="Navigation Link" 
               href="mailto:panditrudradev01@gmail.com" 
-              className="flex items-center gap-3 bg-[var(--color-aurora-green)] text-[#fafafa] px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
+              className="flex items-center gap-3 bg-[var(--color-mystic-accent)] text-[var(--background)] px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
             >
               <span className="font-semibold text-sm">Email Us</span>
               <Mail size={20} />
@@ -47,8 +47,8 @@ const FloatingContact = () => {
       <button
         aria-label="Open Contact Options"
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(99, 102, 241, 0.4)] transition-colors duration-300 ${
-          isOpen ? 'bg-[var(--color-brand-red)] text-[var(--foreground)]' : 'bg-[var(--color-aurora-green)] text-[#fafafa]'
+        className={`w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-colors duration-300 ${
+          isOpen ? 'bg-[var(--color-mystic-secondary)] text-[var(--foreground)] border border-[var(--color-mystic-accent)]' : 'bg-[var(--color-mystic-accent)] text-[var(--background)]'
         }`}
       >
         <AnimatePresence mode="wait">
