@@ -21,7 +21,7 @@ const InfiniteMarquee = () => {
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 20
+            duration: 50
           }}
         >
           {/* Duplicate the list to ensure seamless infinite scroll */}
