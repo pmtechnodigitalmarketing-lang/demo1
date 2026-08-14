@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { MapPin, ArrowRight, Compass } from 'lucide-react';
 
 const locations = [
-  { city: 'Toronto', province: 'Ontario', delay: 0.1, color: 'var(--color-aurora-green)' },
-  { city: 'Vancouver', province: 'British Columbia', delay: 0.2, color: 'var(--color-aurora-purple)' },
+  { city: 'Toronto', province: 'Ontario', delay: 0.1, color: 'var(--color-terracotta)' },
+  { city: 'Vancouver', province: 'British Columbia', delay: 0.2, color: 'var(--color-sand)' },
   { city: 'Montreal', province: 'Quebec', delay: 0.3, color: 'var(--color-brand-orange)' },
-  { city: 'Calgary', province: 'Alberta', delay: 0.4, color: 'var(--color-brand-yellow)' },
+  { city: 'Calgary', province: 'Alberta', delay: 0.4, color: 'var(--color-antique-gold)' },
   { city: 'Edmonton', province: 'Alberta', delay: 0.5, color: 'var(--color-brand-red)' },
-  { city: 'Ottawa', province: 'Ontario', delay: 0.6, color: 'var(--color-brand-green)' },
+  { city: 'Ottawa', province: 'Ontario', delay: 0.6, color: 'var(--color-deep-brown)' },
 ];
 
 const CanadianLocations = () => {
@@ -16,9 +16,9 @@ const CanadianLocations = () => {
     <section className="pt-8 pb-12 lg:pb-16 px-6 md:px-12 lg:px-24 relative z-10 overflow-hidden">
       {/* Background Accents */}
       <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none" 
-           style={{ backgroundImage: 'radial-gradient(circle at 70% 30%, var(--color-aurora-purple) 0%, transparent 40%)' }}></div>
+           style={{ backgroundImage: 'radial-gradient(circle at 70% 30%, var(--color-sand) 0%, transparent 40%)' }}></div>
       <div className="absolute bottom-0 left-0 w-full h-full opacity-20 pointer-events-none" 
-           style={{ backgroundImage: 'radial-gradient(circle at 30% 70%, var(--color-aurora-green) 0%, transparent 40%)' }}></div>
+           style={{ backgroundImage: 'radial-gradient(circle at 30% 70%, var(--color-terracotta) 0%, transparent 40%)' }}></div>
       
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] pointer-events-none"></div>
@@ -34,20 +34,20 @@ const CanadianLocations = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[var(--color-brand-green)]">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[var(--color-deep-brown)]">
                 <Compass size={16} />
                 <span>Nationwide Presence</span>
               </div>
               <h2 className="text-4xl md:text-6xl xl:text-7xl font-bold mb-6 leading-[1.1] tracking-tight">
                 Guidance That <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-aurora-green)] to-[var(--color-aurora-purple)]">Reaches You,</span><br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-terracotta)] to-[var(--color-sand)]">Reaches You,</span><br/>
                 Anywhere.
               </h2>
               <p className="text-[var(--foreground)] text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
                 Distance is no barrier to cosmic healing. Pandit Rudradev offers profound astrological insights and immediate solutions to clients across all major Canadian provinces.
               </p>
               
-              <div className="flex items-center gap-6 glass p-4 rounded-2xl inline-flex border border-[var(--color-brand-yellow)]/10">
+              <div className="flex items-center gap-6 glass p-4 rounded-2xl inline-flex border border-[var(--color-antique-gold)]/10">
                 <div className="flex -space-x-4">
                   {[
                     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100",
@@ -58,7 +58,7 @@ const CanadianLocations = () => {
                       <img loading="lazy" src={src} alt={`Client ${i + 1}`} className="w-full h-full object-cover" />
                     </div>
                   ))}
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-aurora-green)]/10 border-2 border-[#09090b] flex items-center justify-center shadow-lg text-[var(--color-aurora-green)] text-xs font-bold z-10 backdrop-blur-md">
+                  <div className="w-12 h-12 rounded-full bg-[var(--color-terracotta)]/10 border-2 border-[#09090b] flex items-center justify-center shadow-lg text-[var(--color-terracotta)] text-xs font-bold z-10 backdrop-blur-md">
                     +10k
                   </div>
                 </div>
@@ -81,7 +81,7 @@ const CanadianLocations = () => {
                   viewport={{ once: true }}
                   transition={{ delay: loc.delay, duration: 0.5, ease: "easeOut" }}
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="group relative glass rounded-[2rem] p-6 md:p-8 overflow-hidden border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-yellow)]/10 transition-all duration-500 cursor-default shadow-2xl"
+                  className="group relative glass rounded-[2rem] p-6 md:p-8 overflow-hidden border border-[var(--color-antique-gold)]/10 hover:border-[var(--color-antique-gold)]/10 transition-all duration-500 cursor-default shadow-2xl"
                 >
                   {/* Subtle highlight on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -95,12 +95,12 @@ const CanadianLocations = () => {
                   <div className="relative z-10 flex flex-col h-full justify-between gap-6 md:gap-12">
                     <div className="flex justify-between items-start">
                       <div 
-                        className="w-14 h-14 rounded-2xl flex items-center justify-center bg-[var(--color-brand-yellow)]/10 border border-[var(--color-brand-yellow)]/10 backdrop-blur-md shadow-inner transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+                        className="w-14 h-14 rounded-2xl flex items-center justify-center bg-[var(--color-antique-gold)]/10 border border-[var(--color-antique-gold)]/10 backdrop-blur-md shadow-inner transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
                         style={{ color: loc.color }}
                       >
                         <MapPin size={28} />
                       </div>
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center border border-[var(--color-brand-yellow)]/10 bg-[var(--color-brand-yellow)]/10 group-hover:bg-[var(--color-brand-yellow)]/10 transition-colors duration-300">
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center border border-[var(--color-antique-gold)]/10 bg-[var(--color-antique-gold)]/10 group-hover:bg-[var(--color-antique-gold)]/10 transition-colors duration-300">
                         <ArrowRight className="text-[var(--foreground)] group-hover:text-[var(--foreground)] transition-colors duration-300 -rotate-45" size={18} />
                       </div>
                     </div>

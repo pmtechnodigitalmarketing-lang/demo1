@@ -149,7 +149,7 @@ const Blogs = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--color-brand-green)]"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--color-deep-brown)]"
           >
             <BookOpen size={18} />
             <span className="text-sm font-semibold tracking-wider uppercase">Our Blog</span>
@@ -160,7 +160,7 @@ const Blogs = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-glow"
           >
-            Spiritual Insights & <span className="text-[var(--color-aurora-green)]">Wisdom</span>
+            Spiritual Insights & <span className="text-[var(--color-terracotta)]">Wisdom</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -187,8 +187,8 @@ const Blogs = () => {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
                   activeCategory === cat.id
-                    ? 'bg-[var(--color-aurora-green)] text-[#fafafa] font-semibold shadow-[0_0_20px_rgba(99, 102, 241, 0.4)]'
-                    : 'glass text-[var(--foreground)] hover:text-[var(--foreground)] hover:border-[var(--color-brand-green)]'
+                    ? 'bg-[var(--color-terracotta)] text-[#FFFFFF] font-semibold shadow-[0_0_20px_rgba(99, 102, 241, 0.4)]'
+                    : 'glass text-[var(--foreground)] hover:text-[var(--foreground)] hover:border-[var(--color-deep-brown)]'
                 }`}
               >
                 <Icon size={18} />
@@ -209,18 +209,18 @@ const Blogs = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="glass rounded-2xl overflow-hidden group hover:border-[var(--color-brand-green)]"
+                className="glass rounded-2xl overflow-hidden group hover:border-[var(--color-deep-brown)]"
               >
                 {/* Image Container */}
                 <div className="relative h-48 overflow-hidden">
-                  <div className="absolute inset-0 bg-[#6366f1]/20 group-hover:bg-transparent transition-colors z-10" />
+                  <div className="absolute inset-0 bg-[#C85A3F]/20 group-hover:bg-transparent transition-colors z-10" />
                   <img loading="lazy" 
                     src={post.image} 
                     alt={post.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-[#6366f1]/60 backdrop-blur-md rounded-full text-[var(--color-aurora-green)] border border-[var(--color-brand-green)]">
+                    <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-[#C85A3F]/60 backdrop-blur-md rounded-full text-[var(--color-terracotta)] border border-[var(--color-deep-brown)]">
                       {CATEGORIES.find(c => c.id === post.category)?.label}
                     </span>
                   </div>
@@ -228,7 +228,7 @@ const Blogs = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-[var(--foreground)] group-hover:text-[var(--color-aurora-green)] transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold mb-3 text-[var(--foreground)] group-hover:text-[var(--color-terracotta)] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-[var(--foreground)] text-sm mb-6 line-clamp-3">
@@ -238,7 +238,7 @@ const Blogs = () => {
                   <div className="flex items-center justify-between mt-auto">
                     <div className="flex flex-col gap-1">
                       <div className="flex items-center gap-2 text-xs text-[var(--foreground)]">
-                        <User size={14} className="text-[var(--color-aurora-green)]" />
+                        <User size={14} className="text-[var(--color-terracotta)]" />
                         <span>{post.author}</span>
                       </div>
                       <div className="flex items-center gap-2 text-xs text-[var(--foreground)]">
@@ -249,7 +249,7 @@ const Blogs = () => {
                       </div>
                     </div>
                     
-                    <button aria-label="Interactive Button" className="w-10 h-10 rounded-full flex items-center justify-center glass group-hover:bg-[var(--color-aurora-green)] group-hover:text-[#fafafa] transition-all duration-300">
+                    <button aria-label="Interactive Button" className="w-10 h-10 rounded-full flex items-center justify-center glass group-hover:bg-[var(--color-terracotta)] group-hover:text-[#FFFFFF] transition-all duration-300">
                       <ArrowRight size={18} />
                     </button>
                   </div>

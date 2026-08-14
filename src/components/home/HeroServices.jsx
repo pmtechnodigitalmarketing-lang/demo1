@@ -8,7 +8,7 @@ const services = [
     id: '01',
     title: "Love Solutions",
     subtitle: "Immediate Cosmic Intervention",
-    color: "from-[var(--color-mystic-accent)] to-[var(--color-mystic-emerald)]",
+    color: "from-[var(--color-terracotta)] to-[var(--color-deep-brown)]",
     image: "/images/Pandit Rudradev - Bn4.webp",
     heroHeading: "Heal Your",
     heroHighlight: "Broken Heart",
@@ -18,7 +18,7 @@ const services = [
     id: '02',
     title: "Powerful Spells",
     subtitle: "Bind True Love Forever",
-    color: "from-[var(--color-mystic-emerald)] to-[#083D2A]",
+    color: "from-[var(--color-deep-brown)] to-[#083D2A]",
     image: "/images/Pandit Rudradev - Bn1.webp",
     heroHeading: "Awaken The",
     heroHighlight: "Cosmic Bond",
@@ -28,7 +28,7 @@ const services = [
     id: '03',
     title: "Bring Ex Back",
     subtitle: "Restore Broken Bonds",
-    color: "from-[var(--color-mystic-secondary)] to-[var(--color-mystic-secondary)]",
+    color: "from-[var(--color-sand)] to-[var(--color-sand)]",
     image: "/images/Pandit Rudradev - Bn2.webp",
     heroHeading: "Reunite With",
     heroHighlight: "Your Lost Love",
@@ -38,7 +38,7 @@ const services = [
     id: '04',
     title: "Black Magic",
     subtitle: "Ultimate Protection",
-    color: "from-[var(--foreground)] to-[var(--color-mystic-primary)]",
+    color: "from-[var(--foreground)] to-[var(--color-cream)]",
     image: "/images/Pandit Rudradev - Bn3.webp",
     heroHeading: "Destroy Dark",
     heroHighlight: "Energy Forces",
@@ -82,12 +82,12 @@ const HeroServices = () => {
       <motion.div 
         animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-        className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-[var(--color-mystic-accent)]/10 blur-[100px] pointer-events-none z-10"
+        className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-[var(--color-terracotta)]/10 blur-[100px] pointer-events-none z-10"
       />
       <motion.div 
         animate={{ y: [0, 30, 0], x: [0, -15, 0] }}
         transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-        className="absolute bottom-1/4 left-1/3 w-96 h-96 rounded-full bg-[var(--color-mystic-emerald)]/10 blur-[120px] pointer-events-none z-10"
+        className="absolute bottom-1/4 left-1/3 w-96 h-96 rounded-full bg-[var(--color-deep-brown)]/10 blur-[120px] pointer-events-none z-10"
       />
 
       <div className="container mx-auto px-6 md:px-12 relative z-20 flex flex-col lg:flex-row items-center justify-between">
@@ -98,7 +98,7 @@ const HeroServices = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center gap-3 text-[var(--color-mystic-accent)] uppercase tracking-[0.3em] text-sm font-semibold mb-6"
+            className="flex items-center gap-3 text-[var(--color-terracotta)] uppercase tracking-[0.3em] text-sm font-semibold mb-6"
           >
             <Sparkles size={16} />
             <span>Master Astrologer & Psychic</span>
@@ -131,17 +131,17 @@ const HeroServices = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap items-center gap-4 md:gap-6 mt-4"
           >
-            <a aria-label="WhatsApp" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-mystic-emerald)]/10 text-[var(--color-mystic-emerald)] border border-[var(--color-mystic-emerald)]/30 hover:bg-[var(--color-mystic-emerald)] hover:text-[var(--foreground)] transition-all duration-300">
+            <a aria-label="WhatsApp" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-deep-brown)]/10 text-[var(--color-deep-brown)] border border-[var(--color-deep-brown)]/30 hover:bg-[var(--color-deep-brown)] hover:text-[var(--foreground)] transition-all duration-300">
               <MessageCircle size={24} />
             </a>
             
-            <a aria-label="Call" href="tel:+1234567890" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-mystic-accent)]/10 text-[var(--color-mystic-accent)] border border-[var(--color-mystic-accent)]/30 hover:bg-[var(--color-mystic-accent)] hover:text-white transition-all duration-300">
+            <a aria-label="Call" href="tel:+1234567890" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-[var(--color-terracotta)] border border-[var(--color-terracotta)]/30 hover:bg-[var(--color-terracotta)] hover:text-white transition-all duration-300">
               <PhoneCall size={24} />
             </a>
 
             <Link 
               to="/contact" 
-              className="group relative px-8 py-4 bg-[var(--color-mystic-accent)] text-[var(--background)] font-bold uppercase tracking-widest text-sm overflow-hidden rounded-full"
+              className="group relative px-8 py-4 bg-[var(--color-terracotta)] text-[var(--background)] font-bold uppercase tracking-widest text-sm overflow-hidden rounded-full"
             >
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
               <span className="relative z-10 flex items-center gap-3">
@@ -154,7 +154,7 @@ const HeroServices = () => {
         {/* Asymmetrical Floating Services List */}
         <div className="w-full lg:w-2/5 mt-8 md:mt-16 lg:mt-0 flex flex-col gap-4 relative">
           {/* Connecting line */}
-          <div className="hidden lg:block absolute left-[-40px] top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-[var(--color-mystic-accent)]/30 to-transparent"></div>
+          <div className="hidden lg:block absolute left-[-40px] top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-[var(--color-terracotta)]/30 to-transparent"></div>
 
           {services.map((service, index) => {
             const isActive = active === index;
@@ -178,20 +178,20 @@ const HeroServices = () => {
                 }}
                 className={`relative text-left p-6 flex items-center gap-6 transition-all duration-500 overflow-hidden group rounded-2xl ${
                   isActive 
-                    ? 'scale-105 ml-[-20px] shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-[var(--color-mystic-accent)]/50' 
+                    ? 'scale-105 ml-[-20px] shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-[var(--color-terracotta)]/50' 
                     : 'hover:ml-[-10px] opacity-60 hover:opacity-100 border border-transparent'
                 }`}
               >
                 {/* Background Highlight */}
                 <div className={`absolute inset-0 transition-opacity duration-500 ${
                   isActive
-                    ? 'bg-gradient-to-r from-[var(--color-mystic-accent)]/20 to-transparent mix-blend-overlay opacity-100'
+                    ? 'bg-gradient-to-r from-[var(--color-terracotta)]/20 to-transparent mix-blend-overlay opacity-100'
                     : 'opacity-0 group-hover:opacity-100'
                 }`}></div>
 
                 {/* Number */}
                 <div className={`font-heading text-3xl md:text-4xl transition-colors duration-500 z-10 ${
-                  isActive ? 'text-[var(--color-mystic-accent)]' : 'text-[var(--foreground)]/30'
+                  isActive ? 'text-[var(--color-terracotta)]' : 'text-[var(--foreground)]/30'
                 }`}>
                   {service.id}
                 </div>
@@ -204,7 +204,7 @@ const HeroServices = () => {
                     {service.title}
                   </h3>
                   <p className={`text-xs md:text-sm tracking-wide transition-colors duration-500 ${
-                    isActive ? 'text-white/90' : 'text-[var(--color-mystic-accent)] opacity-80'
+                    isActive ? 'text-white/90' : 'text-[var(--color-terracotta)] opacity-80'
                   }`}>
                     {service.subtitle}
                   </p>

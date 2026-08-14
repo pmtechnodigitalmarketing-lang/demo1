@@ -25,7 +25,7 @@ const TopServices = () => {
       subtitle: "Bind True Love Forever",
       desc: "Authentic, safe, and highly potent spiritual love spells designed to attract your soulmate, reignite lost passion, and secure unconditional love without negative karma.",
       icon: <Sparkles size={32} className="text-[var(--foreground)]" />,
-      color: "from-[var(--color-brand-yellow)] to-[var(--color-brand-orange)]"
+      color: "from-[var(--color-antique-gold)] to-[var(--color-brand-orange)]"
     },
     {
       id: '03',
@@ -87,7 +87,7 @@ const TopServices = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bold mb-6 tracking-tight"
           >
-            Our Most <span className="text-[var(--color-aurora-green)]">Powerful</span> Solutions
+            Our Most <span className="text-[var(--color-terracotta)]">Powerful</span> Solutions
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -111,8 +111,8 @@ const TopServices = () => {
                 {/* Image Placeholder */}
                 <div className="img-block flex-1 w-full relative group perspective-1000">
                   <div className="absolute inset-0 bg-gradient-to-tr opacity-20 blur-3xl rounded-full transition-opacity duration-500 group-hover:opacity-40 z-0" style={{ backgroundImage: `linear-gradient(to top right, var(--tw-gradient-stops))` }}></div>
-                  <div className="aspect-[4/3] w-full glass-card rounded-3xl p-4 relative z-10 overflow-hidden border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-yellow)]/10 transition-colors duration-500 shadow-2xl">
-                    <div className="w-full h-full bg-[#6366f1]/40 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-700">
+                  <div className="aspect-[4/3] w-full glass-card rounded-3xl p-4 relative z-10 overflow-hidden border border-[var(--color-antique-gold)]/10 hover:border-[var(--color-antique-gold)]/10 transition-colors duration-500 shadow-2xl">
+                    <div className="w-full h-full bg-[#C85A3F]/40 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-700">
                       {/* Replace with actual <img loading="lazy"> tag later */}
                       {React.cloneElement(service.icon, { size: 64, className: "opacity-30 mb-4" })}
                       <span className="text-[var(--foreground)] font-medium tracking-widest uppercase text-sm">Image Space</span>
@@ -127,7 +127,7 @@ const TopServices = () => {
                 <div className="text-block flex-1 w-full">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="text-3xl md:text-5xl font-black text-[var(--foreground)]/5">{service.id}</span>
-                    <div className="p-3 rounded-xl bg-[var(--color-brand-yellow)]/10 backdrop-blur-sm border border-[var(--color-brand-yellow)]/10">
+                    <div className="p-3 rounded-xl bg-[var(--color-antique-gold)]/10 backdrop-blur-sm border border-[var(--color-antique-gold)]/10">
                       {service.icon}
                     </div>
                   </div>
@@ -145,7 +145,7 @@ const TopServices = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-[var(--color-brand-yellow)]/10 text-[var(--foreground)] font-bold uppercase tracking-wider text-sm hover:bg-[var(--color-brand-yellow)] hover:text-[#fafafa] transition-all duration-300 group"
+                    className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-[var(--color-antique-gold)]/10 text-[var(--foreground)] font-bold uppercase tracking-wider text-sm hover:bg-[var(--color-antique-gold)] hover:text-[#FFFFFF] transition-all duration-300 group"
                   >
                     Consult Now 
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

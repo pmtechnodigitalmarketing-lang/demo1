@@ -40,8 +40,8 @@ const Process = () => {
       
       {/* Background Ambience */}
       <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-[var(--color-mystic-emerald)] rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[var(--color-mystic-secondary)] rounded-full blur-[150px]"></div>
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-[var(--color-deep-brown)] rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[var(--color-sand)] rounded-full blur-[150px]"></div>
       </div>
 
       <div className="container mx-auto max-w-4xl relative z-10">
@@ -52,11 +52,11 @@ const Process = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-4 text-[var(--color-mystic-accent)] uppercase tracking-[0.3em] text-sm font-semibold mb-6"
+            className="inline-flex items-center gap-4 text-[var(--color-terracotta)] uppercase tracking-[0.3em] text-sm font-semibold mb-6"
           >
-            <span className="w-12 h-[1px] bg-[var(--color-mystic-accent)]"></span>
+            <span className="w-12 h-[1px] bg-[var(--color-terracotta)]"></span>
             The Journey
-            <span className="w-12 h-[1px] bg-[var(--color-mystic-accent)]"></span>
+            <span className="w-12 h-[1px] bg-[var(--color-terracotta)]"></span>
           </motion.div>
           
           <motion.h2 
@@ -66,7 +66,7 @@ const Process = () => {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-heading leading-tight"
           >
-            Path To <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-mystic-accent)] to-[#fcd34d] font-style-italic">Transformation</span>
+            Path To <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-terracotta)] to-[#fcd34d] font-style-italic">Transformation</span>
           </motion.h2>
         </div>
 
@@ -74,17 +74,17 @@ const Process = () => {
         <div className="relative">
           
           {/* Animated Line Desktop */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-[var(--color-mystic-accent)]/20 -translate-x-1/2 hidden md:block">
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-[var(--color-terracotta)]/20 -translate-x-1/2 hidden md:block">
             <motion.div 
               style={{ height: lineHeight }} 
-              className="w-full bg-[var(--color-mystic-accent)] shadow-[0_0_15px_rgba(212,175,55,0.8)]"
+              className="w-full bg-[var(--color-terracotta)] shadow-[0_0_15px_rgba(212,175,55,0.8)]"
             ></motion.div>
           </div>
           {/* Animated Line Mobile */}
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-[var(--color-mystic-accent)]/20 -translate-x-1/2 md:hidden">
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-[var(--color-terracotta)]/20 -translate-x-1/2 md:hidden">
             <motion.div 
               style={{ height: lineHeight }} 
-              className="w-full bg-[var(--color-mystic-accent)] shadow-[0_0_15px_rgba(212,175,55,0.8)]"
+              className="w-full bg-[var(--color-terracotta)] shadow-[0_0_15px_rgba(212,175,55,0.8)]"
             ></motion.div>
           </div>
 
@@ -103,10 +103,10 @@ const Process = () => {
                       transition={{ duration: 0.8 }}
                       className={`text-${isEven ? 'right' : 'left'}`}
                     >
-                      <h3 className="text-3xl font-heading font-bold text-[var(--foreground)] mb-2 group-hover:text-[var(--color-mystic-accent)] transition-colors duration-500">
+                      <h3 className="text-3xl font-heading font-bold text-[var(--foreground)] mb-2 group-hover:text-[var(--color-terracotta)] transition-colors duration-500">
                         {step.title}
                       </h3>
-                      <h4 className="text-[var(--color-mystic-accent)] uppercase tracking-widest text-sm mb-4">
+                      <h4 className="text-[var(--color-terracotta)] uppercase tracking-widest text-sm mb-4">
                         {step.subtitle}
                       </h4>
                       <p className="text-[var(--foreground)] opacity-70 font-light leading-relaxed">
@@ -122,17 +122,17 @@ const Process = () => {
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ type: "spring", stiffness: 100, damping: 10, delay: 0.2 }}
-                      className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--color-mystic-accent)] to-[#8a7220] p-[2px] shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 transition-transform duration-500"
+                      className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--color-terracotta)] to-[#8a7220] p-[2px] shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 transition-transform duration-500"
                     >
                       <div className="w-full h-full bg-[var(--background)] rounded-full flex items-center justify-center">
-                        <div className="text-[var(--color-mystic-accent)]">
+                        <div className="text-[var(--color-terracotta)]">
                           {step.icon}
                         </div>
                       </div>
                     </motion.div>
                     
                     {/* Glowing pulse */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[var(--color-mystic-accent)] rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10 hidden md:block"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[var(--color-terracotta)] rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10 hidden md:block"></div>
                   </div>
 
                   {/* Mobile Content */}
@@ -146,7 +146,7 @@ const Process = () => {
                       <h3 className="text-2xl font-heading font-bold text-[var(--foreground)] mb-1">
                         {step.title}
                       </h3>
-                      <h4 className="text-[var(--color-mystic-accent)] uppercase tracking-widest text-xs mb-3">
+                      <h4 className="text-[var(--color-terracotta)] uppercase tracking-widest text-xs mb-3">
                         {step.subtitle}
                       </h4>
                       <p className="text-[var(--foreground)] opacity-70 font-light text-sm leading-relaxed">

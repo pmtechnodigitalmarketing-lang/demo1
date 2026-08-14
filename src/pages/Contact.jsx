@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="container mx-auto max-w-7xl">
         
         <div className="text-center mb-10 md:mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Get in <span className="text-[var(--color-aurora-green)]">Touch</span></h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Get in <span className="text-[var(--color-terracotta)]">Touch</span></h1>
           <p className="text-[var(--foreground)] text-lg max-w-2xl mx-auto">
             Take the first step towards a better life. Reach out for a confidential consultation today.
           </p>
@@ -47,11 +47,11 @@ const Contact = () => {
             className="lg:col-span-1 space-y-6"
           >
             <div className="glass-card p-8 rounded-3xl h-full flex flex-col justify-center">
-              <h3 className="text-2xl font-bold mb-8 border-b border-[var(--color-brand-yellow)]/10 pb-4">Contact Info</h3>
+              <h3 className="text-2xl font-bold mb-8 border-b border-[var(--color-antique-gold)]/10 pb-4">Contact Info</h3>
               
               <ul className="space-y-8">
                 <li className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-[var(--color-aurora-purple)]/20 text-[var(--color-aurora-purple)] shrink-0">
+                  <div className="p-3 rounded-full bg-[var(--color-sand)]/20 text-[var(--color-sand)] shrink-0">
                     <Phone size={24} />
                   </div>
                   <div>
@@ -61,7 +61,7 @@ const Contact = () => {
                 </li>
                 
                 <li className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-[var(--color-aurora-green)]/20 text-[var(--color-aurora-green)] shrink-0">
+                  <div className="p-3 rounded-full bg-[var(--color-terracotta)]/20 text-[var(--color-terracotta)] shrink-0">
                     <Mail size={24} />
                   </div>
                   <div>
@@ -83,7 +83,7 @@ const Contact = () => {
                 </li>
 
                 <li className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-[var(--color-brand-yellow)]/10 text-[var(--foreground)] shrink-0">
+                  <div className="p-3 rounded-full bg-[var(--color-antique-gold)]/10 text-[var(--foreground)] shrink-0">
                     <Clock size={24} />
                   </div>
                   <div>
@@ -103,7 +103,7 @@ const Contact = () => {
             className="lg:col-span-2"
           >
             <div className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-aurora-green)] opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-terracotta)] opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
               
               <h3 className="text-3xl font-bold mb-8">Send a Message</h3>
               
@@ -113,7 +113,7 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-[var(--foreground)] mb-2">Full Name</label>
                     <input 
                       type="text" 
-                      className="w-full bg-[var(--color-brand-yellow)]/10 border border-[var(--color-brand-yellow)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-brand-green)]"
+                      className="w-full bg-[var(--color-antique-gold)]/10 border border-[var(--color-antique-gold)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-deep-brown)]"
                       placeholder="John Doe"
                     />
                   </div>
@@ -121,7 +121,7 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-[var(--foreground)] mb-2">Phone Number</label>
                     <input 
                       type="tel" 
-                      className="w-full bg-[var(--color-brand-yellow)]/10 border border-[var(--color-brand-yellow)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-brand-green)]"
+                      className="w-full bg-[var(--color-antique-gold)]/10 border border-[var(--color-antique-gold)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-deep-brown)]"
                       placeholder="+1 (416) 000-0000"
                     />
                   </div>
@@ -132,13 +132,13 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-[var(--foreground)] mb-2">Email Address</label>
                     <input 
                       type="email" 
-                      className="w-full bg-[var(--color-brand-yellow)]/10 border border-[var(--color-brand-yellow)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-brand-green)]"
+                      className="w-full bg-[var(--color-antique-gold)]/10 border border-[var(--color-antique-gold)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-deep-brown)]"
                       placeholder="john@example.com"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-[var(--foreground)] mb-2">Service Needed</label>
-                    <select className="w-full bg-[#6366f1]/50 border border-[var(--color-brand-yellow)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-brand-green)]">
+                    <select className="w-full bg-[#C85A3F]/50 border border-[var(--color-antique-gold)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-deep-brown)]">
                       <option value="">Select a service</option>
                       <option value="psychic">Psychic Reading</option>
                       <option value="love">Love Solutions</option>
@@ -152,13 +152,13 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-[var(--foreground)] mb-2">Your Message</label>
                   <textarea 
                     rows="5"
-                    className="w-full bg-[var(--color-brand-yellow)]/10 border border-[var(--color-brand-yellow)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-brand-green)]"
+                    className="w-full bg-[var(--color-antique-gold)]/10 border border-[var(--color-antique-gold)]/10 rounded-xl px-4 py-3 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-deep-brown)]"
                     placeholder="Briefly describe what you need help with..."
                   ></textarea>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-[var(--color-aurora-purple)]/10 border border-[var(--color-aurora-purple)]/20">
-                  <ShieldCheck className="text-[var(--color-aurora-purple)] shrink-0 mt-1" size={24} />
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-[var(--color-sand)]/10 border border-[var(--color-sand)]/20">
+                  <ShieldCheck className="text-[var(--color-sand)] shrink-0 mt-1" size={24} />
                   <div>
                     <h5 className="text-[var(--foreground)] font-semibold text-sm mb-1">100% Privacy Guarantee</h5>
                     <p className="text-[var(--foreground)] text-xs leading-relaxed">Your identity, contact details, and the nature of your problem are kept strictly confidential. We never share your information with third parties.</p>
@@ -167,7 +167,7 @@ const Contact = () => {
 
                 <button aria-label="Interactive Button" 
                   type="submit"
-                  className="px-8 py-4 bg-[var(--color-aurora-green)] text-[#fafafa] font-bold rounded-xl hover:bg-[var(--color-brand-yellow)] transition-colors duration-300 flex items-center justify-center gap-2 w-full md:w-auto"
+                  className="px-8 py-4 bg-[var(--color-terracotta)] text-[#FFFFFF] font-bold rounded-xl hover:bg-[var(--color-antique-gold)] transition-colors duration-300 flex items-center justify-center gap-2 w-full md:w-auto"
                 >
                   Send Request
                   <Send size={18} />
@@ -182,7 +182,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 lg:mt-24 w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden glass border border-[var(--color-brand-yellow)]/10 p-2"
+          className="mt-12 lg:mt-24 w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden glass border border-[var(--color-antique-gold)]/10 p-2"
         >
           <div className="w-full h-full rounded-2xl overflow-hidden relative">
             <iframe 
@@ -196,7 +196,7 @@ const Contact = () => {
               title="Google Maps Location"
             ></iframe>
             {/* Overlay to block interaction if needed or just styling overlay */}
-            <div className="absolute inset-0 pointer-events-none border border-[var(--color-brand-yellow)]/10 rounded-2xl mix-blend-overlay"></div>
+            <div className="absolute inset-0 pointer-events-none border border-[var(--color-antique-gold)]/10 rounded-2xl mix-blend-overlay"></div>
           </div>
         </motion.div>
 
@@ -205,21 +205,21 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 lg:mt-24 text-center max-w-3xl mx-auto glass p-6 md:p-12 rounded-3xl relative overflow-hidden border border-[var(--color-brand-yellow)]/10"
+          className="mt-12 lg:mt-24 text-center max-w-3xl mx-auto glass p-6 md:p-12 rounded-3xl relative overflow-hidden border border-[var(--color-antique-gold)]/10"
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-aurora-purple)]/10 to-transparent pointer-events-none z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-sand)]/10 to-transparent pointer-events-none z-0"></div>
           <div className="relative z-10">
             <h3 className="text-3xl font-bold mb-4 text-[var(--foreground)]">Join Our Spiritual Community</h3>
             <p className="text-[var(--foreground)] mb-8 font-light text-lg">Get daily horoscopes, spiritual tips, and exclusive insights directly from Pandit Rudradev.</p>
             
             <div className="flex justify-center gap-6">
-              <a aria-label="Navigation Link" href="#" className="p-4 bg-[var(--color-brand-yellow)]/10 hover:bg-[var(--color-aurora-purple)]/20 border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-aurora-purple)]/50 rounded-full text-[var(--foreground)] transition-all duration-300 hover:scale-110">
+              <a aria-label="Navigation Link" href="#" className="p-4 bg-[var(--color-antique-gold)]/10 hover:bg-[var(--color-sand)]/20 border border-[var(--color-antique-gold)]/10 hover:border-[var(--color-sand)]/50 rounded-full text-[var(--foreground)] transition-all duration-300 hover:scale-110">
                 <Camera size={24} />
               </a>
-              <a aria-label="Navigation Link" href="#" className="p-4 bg-[var(--color-brand-yellow)]/10 hover:bg-[var(--color-brand-red)]/10 border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-red)]/30 rounded-full text-[var(--foreground)] transition-all duration-300 hover:scale-110">
+              <a aria-label="Navigation Link" href="#" className="p-4 bg-[var(--color-antique-gold)]/10 hover:bg-[var(--color-brand-red)]/10 border border-[var(--color-antique-gold)]/10 hover:border-[var(--color-brand-red)]/30 rounded-full text-[var(--foreground)] transition-all duration-300 hover:scale-110">
                 <Video size={24} />
               </a>
-              <a aria-label="Navigation Link" href="#" className="p-4 bg-[var(--color-brand-yellow)]/10 hover:bg-[var(--color-brand-green)]/10 border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-green)]/50 rounded-full text-[var(--foreground)] transition-all duration-300 hover:scale-110">
+              <a aria-label="Navigation Link" href="#" className="p-4 bg-[var(--color-antique-gold)]/10 hover:bg-[var(--color-deep-brown)]/10 border border-[var(--color-antique-gold)]/10 hover:border-[var(--color-deep-brown)]/50 rounded-full text-[var(--foreground)] transition-all duration-300 hover:scale-110">
                 <Users size={24} />
               </a>
             </div>

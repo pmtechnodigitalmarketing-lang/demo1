@@ -8,28 +8,28 @@ const testimonials = [
     location: "Toronto, ON", 
     image: "https://randomuser.me/api/portraits/women/44.jpg", 
     text: "Pandit Rudradev gave me clarity when I was completely lost. His psychic reading was eerily accurate. He saw things no one else could possibly know.",
-    color: "from-[var(--color-mystic-accent)]/20 to-transparent"
+    color: "from-[var(--color-terracotta)]/20 to-transparent"
   },
   { 
     name: "David Chen", 
     location: "Vancouver, BC", 
     image: "https://randomuser.me/api/portraits/men/32.jpg", 
     text: "I was skeptical at first, but the energy healing session completely removed the heavy burden I'd been carrying for years. A truly gifted spiritual healer.",
-    color: "from-[var(--color-mystic-emerald)]/20 to-transparent"
+    color: "from-[var(--color-deep-brown)]/20 to-transparent"
   },
   { 
     name: "Amelia Bouchard", 
     location: "Montreal, QC", 
     image: "https://randomuser.me/api/portraits/women/68.jpg", 
     text: "The love astrology insights helped my partner and me understand our core conflicts. We are now happier than ever, thanks to his guidance.",
-    color: "from-[var(--color-mystic-secondary)]/40 to-transparent"
+    color: "from-[var(--color-sand)]/40 to-transparent"
   },
   { 
     name: "Michael T.", 
     location: "Calgary, AB", 
     image: "https://randomuser.me/api/portraits/men/46.jpg", 
     text: "Professional, confidential, and incredibly insightful. The horoscope reading predicted major life events that allowed me to prepare accordingly.",
-    color: "from-[var(--color-mystic-accent)]/20 to-transparent"
+    color: "from-[var(--color-terracotta)]/20 to-transparent"
   }
 ];
 
@@ -65,16 +65,16 @@ const TestimonialCarousel = () => {
         
         {/* Navigation Top */}
         <div className="flex justify-between items-center mb-16">
-          <div className="text-[var(--color-mystic-accent)] font-semibold tracking-[0.2em] uppercase text-sm flex items-center gap-4">
-            <span className="w-8 h-[1px] bg-[var(--color-mystic-accent)]"></span>
+          <div className="text-[var(--color-terracotta)] font-semibold tracking-[0.2em] uppercase text-sm flex items-center gap-4">
+            <span className="w-8 h-[1px] bg-[var(--color-terracotta)]"></span>
             Voices of Transformation
           </div>
           
           <div className="flex gap-4">
-            <button aria-label="Previous Testimonial" onClick={prev} className="w-12 h-12 rounded-full border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-white transition-all duration-300">
+            <button aria-label="Previous Testimonial" onClick={prev} className="w-12 h-12 rounded-full border border-[var(--color-terracotta)]/30 flex items-center justify-center text-[var(--color-terracotta)] hover:bg-[var(--color-terracotta)] hover:text-white transition-all duration-300">
               <ChevronLeft size={20} />
             </button>
-            <button aria-label="Next Testimonial" onClick={next} className="w-12 h-12 rounded-full border border-[var(--color-mystic-accent)]/30 flex items-center justify-center text-[var(--color-mystic-accent)] hover:bg-[var(--color-mystic-accent)] hover:text-white transition-all duration-300">
+            <button aria-label="Next Testimonial" onClick={next} className="w-12 h-12 rounded-full border border-[var(--color-terracotta)]/30 flex items-center justify-center text-[var(--color-terracotta)] hover:bg-[var(--color-terracotta)] hover:text-white transition-all duration-300">
               <ChevronRight size={20} />
             </button>
           </div>
@@ -91,18 +91,18 @@ const TestimonialCarousel = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="w-full"
             >
-              <Quote className="text-[var(--color-mystic-accent)]/20 w-32 h-32 absolute -top-16 -left-8 md:-left-16 z-0" />
+              <Quote className="text-[var(--color-terracotta)]/20 w-32 h-32 absolute -top-16 -left-8 md:-left-16 z-0" />
               
               <h3 className="text-3xl md:text-5xl lg:text-6xl font-heading font-light leading-snug md:leading-tight text-[var(--foreground)] mb-12 relative z-10">
                 "{testimonials[current].text}"
               </h3>
               
               <div className="flex items-center gap-6">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border border-[var(--color-mystic-accent)]/50 p-1">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border border-[var(--color-terracotta)]/50 p-1">
                   <img src={testimonials[current].image} alt={testimonials[current].name} className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500" />
                 </div>
                 <div>
-                  <h4 className="text-xl md:text-2xl font-bold text-[var(--color-mystic-accent)] tracking-wide font-heading">
+                  <h4 className="text-xl md:text-2xl font-bold text-[var(--color-terracotta)] tracking-wide font-heading">
                     {testimonials[current].name}
                   </h4>
                   <p className="text-[var(--foreground)]/60 text-sm md:text-base uppercase tracking-widest mt-1">
@@ -122,7 +122,7 @@ const TestimonialCarousel = () => {
               aria-label="Select Testimonial"
               key={idx}
               onClick={() => setCurrent(idx)}
-              className={`h-[2px] transition-all duration-500 ${current === idx ? 'w-16 bg-[var(--color-mystic-accent)]' : 'w-8 bg-[var(--color-mystic-accent)]/20 hover:bg-[var(--color-mystic-accent)]/50'}`}
+              className={`h-[2px] transition-all duration-500 ${current === idx ? 'w-16 bg-[var(--color-terracotta)]' : 'w-8 bg-[var(--color-terracotta)]/20 hover:bg-[var(--color-terracotta)]/50'}`}
             />
           ))}
         </div>

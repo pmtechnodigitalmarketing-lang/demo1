@@ -104,8 +104,8 @@ const LocationDetail = () => {
       <div className="container mx-auto max-w-7xl">
 
         {/* Hero Section */}
-        <div ref={heroRef} className="relative w-full h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden mb-10 md:mb-16 glass border border-[var(--color-brand-yellow)]/10 flex items-center justify-center group [perspective:1000px]">
-          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-aurora-purple)]/40 to-[var(--color-aurora-green)]/20 mix-blend-overlay z-10"></div>
+        <div ref={heroRef} className="relative w-full h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden mb-10 md:mb-16 glass border border-[var(--color-antique-gold)]/10 flex items-center justify-center group [perspective:1000px]">
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-sand)]/40 to-[var(--color-terracotta)]/20 mix-blend-overlay z-10"></div>
 
           {/* Parallax Background Image */}
           <motion.div
@@ -127,7 +127,7 @@ const LocationDetail = () => {
               scale: [1, 1.2, 1]
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-10 left-10 w-32 h-32 bg-[var(--color-aurora-purple)] rounded-full blur-[60px] opacity-30 z-0"
+            className="absolute top-10 left-10 w-32 h-32 bg-[var(--color-sand)] rounded-full blur-[60px] opacity-30 z-0"
           />
           <motion.div
             animate={{
@@ -136,7 +136,7 @@ const LocationDetail = () => {
               scale: [1, 1.5, 1]
             }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-10 right-10 w-48 h-48 bg-[var(--color-aurora-green)] rounded-full blur-[80px] opacity-20 z-0"
+            className="absolute bottom-10 right-10 w-48 h-48 bg-[var(--color-terracotta)] rounded-full blur-[80px] opacity-20 z-0"
           />
 
           <motion.div style={{ opacity: opacityText }} className="relative z-20 text-center px-6">
@@ -145,12 +145,12 @@ const LocationDetail = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[var(--color-brand-green)]">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[var(--color-deep-brown)]">
                 <MapPin size={16} />
                 <span>Service Location</span>
               </div>
               <h1 className="text-3xl md:text-5xl md:text-7xl font-bold text-[var(--foreground)] mb-6 tracking-tight drop-shadow-2xl">
-                Astrology in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-aurora-green)] to-[var(--color-aurora-purple)]">{formattedCity}</span>
+                Astrology in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-terracotta)] to-[var(--color-sand)]">{formattedCity}</span>
               </h1>
             </motion.div>
           </motion.div>
@@ -161,9 +161,9 @@ const LocationDetail = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="max-w-4xl mx-auto text-center mb-12 lg:mb-24 glass p-6 md:p-10 rounded-3xl border border-[var(--color-brand-yellow)]/10 shadow-2xl relative"
+          className="max-w-4xl mx-auto text-center mb-12 lg:mb-24 glass p-6 md:p-10 rounded-3xl border border-[var(--color-antique-gold)]/10 shadow-2xl relative"
         >
-          <div className="absolute -top-10 -left-10 w-32 h-32 bg-[var(--color-aurora-purple)] opacity-10 rounded-full blur-[40px]"></div>
+          <div className="absolute -top-10 -left-10 w-32 h-32 bg-[var(--color-sand)] opacity-10 rounded-full blur-[40px]"></div>
           <p className="text-xl md:text-2xl text-[var(--foreground)] leading-relaxed font-light relative z-10">
             Pandit Rudradev proudly offers his world-renowned astrological and spiritual healing services to the residents of {formattedCity}.
             Whether you are facing severe relationship struggles, unprecedented financial losses, or unexplainable health issues, his profound Vedic insights can guide you toward lasting peace.
@@ -180,7 +180,7 @@ const LocationDetail = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 tracking-tight"
           >
-            All Services Provided in <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-aurora-green)] to-[var(--color-aurora-purple)]">{formattedCity}</span>
+            All Services Provided in <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-terracotta)] to-[var(--color-sand)]">{formattedCity}</span>
           </motion.h2>
 
           <motion.div
@@ -204,7 +204,7 @@ const LocationDetail = () => {
               >
                 <Link
                   to={`/services/${service.id}`}
-                  className="group flex flex-col justify-end relative overflow-hidden min-h-[260px] md:min-h-[280px] p-6 md:p-8 rounded-3xl border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-green)]"
+                  className="group flex flex-col justify-end relative overflow-hidden min-h-[260px] md:min-h-[280px] p-6 md:p-8 rounded-3xl border border-[var(--color-antique-gold)]/10 hover:border-[var(--color-deep-brown)]"
                 >
                   {/* Background Image */}
                   <div
@@ -222,9 +222,9 @@ const LocationDetail = () => {
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out pointer-events-none z-0"></div>
 
                   <div className="relative z-10 flex flex-col h-full justify-end">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[var(--color-aurora-green)] transition-colors drop-shadow-md">{service.title}</h3>
-                    <div className="pt-4 border-t border-[var(--color-brand-yellow)]/20 w-full group-hover:border-[var(--color-brand-green)]">
-                      <span className="inline-flex items-center gap-2 text-sm text-[var(--color-aurora-green)] font-semibold group-hover:text-white transition-colors">
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[var(--color-terracotta)] transition-colors drop-shadow-md">{service.title}</h3>
+                    <div className="pt-4 border-t border-[var(--color-antique-gold)]/20 w-full group-hover:border-[var(--color-deep-brown)]">
+                      <span className="inline-flex items-center gap-2 text-sm text-[var(--color-terracotta)] font-semibold group-hover:text-white transition-colors">
                         View Details <ArrowRight size={16} />
                       </span>
                     </div>

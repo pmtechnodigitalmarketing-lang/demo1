@@ -9,14 +9,14 @@ const Authority = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           
           {/* Left: Why Trust Content */}
-          <div className="w-full lg:w-7/12 glass p-8 md:p-12 rounded-[2rem] relative overflow-hidden border border-[var(--color-aurora-purple)]/30">
+          <div className="w-full lg:w-7/12 glass p-8 md:p-12 rounded-[2rem] relative overflow-hidden border border-[var(--color-sand)]/30">
             {/* Background Glow */}
-            <div className="absolute top-0 right-0 w-full max-w-sm md:w-96 h-96 bg-[var(--color-aurora-purple)] opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-full max-w-sm md:w-96 h-96 bg-[var(--color-aurora-green)] opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-full max-w-sm md:w-96 h-96 bg-[var(--color-sand)] opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-full max-w-sm md:w-96 h-96 bg-[var(--color-terracotta)] opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
             
             <div className="mb-12 relative z-10 text-left">
               <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 leading-tight">
-                Why Trust <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-aurora-green)] to-[var(--color-aurora-purple)]">Pandit Rudradev?</span>
+                Why Trust <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-terracotta)] to-[var(--color-sand)]">Pandit Rudradev?</span>
               </h2>
               <p className="text-[var(--foreground)] opacity-80 max-w-xl text-lg font-light leading-relaxed">
                 Choosing a spiritual guide is a critical decision. We combine decades of authentic lineage with a modern, secure approach.
@@ -26,7 +26,7 @@ const Authority = () => {
             <div className="flex flex-col gap-10 relative z-10">
               
               <div className="flex items-start gap-6 group">
-                <div className="shrink-0 w-16 h-16 bg-[var(--color-brand-yellow)]/5 rounded-2xl flex items-center justify-center border border-[var(--color-brand-yellow)]/10 text-[var(--color-aurora-green)] group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 w-16 h-16 bg-[var(--color-antique-gold)]/5 rounded-2xl flex items-center justify-center border border-[var(--color-antique-gold)]/10 text-[var(--color-terracotta)] group-hover:scale-110 transition-transform duration-300">
                   <Award size={32} />
                 </div>
                 <div>
@@ -38,7 +38,7 @@ const Authority = () => {
               </div>
 
               <div className="flex items-start gap-6 group">
-                <div className="shrink-0 w-16 h-16 bg-[var(--color-brand-yellow)]/5 rounded-2xl flex items-center justify-center border border-[var(--color-brand-yellow)]/10 text-[var(--foreground)] group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 w-16 h-16 bg-[var(--color-antique-gold)]/5 rounded-2xl flex items-center justify-center border border-[var(--color-antique-gold)]/10 text-[var(--foreground)] group-hover:scale-110 transition-transform duration-300">
                   <Lock size={32} />
                 </div>
                 <div>
@@ -50,7 +50,7 @@ const Authority = () => {
               </div>
 
               <div className="flex items-start gap-6 group">
-                <div className="shrink-0 w-16 h-16 bg-[var(--color-brand-yellow)]/5 rounded-2xl flex items-center justify-center border border-[var(--color-brand-yellow)]/10 text-[var(--color-mystic-emerald)] group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 w-16 h-16 bg-[var(--color-antique-gold)]/5 rounded-2xl flex items-center justify-center border border-[var(--color-antique-gold)]/10 text-[var(--color-deep-brown)] group-hover:scale-110 transition-transform duration-300">
                   <Users size={32} />
                 </div>
                 <div>
@@ -66,15 +66,15 @@ const Authority = () => {
 
           {/* Right: Quick Contact Form */}
           <div className="w-full lg:w-5/12 relative">
-            <div className="sticky top-24 bg-gradient-to-b from-[var(--color-mystic-secondary)]/40 to-[var(--background)]/80 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] border border-[var(--color-mystic-accent)]/20 shadow-[0_0_50px_rgba(212,175,55,0.05)]">
+            <div className="sticky top-24 bg-gradient-to-b from-[var(--color-sand)]/40 to-[var(--background)]/80 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] border border-[var(--color-terracotta)]/20 shadow-[0_0_50px_rgba(212,175,55,0.05)]">
               
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[var(--color-mystic-accent)]/10 rounded-full blur-3xl pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-40 h-40 bg-[var(--color-terracotta)]/10 rounded-full blur-3xl pointer-events-none"></div>
 
               <div className="mb-8 relative z-10">
                 <h3 className="text-2xl md:text-3xl font-bold font-heading text-[var(--foreground)] mb-2">
                   Request Immediate Help
                 </h3>
-                <p className="text-[var(--color-mystic-accent)] text-sm uppercase tracking-widest font-semibold">
+                <p className="text-[var(--color-terracotta)] text-sm uppercase tracking-widest font-semibold">
                   100% Private & Confidential
                 </p>
               </div>
@@ -86,7 +86,7 @@ const Authority = () => {
                     type="text" 
                     id="auth-name"
                     placeholder="Your Name" 
-                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors placeholder:text-[var(--foreground)]/30 font-light"
+                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-terracotta)] transition-colors placeholder:text-[var(--foreground)]/30 font-light"
                     required
                   />
                 </div>
@@ -97,7 +97,7 @@ const Authority = () => {
                     type="tel" 
                     id="auth-phone"
                     placeholder="Phone Number (for WhatsApp/Call)" 
-                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors placeholder:text-[var(--foreground)]/30 font-light"
+                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-terracotta)] transition-colors placeholder:text-[var(--foreground)]/30 font-light"
                     required
                   />
                 </div>
@@ -106,7 +106,7 @@ const Authority = () => {
                   <label htmlFor="auth-problem" className="sr-only">Select your problem</label>
                   <select 
                     id="auth-problem"
-                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-mystic-accent)] transition-colors font-light appearance-none"
+                    className="w-full bg-[var(--background)]/50 border border-[var(--foreground)]/10 rounded-xl px-5 py-4 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-terracotta)] transition-colors font-light appearance-none"
                     required
                   >
                     <option value="" disabled selected>Select Your Problem...</option>
@@ -120,7 +120,7 @@ const Authority = () => {
 
                 <button 
                   type="submit" 
-                  className="mt-2 w-full group relative flex items-center justify-center gap-3 bg-[var(--color-mystic-accent)] text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                  className="mt-2 w-full group relative flex items-center justify-center gap-3 bg-[var(--color-terracotta)] text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
                 >
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                   <span className="relative z-10">Send Request</span>

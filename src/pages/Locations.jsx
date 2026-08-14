@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 const allLocations = [
   {
     province: 'Ontario',
-    color: 'var(--color-aurora-green)',
+    color: 'var(--color-terracotta)',
     cities: ['Toronto', 'Ottawa', 'Mississauga', 'Brampton', 'Hamilton', 'London', 'Markham', 'Vaughan', 'Kitchener', 'Windsor']
   },
   {
     province: 'British Columbia',
-    color: 'var(--color-aurora-purple)',
+    color: 'var(--color-sand)',
     cities: ['Vancouver', 'Surrey', 'Burnaby', 'Richmond', 'Abbotsford', 'Coquitlam', 'Kelowna', 'Victoria']
   },
   {
@@ -21,7 +21,7 @@ const allLocations = [
   },
   {
     province: 'Alberta',
-    color: 'var(--color-brand-yellow)',
+    color: 'var(--color-antique-gold)',
     cities: ['Calgary', 'Edmonton', 'Red Deer', 'Lethbridge', 'St. Albert']
   },
   {
@@ -31,7 +31,7 @@ const allLocations = [
   },
   {
     province: 'Saskatchewan',
-    color: 'var(--color-brand-green)',
+    color: 'var(--color-deep-brown)',
     cities: ['Saskatoon', 'Regina', 'Prince Albert', 'Moose Jaw']
   },
   {
@@ -51,7 +51,7 @@ const allLocations = [
   },
   {
     province: 'Prince Edward Island',
-    color: 'var(--color-brand-green)',
+    color: 'var(--color-deep-brown)',
     cities: ['Charlottetown', 'Summerside', 'Stratford']
   }
 ];
@@ -77,24 +77,24 @@ const Locations = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[var(--color-aurora-purple)]/30 text-[var(--color-aurora-purple)] mb-6 text-sm font-semibold tracking-wide uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[var(--color-sand)]/30 text-[var(--color-sand)] mb-6 text-sm font-semibold tracking-wide uppercase">
               <MapPin size={16} />
               <span>Service Areas</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Serving All of <span className="text-[var(--color-aurora-green)]">Canada</span></h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Serving All of <span className="text-[var(--color-terracotta)]">Canada</span></h1>
             <p className="text-[var(--foreground)] text-lg max-w-2xl mx-auto mb-10">
               Find Pandit Rudradev's trusted astrological and spiritual healing services in your city. We cover all major provinces and municipalities across Canada.
             </p>
             
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative group">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[var(--foreground)] group-focus-within:text-[var(--color-aurora-green)] transition-colors">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[var(--foreground)] group-focus-within:text-[var(--color-terracotta)] transition-colors">
                 <Search size={20} />
               </div>
               <input
                 type="text"
                 placeholder="Search for your city or province..."
-                className="w-full bg-[var(--color-brand-yellow)]/10 border border-[var(--color-brand-yellow)]/10 rounded-full py-4 pl-12 pr-6 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-brand-green)]"
+                className="w-full bg-[var(--color-antique-gold)]/10 border border-[var(--color-antique-gold)]/10 rounded-full py-4 pl-12 pr-6 text-[var(--foreground)] focus:outline-none focus:border-[var(--color-deep-brown)]"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -122,7 +122,7 @@ const Locations = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  className="glass rounded-3xl p-8 relative overflow-hidden border border-[var(--color-brand-yellow)]/10 hover:border-[var(--color-brand-yellow)]/10 transition-colors"
+                  className="glass rounded-3xl p-8 relative overflow-hidden border border-[var(--color-antique-gold)]/10 hover:border-[var(--color-antique-gold)]/10 transition-colors"
                 >
                   <div 
                     className="absolute top-0 right-0 w-64 h-64 rounded-full blur-[100px] opacity-10 pointer-events-none"
@@ -170,15 +170,15 @@ const Locations = () => {
 
         {/* Global CTA */}
         <div className="mt-12 lg:mt-24 text-center">
-          <div className="glass inline-block relative overflow-hidden rounded-[3rem] p-6 md:p-12 border border-[var(--color-brand-green)]">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-aurora-green)]/10 to-transparent pointer-events-none"></div>
+          <div className="glass inline-block relative overflow-hidden rounded-[3rem] p-6 md:p-12 border border-[var(--color-deep-brown)]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-terracotta)]/10 to-transparent pointer-events-none"></div>
             <h3 className="text-3xl font-bold mb-4 relative z-10">Don't see your city?</h3>
             <p className="text-[var(--foreground)] mb-8 max-w-lg mx-auto relative z-10">
               Pandit Rudradev provides online, phone, and video consultations worldwide. Distance does not limit the power of authentic spiritual healing.
             </p>
             <Link 
               to="/contact"
-              className="relative z-10 inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--color-aurora-green)] text-[#fafafa] font-bold rounded-full hover:bg-[var(--color-brand-yellow)] hover:shadow-[0_0_20px_var(--color-aurora-green)] transition-all"
+              className="relative z-10 inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--color-terracotta)] text-[#FFFFFF] font-bold rounded-full hover:bg-[var(--color-antique-gold)] hover:shadow-[0_0_20px_var(--color-terracotta)] transition-all"
             >
               Contact Us Now <ArrowRight size={20} />
             </Link>
