@@ -31,7 +31,7 @@ const Contact = () => {
               <p className="text-[var(--foreground)] text-sm">Don't wait. Reach out immediately for priority support and spiritual guidance.</p>
             </div>
           </div>
-          <a aria-label="Navigation Link" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="relative z-10 shrink-0 bg-[var(--color-brand-red)] hover:bg-[var(--color-brand-red)] text-[var(--foreground)] px-6 py-3 rounded-full font-semibold transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(99, 102, 241, 0.4)] hover:shadow-[0_0_25px_rgba(99, 102, 241, 0.6)]">
+          <a aria-label="Navigation Link" href="https://wa.me/14169980146" target="_blank" rel="noopener noreferrer" className="relative z-10 shrink-0 bg-[var(--color-brand-red)] hover:bg-[var(--color-brand-red)] text-[var(--foreground)] px-6 py-3 rounded-full font-semibold transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(99, 102, 241, 0.4)] hover:shadow-[0_0_25px_rgba(99, 102, 241, 0.6)]">
             <MessageCircle size={20} />
             Emergency WhatsApp
           </a>
@@ -56,7 +56,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-[var(--foreground)] text-sm font-semibold uppercase tracking-wider mb-1">Call Us Now</p>
-                    <p className="text-xl font-medium text-[var(--foreground)]">+1 (416) 555-0198</p>
+                    <p className="text-xl font-medium text-[var(--foreground)]">+1 (416) 998-0146</p>
                   </div>
                 </li>
                 

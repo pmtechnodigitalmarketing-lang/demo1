@@ -79,11 +79,11 @@ const ServiceDetail = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <a aria-label="Navigation Link" href="tel:+1234567890" className="flex items-center gap-2 bg-[var(--color-antique-gold)] hover:bg-[var(--color-antique-gold)] text-[#FFFFFF] font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-lg">
+                <a aria-label="Navigation Link" href="tel:+14169980146" className="flex items-center gap-2 bg-[var(--color-antique-gold)] hover:bg-[var(--color-antique-gold)] text-[#FFFFFF] font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-lg">
                   <Phone size={20} />
                   Call Now
                 </a>
-                <a aria-label="Navigation Link" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[var(--color-deep-brown)] hover:bg-[var(--color-deep-brown)] text-[var(--foreground)] font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-lg">
+                <a aria-label="Navigation Link" href="https://wa.me/14169980146" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[var(--color-deep-brown)] hover:bg-[var(--color-deep-brown)] text-white font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-lg">
                   <MessageCircle size={20} />
                   WhatsApp
                 </a>

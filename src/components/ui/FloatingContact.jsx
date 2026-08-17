@@ -12,14 +12,14 @@ const FloatingContact = () => {
       </a>
 
       <a aria-label="Call Now" 
-        href="tel:+14165550198" 
+        href="tel:+14169980146" 
         className="w-14 h-14 flex items-center justify-center bg-[var(--color-sand)] text-[var(--foreground)] border border-[var(--color-terracotta)]/30 rounded-full shadow-lg hover:scale-110 transition-transform"
       >
         <Phone size={24} />
       </a>
       
       <a aria-label="WhatsApp" 
-        href="https://wa.me/14165550198" 
+        href="https://wa.me/14169980146" 
         target="_blank" 
         rel="noreferrer"
         className="w-14 h-14 flex items-center justify-center bg-[var(--color-deep-brown)] text-[#FFFFFF] rounded-full shadow-lg hover:scale-110 transition-transform"

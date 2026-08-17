@@ -295,7 +295,7 @@ const About = () => {
               Book Consultation <ArrowRight size={18} />
             </Link>
             <a
-              href="tel:+14165550198"
+              href="tel:+14169980146"
               className="inline-flex items-center gap-3 px-10 py-5 bg-transparent border border-[var(--color-terracotta)] text-[var(--color-terracotta)] font-bold uppercase tracking-widest text-sm hover:bg-[var(--color-terracotta)]/10 transition-colors duration-300 rounded-full"
             >
               <Phone size={18} /> Call Directly

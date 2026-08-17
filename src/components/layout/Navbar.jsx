@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <img src="/images/PR Logo2.png" alt="Pandit Rudradev Logo" className="h-16 md:h-20 w-auto mt-0 md:-mt-2 group-hover:scale-105 transition-transform duration-300" />
+          <img src="/images/PR - LOGO.png" alt="Pandit Rudradev Logo" className="h-16 md:h-20 w-auto -mt-2 md:-mt-4 group-hover:scale-105 transition-transform duration-300" />
         </Link>
 
         {/* Desktop Nav */}
@@ -102,7 +102,7 @@ const Navbar = () => {
             {/* Quick Contact Action Icons with Superb Animations */}
             <div className="col-span-2 flex justify-center gap-6 mt-4 mb-2">
               <motion.a
-                href="tel:+1234567890"
+                href="tel:+14169980146"
                 className="w-14 h-14 rounded-full bg-black/5 border border-[var(--color-terracotta)]/30 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(212,175,55,0.15)] relative"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
@@ -112,7 +112,7 @@ const Navbar = () => {
               </motion.a>
 
               <motion.a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/14169980146"
                 target="_blank" rel="noopener noreferrer"
                 className="w-14 h-14 rounded-full bg-black/5 border border-[var(--color-deep-brown)]/40 flex items-center justify-center text-[var(--foreground)] shadow-[0_0_15px_rgba(15,90,62,0.15)] relative"
                 animate={{ y: [0, -6, 0] }}

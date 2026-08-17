@@ -131,11 +131,11 @@ const HeroServices = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap items-center gap-4 md:gap-6 mt-4"
           >
-            <a aria-label="WhatsApp" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-deep-brown)]/10 text-[var(--color-deep-brown)] border border-[var(--color-deep-brown)]/30 hover:bg-[var(--color-deep-brown)] hover:text-[var(--foreground)] transition-all duration-300">
+            <a aria-label="WhatsApp" href="https://wa.me/14169980146" target="_blank" rel="noopener noreferrer" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-deep-brown)]/10 text-[var(--color-deep-brown)] border border-[var(--color-deep-brown)]/30 hover:bg-[var(--color-deep-brown)] hover:text-[var(--foreground)] transition-all duration-300">
               <MessageCircle size={24} />
             </a>
             
-            <a aria-label="Call" href="tel:+1234567890" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-[var(--color-terracotta)] border border-[var(--color-terracotta)]/30 hover:bg-[var(--color-terracotta)] hover:text-white transition-all duration-300">
+            <a aria-label="Call" href="tel:+14169980146" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-[var(--color-terracotta)] border border-[var(--color-terracotta)]/30 hover:bg-[var(--color-terracotta)] hover:text-white transition-all duration-300">
               <PhoneCall size={24} />
             </a>
 

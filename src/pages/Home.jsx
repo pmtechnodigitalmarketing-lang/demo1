@@ -132,7 +132,7 @@ const Home = () => {
                     <div className="absolute inset-0 bg-[var(--color-terracotta)]/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                   </Link>
 
-                  <a aria-label="Navigation Link" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[var(--foreground)] hover:text-[var(--color-deep-brown)] transition-colors tracking-wide font-semibold">
+                  <a aria-label="Navigation Link" href="https://wa.me/14169980146" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[var(--foreground)] hover:text-[var(--color-deep-brown)] transition-colors tracking-wide font-semibold">
                     <MessageCircle size={20} />
                     Direct WhatsApp
                   </a>
