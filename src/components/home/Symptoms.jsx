@@ -71,10 +71,10 @@ const SymptomItem = ({ item, index }) => {
       {/* Text Side */}
       <div className={`w-full lg:w-7/12 flex flex-col justify-center text-left ${isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
         {item.icon}
-        <h3 className="text-3xl md:text-5xl lg:text-5xl font-heading font-bold text-[var(--foreground)] mb-6 leading-tight tracking-tight text-glow">
+        <h3 className="text-3xl md:text-5xl lg:text-5xl font-heading font-bold text-white drop-shadow-lg mb-6 leading-tight tracking-tight text-glow">
           {item.question}
         </h3>
-        <p className="text-lg md:text-2xl text-[var(--foreground)] opacity-70 font-light leading-relaxed max-w-2xl">
+        <p className="text-lg md:text-2xl text-white/90 font-light leading-relaxed max-w-2xl drop-shadow-md">
           {item.desc}
         </p>
       </div>
@@ -84,11 +84,16 @@ const SymptomItem = ({ item, index }) => {
 
 const Symptoms = () => {
   return (
-    <section className="relative bg-[var(--background)] pt-8 pb-8 overflow-hidden">
+    <section className="relative bg-[#050510] pt-16 pb-16 overflow-hidden">
       
-      {/* Dark Ambience */}
+      {/* Galaxy Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-sand)]/20 via-[var(--background)] to-[var(--background)]"></div>
+        <img 
+          src="/images/galaxy-bg.jpg" 
+          alt="Galaxy Background" 
+          className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -101,10 +106,10 @@ const Symptoms = () => {
             viewport={{ once: true }}
             className="inline-block"
           >
-            <h2 className="text-2xl md:text-3xl text-[var(--color-terracotta)] font-semibold tracking-[0.2em] uppercase mb-4 opacity-80">
+            <h2 className="text-2xl md:text-3xl text-white font-semibold tracking-[0.2em] uppercase mb-4 drop-shadow-md">
               Are You Experiencing This?
             </h2>
-            <div className="h-[1px] w-24 bg-[var(--color-terracotta)]/50 mx-auto"></div>
+            <div className="h-[1px] w-24 bg-[var(--color-terracotta)] mx-auto"></div>
           </motion.div>
         </div>
 
@@ -122,8 +127,8 @@ const Symptoms = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-xl md:text-3xl text-[var(--foreground)] font-light max-w-4xl mx-auto leading-relaxed">
-              You are not alone. These are the echoes of severe astrological blockages and dark energy interference. <span className="text-[var(--color-terracotta)] font-semibold">But they can be broken.</span>
+            <p className="text-xl md:text-3xl text-white/90 font-light max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+              You are not alone. These are the echoes of severe astrological blockages and dark energy interference. <span className="text-white font-semibold underline decoration-[var(--color-terracotta)] decoration-2">But they can be broken.</span>
             </p>
           </motion.div>
         </div>

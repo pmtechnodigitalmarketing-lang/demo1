@@ -38,6 +38,15 @@ const ServiceDetail = () => {
 
   return (
     <div className="w-full pb-12 lg:pb-24 relative z-10 min-h-screen">
+      {/* Galaxy Background for the entire Service page */}
+      <div className="fixed inset-0 z-[-1] bg-[#050510]">
+        <img 
+          src="/images/galaxy-bg.jpg" 
+          alt="Galaxy Background" 
+          className="w-full h-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-[var(--background)]"></div>
+      </div>
 
       {/* Hero Section */}
       <div className="relative w-full h-[65vh] md:h-[85vh] overflow-hidden mb-10 md:mb-16 rounded-b-[3rem] shadow-2xl">
