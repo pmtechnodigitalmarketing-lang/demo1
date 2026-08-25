@@ -8,7 +8,7 @@ const services = [
     id: '01',
     title: "Love Solutions",
     subtitle: "Immediate Cosmic Intervention",
-    color: "from-[var(--color-terracotta)] to-[var(--color-deep-brown)]",
+    color: "from-[var(--color-space-cyan)] to-blue-200",
     image: "/images/Pandit Rudradev - Bn4.webp",
     heroHeading: "Heal Your",
     heroHighlight: "Broken Heart",
@@ -18,7 +18,7 @@ const services = [
     id: '02',
     title: "Powerful Spells",
     subtitle: "Bind True Love Forever",
-    color: "from-[var(--color-deep-brown)] to-[#083D2A]",
+    color: "from-[var(--color-space-purple)] to-[var(--color-space-light)]",
     image: "/images/Pandit Rudradev - Bn1.webp",
     heroHeading: "Awaken The",
     heroHighlight: "Cosmic Bond",
@@ -28,7 +28,7 @@ const services = [
     id: '03',
     title: "Bring Ex Back",
     subtitle: "Restore Broken Bonds",
-    color: "from-[var(--color-sand)] to-[var(--color-sand)]",
+    color: "from-pink-400 to-[var(--color-space-purple)]",
     image: "/images/Pandit Rudradev - Bn2.webp",
     heroHeading: "Reunite With",
     heroHighlight: "Your Lost Love",
@@ -38,7 +38,7 @@ const services = [
     id: '04',
     title: "Black Magic",
     subtitle: "Ultimate Protection",
-    color: "from-[var(--foreground)] to-[var(--color-cream)]",
+    color: "from-[var(--color-space-light)] to-[var(--color-space-cyan)]",
     image: "/images/Pandit Rudradev - Bn3.webp",
     heroHeading: "Destroy Dark",
     heroHighlight: "Energy Forces",
@@ -59,7 +59,7 @@ const HeroServices = () => {
   const activeService = services[active];
 
   return (
-    <section className="relative w-full overflow-hidden bg-[var(--background)] pt-6 pb-8 lg:pt-8 lg:pb-8">
+    <section className="relative w-full overflow-hidden bg-transparent pt-6 pb-8 lg:pt-8 lg:pb-8">
       {/* Immersive Background (Image-less) */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -70,11 +70,8 @@ const HeroServices = () => {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="absolute inset-0 z-0"
         >
-          <div className="absolute inset-0 bg-[var(--background)]"></div>
-          {/* Sweeping atmospheric gradient based on active service color */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${activeService.color} opacity-30`}></div>
-          {/* Vignette effect */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[var(--background)]/50 to-[var(--background)]"></div>
+          {/* Subtle color hint based on active service to keep the dynamic feel without overpowering the galaxy */}
+          <div className={`absolute inset-0 bg-gradient-to-br ${activeService.color} opacity-5 mix-blend-screen`}></div>
         </motion.div>
       </AnimatePresence>
 
@@ -82,12 +79,12 @@ const HeroServices = () => {
       <motion.div 
         animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-        className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-[var(--color-terracotta)]/10 blur-[100px] pointer-events-none z-10"
+        className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-[var(--color-space-cyan)]/10 blur-[100px] pointer-events-none z-10"
       />
       <motion.div 
         animate={{ y: [0, 30, 0], x: [0, -15, 0] }}
         transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-        className="absolute bottom-1/4 left-1/3 w-96 h-96 rounded-full bg-[var(--color-deep-brown)]/10 blur-[120px] pointer-events-none z-10"
+        className="absolute bottom-1/4 left-1/3 w-96 h-96 rounded-full bg-[var(--color-space-purple)]/10 blur-[120px] pointer-events-none z-10"
       />
 
       <div className="container mx-auto px-6 md:px-12 relative z-20 flex flex-col lg:flex-row items-center justify-between">
@@ -98,7 +95,7 @@ const HeroServices = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center gap-3 text-[var(--color-terracotta)] uppercase tracking-[0.3em] text-sm font-semibold mb-6"
+            className="flex items-center gap-3 text-[var(--color-space-cyan)] uppercase tracking-[0.3em] text-sm font-semibold mb-6"
           >
             <Sparkles size={16} />
             <span>Master Astrologer & Psychic</span>
@@ -112,14 +109,14 @@ const HeroServices = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[1.05] tracking-tight mb-8">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[1.05] tracking-tight mb-8 text-white drop-shadow-md">
                 {activeService.heroHeading} <br />
-                <span className={`text-transparent bg-clip-text bg-gradient-to-r ${activeService.color}`}>
+                <span className="text-[var(--color-space-cyan)] drop-shadow-[0_0_8px_rgba(69,243,255,0.4)]">
                   {activeService.heroHighlight}
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-[var(--foreground)] opacity-80 max-w-xl font-light leading-relaxed mb-10">
+              <p className="text-lg md:text-xl text-white drop-shadow-md max-w-xl font-light leading-relaxed mb-10">
                 {activeService.heroDesc}
               </p>
             </motion.div>
@@ -131,20 +128,20 @@ const HeroServices = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap items-center gap-4 md:gap-6 mt-4"
           >
-            <a aria-label="WhatsApp" href="https://wa.me/14169980146" target="_blank" rel="noopener noreferrer" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-deep-brown)]/10 text-[var(--color-deep-brown)] border border-[var(--color-deep-brown)]/30 hover:bg-[var(--color-deep-brown)] hover:text-[var(--foreground)] transition-all duration-300">
+            <a aria-label="WhatsApp" href="https://wa.me/14169980146" target="_blank" rel="noopener noreferrer" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-space-purple)]/10 text-[var(--color-space-light)] border border-[var(--color-space-light)]/30 hover:bg-[var(--color-space-purple)] hover:text-white transition-all duration-300">
               <MessageCircle size={24} />
             </a>
             
-            <a aria-label="Call" href="tel:+14169980146" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-[var(--color-terracotta)] border border-[var(--color-terracotta)]/30 hover:bg-[var(--color-terracotta)] hover:text-white transition-all duration-300">
+            <a aria-label="Call" href="tel:+14169980146" className="w-14 h-14 flex items-center justify-center rounded-full bg-[var(--color-space-cyan)]/10 text-[var(--color-space-cyan)] border border-[var(--color-space-cyan)]/30 hover:bg-[var(--color-space-cyan)] hover:text-white transition-all duration-300">
               <PhoneCall size={24} />
             </a>
 
             <Link 
               to="/contact" 
-              className="group relative px-8 py-4 bg-[var(--color-terracotta)] text-[var(--background)] font-bold uppercase tracking-widest text-sm overflow-hidden rounded-full"
+              className="group relative px-8 py-4 bg-[var(--color-space-cyan)] text-[var(--background)] font-bold uppercase tracking-widest text-sm overflow-hidden rounded-full"
             >
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
-              <span className="relative z-10 flex items-center gap-3">
+              <span className="relative z-10 flex items-center gap-3 text-white drop-shadow-md">
                 Consult Now <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
@@ -154,7 +151,7 @@ const HeroServices = () => {
         {/* Asymmetrical Floating Services List */}
         <div className="w-full lg:w-2/5 mt-8 md:mt-16 lg:mt-0 flex flex-col gap-4 relative">
           {/* Connecting line */}
-          <div className="hidden lg:block absolute left-[-40px] top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-[var(--color-terracotta)]/30 to-transparent"></div>
+          <div className="hidden lg:block absolute left-[-40px] top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-[var(--color-space-cyan)]/30 to-transparent"></div>
 
           {services.map((service, index) => {
             const isActive = active === index;
@@ -178,20 +175,20 @@ const HeroServices = () => {
                 }}
                 className={`relative text-left p-6 flex items-center gap-6 transition-all duration-500 overflow-hidden group rounded-2xl ${
                   isActive 
-                    ? 'scale-105 ml-[-20px] shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-[var(--color-terracotta)]/50' 
+                    ? 'scale-105 ml-[-20px] shadow-[0_0_30px_rgba(157, 78, 221, 0.15)] border border-[var(--color-space-cyan)]/50' 
                     : 'hover:ml-[-10px] opacity-60 hover:opacity-100 border border-transparent'
                 }`}
               >
                 {/* Background Highlight */}
                 <div className={`absolute inset-0 transition-opacity duration-500 ${
                   isActive
-                    ? 'bg-gradient-to-r from-[var(--color-terracotta)]/20 to-transparent mix-blend-overlay opacity-100'
+                    ? 'bg-gradient-to-r from-[var(--color-space-cyan)]/20 to-transparent mix-blend-overlay opacity-100'
                     : 'opacity-0 group-hover:opacity-100'
                 }`}></div>
 
                 {/* Number */}
                 <div className={`font-heading text-3xl md:text-4xl transition-colors duration-500 z-10 ${
-                  isActive ? 'text-[var(--color-terracotta)]' : 'text-[var(--foreground)]/30'
+                  isActive ? 'text-[var(--color-space-cyan)]' : 'text-white/30'
                 }`}>
                   {service.id}
                 </div>
@@ -199,12 +196,12 @@ const HeroServices = () => {
                 {/* Content */}
                 <div className="z-10">
                   <h3 className={`text-lg md:text-xl font-bold uppercase tracking-widest mb-1 transition-colors duration-500 ${
-                    isActive ? 'text-white' : 'text-[var(--foreground)]'
+                    isActive ? 'text-white' : 'text-white'
                   }`}>
                     {service.title}
                   </h3>
                   <p className={`text-xs md:text-sm tracking-wide transition-colors duration-500 ${
-                    isActive ? 'text-white/90' : 'text-[var(--color-terracotta)] opacity-80'
+                    isActive ? 'text-white/90' : 'text-[var(--color-space-cyan)] opacity-80'
                   }`}>
                     {service.subtitle}
                   </p>

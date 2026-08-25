@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #FFF9EF;
-  --color-terracotta: #C85A3F;
-  --color-deep-brown: #6B3E2E;
-  --color-antique-gold: #D6A84F;
-  --color-sand: #EED9B7;
+  --color-space-dark: #0B0C10;
+  --color-space-cyan: #45F3FF;
+  --color-space-light: #FFFFFF;
+  --color-space-purple: #9D4EDD;
+  --color-space-gray: #1F2833;
   
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
@@ -14,40 +14,91 @@
 
 @layer base {
   :root {
-    --background: #FFF9EF;
-    --foreground: #6B3E2E;
+    --background: var(--color-space-dark);
+    --foreground: var(--color-space-light);
   }
   body {
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-body);
     overflow-x: hidden;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8); /* Added for readability over bright stars */
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--color-deep-brown);
+    color: var(--color-space-light);
     font-weight: 600;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); /* Stronger shadow for headings */
   }
 }
 
 @layer utilities {
   .glass {
-    background: rgba(255, 249, 239, 0.85); 
+    background: rgba(11, 12, 16, 0.85); /* Darkened for better contrast */
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(214, 168, 79, 0.15); /* gold border */
+    border-bottom: 1px solid rgba(157, 78, 221, 0.25); /* purple border */
   }
   
   .glass-card {
-    background: #FFFFFF;
+    background: rgba(11, 15, 20, 0.8); /* Darkened and made more opaque for readability */
     border-radius: 1rem;
-    box-shadow: 0 8px 32px rgba(107, 62, 46, 0.08); /* soft deep brown shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(69, 243, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
   
   .glass-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(107, 62, 46, 0.15);
+    box-shadow: 0 12px 40px rgba(69, 243, 255, 0.15);
+    border-color: rgba(69, 243, 255, 0.3);
+  }
+
+  .aurora-bg {
+    @apply fixed inset-0 z-[-1] overflow-hidden bg-[var(--color-space-dark)];
+  }
+  
+  /* The moving space background */
+  .aurora-bg::after {
+    content: '';
+    @apply absolute inset-[-10%] z-[-2];
+    background-image: url('/images/galaxy-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: driftSpace 90s linear infinite alternate;
+  }
+  
+  /* Add an overlay to darken the galaxy image slightly so text is readable */
+  .aurora-bg::before {
+    content: '';
+    @apply absolute inset-0 bg-[var(--color-space-dark)]/10 z-[-1] pointer-events-none;
+  }
+
+  @keyframes driftSpace {
+    0% {
+      transform: scale(1) translate(0%, 0%);
+    }
+    50% {
+      transform: scale(1.05) translate(-1%, 2%);
+    }
+    100% {
+      transform: scale(1.1) translate(1%, -1%);
+    }
+  }
+  .aurora-blob {
+    @apply absolute rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-pulse;
+  }
+  .aurora-blob-1 {
+    @apply w-[600px] h-[600px] bg-[var(--color-space-cyan)] top-[-100px] left-[-100px];
+    animation-duration: 10s;
+  }
+  .aurora-blob-2 {
+    @apply w-[500px] h-[500px] bg-[var(--color-space-purple)] bottom-[-200px] right-[-100px];
+    animation-duration: 12s;
+  }
+  .aurora-blob-3 {
+    @apply w-[400px] h-[400px] bg-[var(--color-space-light)] top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 opacity-10;
+    animation-duration: 15s;
   }
 }

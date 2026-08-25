@@ -16,7 +16,7 @@ const TopServices = () => {
       title: "Love Solutions in 24 Hours",
       subtitle: "Immediate Cosmic Intervention",
       desc: "When matters of the heart can't wait, our powerful Vedic remedies align planetary energies to resolve severe relationship crises within 24 hours. Experience profound peace and immediate results.",
-      icon: <Heart size={32} className="text-[var(--foreground)]" />,
+      icon: <Heart size={32} className="text-white" />,
       color: "from-[var(--color-brand-red)] to-[var(--color-brand-red)]"
     },
     {
@@ -24,15 +24,15 @@ const TopServices = () => {
       title: "Powerful Love Spells",
       subtitle: "Bind True Love Forever",
       desc: "Authentic, safe, and highly potent spiritual love spells designed to attract your soulmate, reignite lost passion, and secure unconditional love without negative karma.",
-      icon: <Sparkles size={32} className="text-[var(--foreground)]" />,
-      color: "from-[var(--color-antique-gold)] to-[var(--color-brand-orange)]"
+      icon: <Sparkles size={32} className="text-white" />,
+      color: "from-[var(--color-space-purple)] to-[var(--color-brand-orange)]"
     },
     {
       id: '03',
       title: "Bring Your Ex Back",
       subtitle: "Restore Broken Bonds",
       desc: "Heartbreak is not the end. Using ancient astrology and energy binding, we can remove the misunderstandings and external influences that drove you apart, bringing your ex back into your arms.",
-      icon: <RefreshCcw size={32} className="text-[var(--foreground)]" />,
+      icon: <RefreshCcw size={32} className="text-white" />,
       color: "from-[var(--color-brand-orange)] to-[var(--color-brand-red)]"
     },
     {
@@ -40,7 +40,7 @@ const TopServices = () => {
       title: "Black Magic Removal",
       subtitle: "Ultimate Spiritual Protection",
       desc: "Are you facing unexplained failures, sudden illnesses, or chronic bad luck? We identify and completely destroy dark energies, curses, and black magic, restoring a protective aura around you.",
-      icon: <ShieldAlert size={32} className="text-[var(--foreground)]" />,
+      icon: <ShieldAlert size={32} className="text-white" />,
       color: "from-white to-[#18181b]"
     }
   ];
@@ -87,14 +87,14 @@ const TopServices = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bold mb-6 tracking-tight"
           >
-            Our Most <span className="text-[var(--color-terracotta)]">Powerful</span> Solutions
+            Our Most <span className="text-[var(--color-space-cyan)] text-white drop-shadow-md">Powerful</span> Solutions
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-[var(--foreground)] text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-white text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
           >
             Some problems require immediate, specialized attention. Discover our master-level services designed to conquer the most impossible challenges.
           </motion.p>
@@ -111,11 +111,11 @@ const TopServices = () => {
                 {/* Image Placeholder */}
                 <div className="img-block flex-1 w-full relative group perspective-1000">
                   <div className="absolute inset-0 bg-gradient-to-tr opacity-20 blur-3xl rounded-full transition-opacity duration-500 group-hover:opacity-40 z-0" style={{ backgroundImage: `linear-gradient(to top right, var(--tw-gradient-stops))` }}></div>
-                  <div className="aspect-[4/3] w-full glass-card rounded-3xl p-4 relative z-10 overflow-hidden border border-[var(--color-antique-gold)]/10 hover:border-[var(--color-antique-gold)]/10 transition-colors duration-500 shadow-2xl">
+                  <div className="aspect-[4/3] w-full glass-card rounded-3xl p-4 relative z-10 overflow-hidden border border-[var(--color-space-purple)]/10 hover:border-[var(--color-space-purple)]/10 transition-colors duration-500 shadow-2xl">
                     <div className="w-full h-full bg-[#C85A3F]/40 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-700">
                       {/* Replace with actual <img loading="lazy"> tag later */}
                       {React.cloneElement(service.icon, { size: 64, className: "opacity-30 mb-4" })}
-                      <span className="text-[var(--foreground)] font-medium tracking-widest uppercase text-sm">Image Space</span>
+                      <span className="text-white font-medium tracking-widest uppercase text-sm">Image Space</span>
                       
                       {/* Decorative gradient overlay */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10 mix-blend-overlay`}></div>
@@ -126,26 +126,26 @@ const TopServices = () => {
                 {/* Text Content */}
                 <div className="text-block flex-1 w-full">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="text-3xl md:text-5xl font-black text-[var(--foreground)]/5">{service.id}</span>
-                    <div className="p-3 rounded-xl bg-[var(--color-antique-gold)]/10 backdrop-blur-sm border border-[var(--color-antique-gold)]/10">
+                    <span className="text-3xl md:text-5xl font-black text-white/5">{service.id}</span>
+                    <div className="p-3 rounded-xl bg-[var(--color-space-purple)]/10 backdrop-blur-sm border border-[var(--color-space-purple)]/10">
                       {service.icon}
                     </div>
                   </div>
                   
-                  <h3 className={`text-4xl md:text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r ${service.color}`}>
+                  <h3 className={`text-4xl md:text-5xl font-bold mb-2 text-[var(--color-space-cyan)] drop-shadow-[0_0_8px_rgba(69,243,255,0.3)]`}>
                     {service.title}
                   </h3>
-                  <h4 className="text-xl text-[var(--foreground)] font-semibold tracking-wide uppercase mb-6">
+                  <h4 className="text-xl text-white font-semibold tracking-wide uppercase mb-6">
                     {service.subtitle}
                   </h4>
                   
-                  <p className="text-[var(--foreground)] text-lg leading-relaxed mb-8">
+                  <p className="text-white text-lg leading-relaxed mb-8">
                     {service.desc}
                   </p>
                   
                   <Link 
                     to="/contact" 
-                    className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-[var(--color-antique-gold)]/10 text-[var(--foreground)] font-bold uppercase tracking-wider text-sm hover:bg-[var(--color-antique-gold)] hover:text-[#FFFFFF] transition-all duration-300 group"
+                    className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-[var(--color-space-purple)]/10 text-white font-bold uppercase tracking-wider text-sm hover:bg-[var(--color-space-purple)] hover:text-[#FFFFFF] transition-all duration-300 group"
                   >
                     Consult Now 
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

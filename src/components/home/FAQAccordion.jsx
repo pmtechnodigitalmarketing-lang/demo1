@@ -33,11 +33,10 @@ const FAQAccordion = () => {
   };
 
   return (
-    <section className="pt-4 md:pt-8 pb-8 lg:pb-12 px-6 relative z-10">
-      <div className="container mx-auto max-w-4xl">
+    <section className="pt-0 md:pt-4 pb-8 lg:pb-12 px-6 relative z-10">      <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Frequently Asked <span className="text-[var(--color-terracotta)]">Questions</span></h2>
-          <p className="text-[var(--foreground)]">Everything you need to know before booking your consultation.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white drop-shadow-md">Frequently Asked <span className="text-[var(--color-space-cyan)] text-white drop-shadow-md">Questions</span></h2>
+          <p className="text-white">Everything you need to know before booking your consultation.</p>
         </div>
 
         <div className="space-y-4">
@@ -54,8 +53,8 @@ const FAQAccordion = () => {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none"
               >
-                <h3 className="text-lg font-semibold pr-8">{faq.question}</h3>
-                <div className={`p-2 rounded-full transition-colors duration-300 shrink-0 ${activeIndex === index ? 'bg-[var(--color-terracotta)] text-[#FFFFFF]' : 'bg-[var(--color-antique-gold)]/10 text-[var(--foreground)]'}`}>
+                <h3 className="text-lg font-semibold pr-8 text-white drop-shadow-md">{faq.question}</h3>
+                <div className={`p-2 rounded-full transition-colors duration-300 shrink-0 ${activeIndex === index ? 'bg-[var(--color-space-cyan)] text-[#FFFFFF]' : 'bg-[var(--color-space-purple)]/10 text-white'}`}>
                   {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
                 </div>
               </button>
@@ -68,7 +67,7 @@ const FAQAccordion = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="px-8 pb-6 text-[var(--foreground)] leading-relaxed border-t border-[var(--color-antique-gold)]/10 pt-4">
+                    <div className="px-8 pb-6 text-white leading-relaxed border-t border-[var(--color-space-purple)]/10 pt-4">
                       {faq.answer}
                     </div>
                   </motion.div>

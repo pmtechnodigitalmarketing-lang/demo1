@@ -40,13 +40,7 @@ const Home = () => {
       <CanadianLocations />
 
       {/* About CTA Section */}
-      <section className="pt-12 pb-6 md:pb-24 lg:pt-16 lg:pb-32 px-6 relative z-10 overflow-hidden bg-[var(--background)]">
-        {/* Background Massive Typography */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none opacity-5">
-          <h2 className="text-[10rem] md:text-[20rem] font-black font-heading leading-none whitespace-nowrap">
-            R U D R A D E V
-          </h2>
-        </div>
+      <section className="pt-12 pb-6 md:pb-12 lg:pt-16 lg:pb-12 px-6 relative z-10 overflow-hidden bg-transparent">
 
         <div className="container mx-auto max-w-7xl relative">
           <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-16 lg:gap-0">
@@ -65,7 +59,7 @@ const Home = () => {
                   WebkitClipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
                 }}
               >
-                <div className="absolute inset-0 bg-[var(--color-terracotta)]/20 z-10 pointer-events-none mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[var(--color-space-cyan)]/20 z-10 pointer-events-none mix-blend-overlay"></div>
                 <img
                   fetchpriority="high"
                   src="/images/Shiva parvathi I hd Shiva parvathi wallpaper.webp"
@@ -78,14 +72,14 @@ const Home = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-                className="absolute top-10 left-10 text-[var(--color-terracotta)] opacity-50"
+                className="absolute top-10 left-10 text-[var(--color-space-cyan)] opacity-50"
               >
                 <Star size={40} />
               </motion.div>
               <motion.div
                 animate={{ rotate: -360, y: [0, 20, 0] }}
                 transition={{ rotate: { repeat: Infinity, duration: 25, ease: "linear" }, y: { repeat: Infinity, duration: 5, ease: "easeInOut" } }}
-                className="absolute bottom-20 right-10 text-[var(--color-deep-brown)] opacity-50"
+                className="absolute bottom-20 right-10 text-[var(--color-space-light)] opacity-50"
               >
                 <Moon size={60} />
               </motion.div>
@@ -98,41 +92,41 @@ const Home = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 1, delay: 0.3 }}
-                className="bg-[var(--color-sand)]/80 backdrop-blur-2xl p-10 md:p-16 border-l-4 border-[var(--color-terracotta)] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                className="bg-[var(--color-space-gray)]/80 backdrop-blur-2xl p-10 md:p-16 border-l-4 border-[var(--color-space-cyan)] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
               >
-                <h2 className="text-4xl md:text-6xl font-bold mb-8 text-[var(--foreground)] tracking-tight font-heading leading-tight">
+                <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white tracking-tight font-heading leading-tight">
                   Guidance Beyond <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-terracotta)] to-amber-200">The Physical Realm</span>
+                  <span className="text-[var(--color-space-cyan)] drop-shadow-[0_0_8px_rgba(69,243,255,0.3)] text-white drop-shadow-md">The Physical Realm</span>
                 </h2>
 
-                <p className="text-[var(--foreground)] mb-8 text-lg leading-relaxed opacity-80 font-light">
+                <p className="text-white mb-8 text-lg leading-relaxed font-light">
                   With over 25 years of profound experience in Vedic Astrology and spiritual healing, Pandit Rudradev acts as a conduit between you and the cosmic energies. His approach doesn't just treat symptoms; it annihilates the root cause of your life's blockages.
                 </p>
 
                 <ul className="flex flex-col gap-6 mb-12">
-                  <li className="flex items-start gap-4">
-                    <span className="text-[var(--color-terracotta)] mt-1"><Compass size={24} /></span>
+                  <li className="flex items-start gap-4 text-white drop-shadow-md">
+                    <span className="text-[var(--color-space-cyan)] mt-1 text-white drop-shadow-md"><Compass size={24} /></span>
                     <div>
-                      <h4 className="text-xl font-bold font-heading mb-1 text-[var(--foreground)]">Absolute Confidentiality</h4>
-                      <p className="text-sm opacity-70">A judgment-free sanctuary for your deepest concerns.</p>
+                      <h4 className="text-xl font-bold font-heading mb-1 text-white">Absolute Confidentiality</h4>
+                      <p className="text-sm text-white drop-shadow-md">A judgment-free sanctuary for your deepest concerns.</p>
                     </div>
                   </li>
-                  <li className="flex items-start gap-4">
-                    <span className="text-[var(--color-deep-brown)] mt-1"><Sun size={24} /></span>
+                  <li className="flex items-start gap-4 text-white drop-shadow-md">
+                    <span className="text-[var(--color-space-light)] mt-1 text-white drop-shadow-md"><Sun size={24} /></span>
                     <div>
-                      <h4 className="text-xl font-bold font-heading mb-1 text-[var(--foreground)]">Immediate Interventions</h4>
-                      <p className="text-sm opacity-70">Powerful rituals that demand rapid cosmic shifts.</p>
+                      <h4 className="text-xl font-bold font-heading mb-1 text-white">Immediate Interventions</h4>
+                      <p className="text-sm text-white drop-shadow-md">Powerful rituals that demand rapid cosmic shifts.</p>
                     </div>
                   </li>
                 </ul>
 
                 <div className="flex flex-wrap items-center gap-6">
-                  <Link to="/about" className="group relative inline-flex items-center justify-center px-8 py-4 bg-transparent text-[var(--color-terracotta)] border border-[var(--color-terracotta)]/50 font-bold uppercase tracking-widest text-sm overflow-hidden hover:border-[var(--color-terracotta)] transition-colors">
-                    <span className="relative z-10">Discover The Journey</span>
-                    <div className="absolute inset-0 bg-[var(--color-terracotta)]/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
+                  <Link to="/about" className="group relative inline-flex items-center justify-center px-8 py-4 bg-transparent text-[var(--color-space-cyan)] border border-[var(--color-space-cyan)]/50 font-bold uppercase tracking-widest text-sm overflow-hidden hover:border-[var(--color-space-cyan)] transition-colors">
+                    <span className="relative z-10 text-white drop-shadow-md">Discover The Journey</span>
+                    <div className="absolute inset-0 bg-[var(--color-space-cyan)]/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                   </Link>
 
-                  <a aria-label="Navigation Link" href="https://wa.me/14169980146" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[var(--foreground)] hover:text-[var(--color-deep-brown)] transition-colors tracking-wide font-semibold">
+                  <a aria-label="Navigation Link" href="https://wa.me/14169980146" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-[var(--color-space-light)] transition-colors tracking-wide font-semibold">
                     <MessageCircle size={20} />
                     Direct WhatsApp
                   </a>

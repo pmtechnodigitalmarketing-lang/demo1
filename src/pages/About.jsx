@@ -55,7 +55,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full bg-[var(--background)] min-h-screen">
+    <div className="w-full bg-transparent min-h-screen">
 
       {/* 1. Immersive Hero Section */}
       <section className="relative w-full h-auto pb-0 md:pb-12 lg:pb-16 flex flex-col justify-start pt-8 md:pt-12 overflow-hidden">
@@ -76,16 +76,16 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="text-[var(--color-terracotta)] tracking-[0.3em] uppercase text-sm mb-6 font-semibold inline-flex items-center gap-4">
-              <span className="w-12 h-[1px] bg-[var(--color-terracotta)]"></span>
+            <div className="text-[var(--color-space-cyan)] tracking-[0.3em] uppercase text-sm mb-6 font-semibold inline-flex items-center gap-4">
+              <span className="w-12 h-[1px] bg-[var(--color-space-cyan)] text-white drop-shadow-md"></span>
               The Master Healer
-              <span className="w-12 h-[1px] bg-[var(--color-terracotta)]"></span>
+              <span className="w-12 h-[1px] bg-[var(--color-space-cyan)] text-white drop-shadow-md"></span>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black font-heading leading-tight mb-8">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black font-heading leading-tight mb-8 text-white drop-shadow-md">
               Pandit <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-terracotta)] to-amber-200">Rudradev</span>
+              <span className="text-[var(--color-space-cyan)] drop-shadow-[0_0_8px_rgba(69,243,255,0.3)] text-white drop-shadow-md">Rudradev</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[var(--foreground)] opacity-80 font-light max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-white drop-shadow-md font-light max-w-4xl mx-auto leading-relaxed">
               Deciphering the cosmic code for over 25 years. Guiding souls from darkness into profound clarity. Specializing in Vedic interventions that remove severe blockages, restoring permanent peace and prosperity.
             </p>
           </motion.div>
@@ -99,11 +99,11 @@ const About = () => {
 
             {/* Left: Sticky Title */}
             <div className="w-full lg:w-1/3 lg:sticky lg:top-32 h-fit">
-              <h2 className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6 text-white drop-shadow-md">
                 The Path to <br />
-                <span className="text-[var(--color-terracotta)]">Enlightenment</span>
+                <span className="text-[var(--color-space-cyan)] text-white drop-shadow-md">Enlightenment</span>
               </h2>
-              <p className="text-lg opacity-70 font-light leading-relaxed">
+              <p className="text-lg font-light leading-relaxed text-white drop-shadow-md">
                 A life dedicated to the ancient sciences of the Vedas, translating celestial alignments into tangible human success.
               </p>
 
@@ -111,8 +111,8 @@ const About = () => {
               <div className="mt-16 hidden lg:flex items-center justify-start">
                 <div className="relative w-56 h-56 flex items-center justify-center">
                   {/* Central Glow & Icon */}
-                  <div className="absolute inset-0 flex items-center justify-center z-10 text-[var(--color-terracotta)]">
-                    <div className="absolute w-20 h-20 bg-[var(--color-terracotta)]/10 rounded-full blur-xl"></div>
+                  <div className="absolute inset-0 flex items-center justify-center z-10 text-[var(--color-space-cyan)]">
+                    <div className="absolute w-20 h-20 bg-[var(--color-space-cyan)]/10 rounded-full blur-xl"></div>
                     <Star size={48} className="opacity-90" />
                   </div>
 
@@ -120,7 +120,7 @@ const About = () => {
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-                    className="absolute inset-0 w-full h-full text-[var(--color-terracotta)] opacity-70"
+                    className="absolute inset-0 w-full h-full text-[var(--color-space-cyan)] opacity-70"
                   >
                     <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
                       <path
@@ -145,12 +145,12 @@ const About = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                className="text-xl md:text-2xl leading-relaxed font-light opacity-90 border-l-2 border-[var(--color-terracotta)] pl-8"
+                className="text-xl md:text-2xl leading-relaxed font-light opacity-90 border-l-2 border-[var(--color-space-cyan)] pl-8"
               >
                 "Hailing from a long, unbroken lineage of traditional Vedic astrologers, Pandit Rudradev has spent decades mastering the subtle energies that dictate our reality."
               </motion.div>
 
-              <div className="space-y-8 text-lg font-light opacity-80 leading-relaxed">
+              <div className="space-y-8 text-lg font-light leading-relaxed text-white">
                 <p>
                   Based in Canada, he serves as a bridge between ancient Eastern spiritual wisdom and the complex, fast-paced challenges of modern life. His approach is not about generic horoscopes; it is about surgical spiritual intervention.
                 </p>
@@ -160,7 +160,7 @@ const About = () => {
               </div>
 
               {/* In-line Image / Visual Break */}
-              <div className="w-full aspect-[4/5] md:aspect-[4/3] rounded-3xl overflow-hidden relative group mt-12 mb-0 md:my-12 border border-[var(--color-terracotta)]/20 shadow-2xl">
+              <div className="w-full aspect-[4/5] md:aspect-[4/3] rounded-3xl overflow-hidden relative group mt-12 mb-0 md:my-12 border border-[var(--color-space-cyan)]/20 shadow-2xl">
                 <img
                   src="/images/load_shiva.jpg"
                   alt="Lord Shiva"
@@ -174,9 +174,9 @@ const About = () => {
       </section>
 
       {/* 4. The Cosmic Impact (Stats) */}
-      <section className="py-6 relative overflow-hidden bg-[var(--color-sand)]/30 border-y border-[var(--color-terracotta)]/10">
+      <section className="py-6 relative overflow-hidden bg-[var(--color-space-gray)]/30 border-y border-[var(--color-space-cyan)]/10">
         <div className="container mx-auto max-w-7xl px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x-0 md:divide-x divide-[var(--color-terracotta)]/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x-0 md:divide-x divide-[var(--color-space-cyan)]/20">
             {stats.map((stat, idx) => (
               <motion.div
                 key={idx}
@@ -186,10 +186,10 @@ const About = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="flex flex-col items-center justify-center px-4"
               >
-                <div className="text-5xl md:text-6xl lg:text-7xl font-black font-heading text-[var(--color-terracotta)] mb-4 text-glow">
+                <div className="text-5xl md:text-6xl lg:text-7xl font-black font-heading text-[var(--color-space-cyan)] mb-4 text-glow">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base uppercase tracking-[0.2em] opacity-80 font-semibold">
+                <div className="text-sm md:text-base uppercase tracking-[0.2em] font-semibold text-white">
                   {stat.label}
                 </div>
               </motion.div>
@@ -202,15 +202,15 @@ const About = () => {
       <section className="pt-8 pb-12 md:pb-24 px-6 md:px-12 lg:px-24 lg:pt-12 relative z-10">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">Our <span className="text-[var(--color-terracotta)]">Methodology</span></h2>
-            <p className="text-lg opacity-70 font-light max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-white drop-shadow-md">Our <span className="text-[var(--color-space-cyan)] text-white drop-shadow-md">Methodology</span></h2>
+            <p className="text-lg font-light max-w-2xl mx-auto text-white drop-shadow-md">
               We do not rely on guesswork. Every intervention is backed by precise Vedic calculations and powerful energetic shielding.
             </p>
           </div>
 
           <div className="space-y-12 relative">
             {/* Connecting Line */}
-            <div className="hidden md:block absolute left-[3.5rem] top-10 bottom-10 w-[2px] bg-gradient-to-b from-[var(--color-terracotta)] via-[var(--color-terracotta)]/50 to-transparent"></div>
+            <div className="hidden md:block absolute left-[3.5rem] top-10 bottom-10 w-[2px] bg-gradient-to-b from-[var(--color-space-cyan)] via-[var(--color-space-cyan)]/50 to-transparent"></div>
 
             {processSteps.map((step, idx) => (
               <motion.div
@@ -222,15 +222,15 @@ const About = () => {
                 className="flex flex-col md:flex-row gap-8 md:gap-12 items-start relative z-10"
               >
                 {/* Icon Circle */}
-                <div className="w-16 h-16 md:w-28 md:h-28 shrink-0 rounded-full bg-[var(--background)] border border-[var(--color-terracotta)] flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.15)] text-[var(--color-terracotta)]">
+                <div className="w-16 h-16 md:w-28 md:h-28 shrink-0 rounded-full bg-transparent border border-[var(--color-space-cyan)] flex items-center justify-center shadow-[0_0_30px_rgba(157, 78, 221, 0.15)] text-[var(--color-space-cyan)]">
                   {step.icon}
                 </div>
 
                 {/* Content */}
                 <div className="pt-2 md:pt-6">
-                  <div className="text-[var(--color-terracotta)] font-heading font-bold text-xl mb-2">Phase {step.id}</div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-lg opacity-80 font-light leading-relaxed max-w-2xl">
+                  <div className="text-[var(--color-space-cyan)] font-heading font-bold text-xl mb-2">Phase {step.id}</div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-md">{step.title}</h3>
+                  <p className="text-lg font-light leading-relaxed max-w-2xl text-white drop-shadow-md">
                     {step.desc}
                   </p>
                 </div>
@@ -241,9 +241,9 @@ const About = () => {
       </section>
 
       {/* 5. Seamless Testimonials */}
-      <section className="pt-0 pb-6 md:pb-24 lg:pt-0 bg-gradient-to-b from-transparent to-[var(--color-sand)]/50 px-6">
+      <section className="pt-0 pb-6 md:pb-24 lg:pt-0 bg-gradient-to-b from-transparent to-[var(--color-space-gray)]/50 px-6">
         <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold font-heading mb-16">Words of <span className="text-[var(--color-terracotta)]">Transformation</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold font-heading mb-16 text-white drop-shadow-md">Words of <span className="text-[var(--color-space-cyan)] text-white drop-shadow-md">Transformation</span></h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((test, idx) => (
@@ -252,21 +252,21 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-[var(--background)]/80 backdrop-blur-sm border border-[var(--foreground)]/5 p-0 rounded-[2rem] text-left hover:border-[var(--color-terracotta)]/30 transition-colors duration-500"
+                className="bg-transparent/80 backdrop-blur-sm border border-[var(--foreground)]/5 p-0 rounded-[2rem] text-left hover:border-[var(--color-space-cyan)]/30 transition-colors duration-500"
               >
-                <div className="flex gap-1 mb-6 text-[var(--color-terracotta)]">
+                <div className="flex gap-1 mb-6 text-[var(--color-space-cyan)]">
                   {[...Array(test.rating)].map((_, i) => (
                     <Star key={i} size={16} fill="currentColor" />
                   ))}
                 </div>
-                <p className="text-lg opacity-90 italic mb-8 font-light leading-relaxed">
+                <p className="text-lg italic mb-8 font-light leading-relaxed text-white drop-shadow-md">
                   "{test.text}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <img src={test.image} alt={test.name} className="w-12 h-12 rounded-full border border-[var(--color-terracotta)]/50" />
+                  <img src={test.image} alt={test.name} className="w-12 h-12 rounded-full border border-[var(--color-space-cyan)]/50" />
                   <div>
-                    <h4 className="font-bold">{test.name}</h4>
-                    <span className="text-sm opacity-60 uppercase tracking-widest">{test.location}</span>
+                    <h4 className="font-bold text-white drop-shadow-md">{test.name}</h4>
+                    <span className="text-sm uppercase tracking-widest text-white drop-shadow-md">{test.location}</span>
                   </div>
                 </div>
               </motion.div>
@@ -278,25 +278,25 @@ const About = () => {
       {/* 6. Dramatic Final CTA */}
       <section className="pt-6 md:pt-12 pb-12 md:pb-32 lg:pt-16 lg:pb-32 px-6 relative overflow-hidden flex items-center justify-center">
         {/* Deep Glow Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-terracotta)]/20 via-[var(--background)] to-[var(--background)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--color-space-cyan)]/20 via-[var(--background)] to-[var(--background)]"></div>
 
         <div className="relative z-10 text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black font-heading mb-8">
-            Your Future is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-terracotta)] to-amber-200">Not Fixed.</span>
+          <h2 className="text-4xl md:text-6xl font-black font-heading mb-8 text-white drop-shadow-md">
+            Your Future is <span className="text-[var(--color-space-cyan)] drop-shadow-[0_0_8px_rgba(69,243,255,0.3)] text-white drop-shadow-md">Not Fixed.</span>
           </h2>
-          <p className="text-xl md:text-2xl font-light opacity-80 mb-12">
+          <p className="text-xl md:text-2xl font-light mb-12 text-white drop-shadow-md">
             Take control of your destiny today. Book a private, confidential consultation and step into the light of clarity.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-terracotta)] text-white font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-300 rounded-full"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-space-cyan)] text-white font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-300 rounded-full"
             >
               Book Consultation <ArrowRight size={18} />
             </Link>
             <a
               href="tel:+14169980146"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-transparent border border-[var(--color-terracotta)] text-[var(--color-terracotta)] font-bold uppercase tracking-widest text-sm hover:bg-[var(--color-terracotta)]/10 transition-colors duration-300 rounded-full"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-transparent border border-[var(--color-space-cyan)] text-[var(--color-space-cyan)] font-bold uppercase tracking-widest text-sm hover:bg-[var(--color-space-cyan)]/10 transition-colors duration-300 rounded-full"
             >
               <Phone size={18} /> Call Directly
             </a>

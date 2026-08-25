@@ -149,10 +149,10 @@ const Blogs = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--color-deep-brown)]"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--color-space-light)]"
           >
             <BookOpen size={18} />
-            <span className="text-sm font-semibold tracking-wider uppercase">Our Blog</span>
+            <span className="text-sm font-semibold tracking-wider uppercase text-white drop-shadow-md">Our Blog</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -160,13 +160,13 @@ const Blogs = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-glow"
           >
-            Spiritual Insights & <span className="text-[var(--color-terracotta)]">Wisdom</span>
+            Spiritual Insights & <span className="text-[var(--color-space-cyan)] text-white drop-shadow-md">Wisdom</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-[var(--foreground)] text-lg"
+            className="text-white text-lg"
           >
             Explore our collection of articles, horoscopes, and spiritual teachings to guide you on your journey.
           </motion.p>
@@ -187,8 +187,8 @@ const Blogs = () => {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
                   activeCategory === cat.id
-                    ? 'bg-[var(--color-terracotta)] text-[#FFFFFF] font-semibold shadow-[0_0_20px_rgba(99, 102, 241, 0.4)]'
-                    : 'glass text-[var(--foreground)] hover:text-[var(--foreground)] hover:border-[var(--color-deep-brown)]'
+                    ? 'bg-[var(--color-space-cyan)] text-[#FFFFFF] font-semibold shadow-[0_0_20px_rgba(99, 102, 241, 0.4)]'
+                    : 'glass text-white hover:text-white hover:border-[var(--color-space-light)]'
                 }`}
               >
                 <Icon size={18} />
@@ -209,7 +209,7 @@ const Blogs = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="glass rounded-2xl overflow-hidden group hover:border-[var(--color-deep-brown)]"
+                className="glass rounded-2xl overflow-hidden group hover:border-[var(--color-space-light)]"
               >
                 {/* Image Container */}
                 <div className="relative h-48 overflow-hidden">
@@ -220,7 +220,7 @@ const Blogs = () => {
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-[#C85A3F]/60 backdrop-blur-md rounded-full text-[var(--color-terracotta)] border border-[var(--color-deep-brown)]">
+                    <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-[#C85A3F]/60 backdrop-blur-md rounded-full text-[var(--color-space-cyan)] border border-[var(--color-space-light)] text-white drop-shadow-md">
                       {CATEGORIES.find(c => c.id === post.category)?.label}
                     </span>
                   </div>
@@ -228,20 +228,20 @@ const Blogs = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-[var(--foreground)] group-hover:text-[var(--color-terracotta)] transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[var(--color-space-cyan)] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
-                  <p className="text-[var(--foreground)] text-sm mb-6 line-clamp-3">
+                  <p className="text-white text-sm mb-6 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
                   <div className="flex items-center justify-between mt-auto">
                     <div className="flex flex-col gap-1">
-                      <div className="flex items-center gap-2 text-xs text-[var(--foreground)]">
-                        <User size={14} className="text-[var(--color-terracotta)]" />
+                      <div className="flex items-center gap-2 text-xs text-white">
+                        <User size={14} className="text-[var(--color-space-cyan)]" />
                         <span>{post.author}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-xs text-[var(--foreground)]">
+                      <div className="flex items-center gap-2 text-xs text-white">
                         <Calendar size={14} />
                         <span>{post.date}</span>
                         <span>•</span>
@@ -249,7 +249,7 @@ const Blogs = () => {
                       </div>
                     </div>
                     
-                    <button aria-label="Interactive Button" className="w-10 h-10 rounded-full flex items-center justify-center glass group-hover:bg-[var(--color-terracotta)] group-hover:text-[#FFFFFF] transition-all duration-300">
+                    <button aria-label="Interactive Button" className="w-10 h-10 rounded-full flex items-center justify-center glass group-hover:bg-[var(--color-space-cyan)] group-hover:text-[#FFFFFF] transition-all duration-300">
                       <ArrowRight size={18} />
                     </button>
                   </div>
