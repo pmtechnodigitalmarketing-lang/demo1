@@ -27,13 +27,13 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col relative pt-[48px]">
+    <div className="min-h-screen flex flex-col relative pt-[32px]">
       <AuroraBackground />
       <InfiniteMarquee />
       <Navbar />
       <FloatingContact />
-      
-      <main className="flex-grow pt-24">
+
+      <main className="flex-grow pt-20 md:pt-24">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />

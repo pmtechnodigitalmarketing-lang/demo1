@@ -4,14 +4,15 @@ import { ArrowRight, Star, Moon, Sun, Compass, MessageCircle } from 'lucide-reac
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import TopBanners from '../components/home/TopBanners';
 import HeroServices from '../components/home/HeroServices';
+import TopServicesGrid from '../components/home/TopServicesGrid';
 import Symptoms from '../components/home/Symptoms';
 import Process from '../components/home/Process';
 import Authority from '../components/home/Authority';
 import ServicesShowcase from '../components/home/ServicesShowcase';
 import TestimonialCarousel from '../components/home/TestimonialCarousel';
 import FAQAccordion from '../components/home/FAQAccordion';
-import InfiniteMarquee from '../components/ui/InfiniteMarquee';
 import CanadianLocations from '../components/home/CanadianLocations';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,9 +23,14 @@ const Home = () => {
 
   return (
     <div className="w-full">
+      {/* 3 Featured Banners Above Hero Section */}
+      <TopBanners />
+
+      {/* Hero Section */}
       <HeroServices />
 
-      <InfiniteMarquee />
+      {/* Top 10 Services Below Hero Section */}
+      <TopServicesGrid />
 
       {/* Helpful Sections */}
       <Symptoms />

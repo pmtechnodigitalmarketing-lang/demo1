@@ -84,7 +84,7 @@ const SymptomItem = ({ item, index }) => {
 
 const Symptoms = () => {
   return (
-    <section className="relative bg-transparent pt-16 pb-4 overflow-hidden">
+    <section className="relative bg-transparent pt-10 md:pt-14 pb-4 overflow-hidden">
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         

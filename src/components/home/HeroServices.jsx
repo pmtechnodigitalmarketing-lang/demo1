@@ -59,7 +59,7 @@ const HeroServices = () => {
   const activeService = services[active];
 
   return (
-    <section className="relative w-full overflow-hidden bg-transparent pt-6 pb-8 lg:pt-8 lg:pb-8">
+    <section className="relative w-full overflow-hidden bg-transparent pt-6 pb-3 lg:pt-8 lg:pb-4">
       {/* Immersive Background (Image-less) */}
       <AnimatePresence mode="wait">
         <motion.div

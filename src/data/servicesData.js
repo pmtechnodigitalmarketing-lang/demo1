@@ -25,7 +25,8 @@ const baseServices = [
   { id: "financial-blockages", title: "Financial Blockages", desc: "Break through invisible glass ceilings preventing you from accumulating the wealth you deserve.", color: "from-[#C85A3F] to-[#18181b]", image: "/images/finance_symptom.jpg" },
   { id: "chakra-balancing", title: "Chakra Balancing", desc: "Realign your seven primary energy centers to achieve perfect physical and emotional harmony.", color: "from-[#C85A3F] to-[#18181b]", image: "/images/Como Alinhar os Chakras_ Um Guia Completo para Equilibrar Sua Energia Interior.webp" },
   { id: "karmic-healing", title: "Karmic Healing", desc: "Sever unhealthy soul ties and heal ancestral trauma passed down through your bloodline.", color: "from-[#C85A3F] to-[#18181b]", image: "/images/generational_symptom.jpg" },
-  { id: "entity-attachment", title: "Entity Removal", desc: "Safely detach parasitic spiritual entities that are draining your life force and causing fatigue.", color: "from-[#C85A3F] to-[#18181b]", image: "/images/dark_energy_symptom.jpg" }
+  { id: "entity-attachment", title: "Entity Removal", desc: "Safely detach parasitic spiritual entities that are draining your life force and causing fatigue.", color: "from-[#C85A3F] to-[#18181b]", image: "/images/dark_energy_symptom.jpg" },
+  { id: "vashikaran-specialist", title: "Vashikaran Specialist", desc: "Harness ancient Vedic Vashikaran mantras to positively influence relationships, resolve estrangement, and restore domestic harmony.", color: "from-[#C85A3F] to-[#18181b]", image: "/images/vashikaran.webp" }
 ];
 
 const testimonialPool = [
@@ -138,7 +139,8 @@ const uniqueExpansions = {
   "financial-blockages": "If money slips through your fingers despite hard work, you likely have a Jupiter or Venus affliction. Pandit Rudradev identifies these wealth-draining combinations and prescribes powerful remedies to open the floodgates of abundance.",
   "chakra-balancing": "Blocked chakras manifest as physical illness and emotional instability. Through targeted energy work and crystal therapy, Pandit Rudradev unblocks your meridians, allowing vital prana (life force) to flow freely through your body.",
   "karmic-healing": "You may be carrying the energetic burdens of your ancestors. Pandit Rudradev performs sacred ancestral healing (Pitra Dosh remedies) to cut toxic family cords, allowing you to build your own legacy free from inherited curses.",
-  "entity-attachment": "Chronic fatigue, sudden personality changes, and unexplainable bad luck are classic signs of an entity attachment. Pandit Rudradev safely and permanently exorcises these parasitic beings, placing a protective seal around your aura to prevent their return."
+  "entity-attachment": "Chronic fatigue, sudden personality changes, and unexplainable bad luck are classic signs of an entity attachment. Pandit Rudradev safely and permanently exorcises these parasitic beings, placing a protective seal around your aura to prevent their return.",
+  "vashikaran-specialist": "Vashikaran is an ancient and sacred Vedic science that channelizes pure cosmic vibrations to resolve stubborn emotional conflicts, remove external misunderstandings, and attract true devotion. Pandit Rudradev performs precise, purely ethical, and spiritually protective rituals to harmonize bonds and bring peace to your family."
 };
 
 export const servicesData = baseServices.map((service, index) => ({

@@ -31,13 +31,20 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-[48px] w-full z-50 transition-all duration-300 ${scrolled ? 'py-4 glass shadow-lg' : 'py-6 bg-transparent'
+      className={`fixed top-[32px] w-full z-50 transition-all duration-300 ${scrolled ? 'py-2.5 md:py-3 glass shadow-lg' : 'py-3 md:py-4 bg-[#070312]/92 backdrop-blur-md border-b border-[var(--color-space-cyan)]/20 shadow-md'
         }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
-          <img src="/images/PR - LOGO.png" alt="Pandit Rudradev Logo" className="h-16 md:h-20 w-auto -mt-2 md:-mt-4 group-hover:scale-105 transition-transform duration-300" />
+        <Link to="/" className="flex items-center gap-2 group relative z-10">
+          <img 
+            src="/images/PR - LOGO.png" 
+            alt="Pandit Rudradev Logo" 
+            className="h-16 md:h-20 w-auto -my-1 md:-my-2 transition-all duration-300 group-hover:scale-105 group-hover:brightness-135" 
+            style={{ 
+              filter: 'brightness(1.3) contrast(1.1) drop-shadow(0 0 16px rgba(255, 215, 0, 0.55)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.85))' 
+            }}
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -46,21 +53,21 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm uppercase tracking-widest hover:text-[var(--color-space-cyan)] transition-colors relative group font-semibold ${location.pathname === link.path ? 'text-[var(--color-space-cyan)]' : 'text-white'
+              className={`text-xs md:text-sm uppercase tracking-wider hover:text-[var(--color-space-cyan)] transition-colors relative group font-semibold ${location.pathname === link.path ? 'text-[var(--color-space-cyan)]' : 'text-white'
                 }`}
             >
               {link.name}
               {location.pathname === link.path && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute -bottom-2 left-0 w-full h-[2px] bg-[var(--color-space-cyan)]"
+                  className="absolute -bottom-1.5 left-0 w-full h-[2px] bg-[var(--color-space-cyan)]"
                 />
               )}
             </Link>
           ))}
           <Link
             to="/contact"
-            className="ml-4 px-6 py-2 rounded-full border border-[var(--color-space-cyan)] text-[var(--color-space-cyan)] hover:bg-[var(--color-space-cyan)] hover:text-[var(--background)] transition-all font-semibold uppercase tracking-widest text-sm"
+            className="ml-3 px-5 md:px-6 py-2 rounded-full border border-[var(--color-space-cyan)] text-[var(--color-space-cyan)] hover:bg-[var(--color-space-cyan)] hover:text-[var(--background)] transition-all font-semibold uppercase tracking-wider text-xs"
           >
             Book Reading
           </Link>
