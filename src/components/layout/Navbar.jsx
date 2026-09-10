@@ -38,11 +38,11 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group relative z-10">
           <img 
-            src="/images/PR - LOGO.png" 
+            src="/images/logo.png" 
             alt="Pandit Rudradev Logo" 
-            className="h-16 md:h-20 w-auto -my-1 md:-my-2 transition-all duration-300 group-hover:scale-105 group-hover:brightness-135" 
+            className="h-20 md:h-24 w-auto -my-1.5 md:-my-2.5 transition-all duration-300 group-hover:scale-105" 
             style={{ 
-              filter: 'brightness(1.3) contrast(1.1) drop-shadow(0 0 16px rgba(255, 215, 0, 0.55)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.85))' 
+              filter: 'brightness(1.65) contrast(1.12) drop-shadow(0 0 18px rgba(255, 215, 0, 0.65)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5))' 
             }}
           />
         </Link>

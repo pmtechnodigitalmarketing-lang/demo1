@@ -10,11 +10,11 @@ const Footer = () => {
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center mb-6">
             <img 
-              src="/images/PR - LOGO.png" 
+              src="/images/logo.png" 
               alt="Pandit Rudradev Logo" 
-              className="h-20 w-auto transition-transform duration-300 hover:scale-105" 
+              className="h-24 md:h-28 w-auto transition-transform duration-300 hover:scale-105" 
               style={{ 
-                filter: 'brightness(1.3) contrast(1.1) drop-shadow(0 0 16px rgba(255, 215, 0, 0.5)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.85))' 
+                filter: 'brightness(1.65) contrast(1.12) drop-shadow(0 0 18px rgba(255, 215, 0, 0.6)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5))' 
               }}
             />
           </Link>
